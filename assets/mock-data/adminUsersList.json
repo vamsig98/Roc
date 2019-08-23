@@ -1,0 +1,94 @@
+{
+    "status": "SUCCESS",
+    "message": "",
+    "result": [
+        {
+            "_id": {
+                "$oid": "5a92e99055772a1c20cb0fdf"
+            },
+            "username": "Kruthika",
+            "password": "a7470858e79c282bc2f6adfd831b132672dfd1224c1e78cbf5bcd057",
+            "firstname": "kumar456",
+            "lastname": "B",
+            "role": {
+                "id": 3,
+                "name": "TestNewRole",
+                "type": "Operator",
+                "processes": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ]
+            }
+        },
+        {
+            "_id": {
+                "$oid": "5a9441d055772a1d44fca2ab"
+            },
+            "username": "Testuser",
+            "firstname": "kumar456",
+            "lastname": "B",
+            "role": {
+                "id": 3,
+                "name": "TestNewRole",
+                "type": "Operator",
+                "processes": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ]
+            },
+            "password": "a7470858e79c282bc2f6adfd831b132672dfd1224c1e78cbf5bcd057",
+            "first_login": "False"
+        },
+        {
+            "_id": {
+                "$oid": "5a94ebf955772a1edc573c47"
+            },
+            "username": "superadmin",
+            "firstname": "changeme",
+            "lastname": "B",
+            "role": {
+                "id": 3,
+                "name": "TestNewRole",
+                "type": "Operator",
+                "processes": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ]
+            },
+            "password": "d44d697d0b8ad27b1d3b323b1b438db88058ec1f0f21cef6a6629875",
+            "first_login": "False"
+        },
+        {
+            "_id": {
+                "$oid": "5a94ed2455772a19008b70fd"
+            },
+            "username": "user2",
+            "firstname": "changeme",
+            "lastname": "B",
+            "role": {
+                "id": 3,
+                "name": "TestNewRole",
+                "type": "Operator",
+                "processes": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ]
+            },
+            "password": "a7470858e79c282bc2f6adfd831b132672dfd1224c1e78cbf5bcd057",
+            "first_login": "False"
+        }
+    ],
+    "total": 5
+}

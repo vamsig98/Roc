@@ -1,0 +1,16 @@
+{
+    "status": "SUCCESS",
+    "message": "",
+    "result": {
+        "id": 1010,
+        "name": "TestNewRole",
+        "type": "Admin",
+        "processes": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ]
+    }
+}

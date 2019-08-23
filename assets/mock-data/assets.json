@@ -1,0 +1,3 @@
+[{"key": "keynamelorem", "value": "lorem ipsum" , "type" : "text" },
+    {"key": "keynamelorem", "value": "lorem ipsum" , "type" : "boolean" },
+    {"key": "keynamelorem", "value": "lorem ipsum" , "type" : "credentials" }]

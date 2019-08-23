@@ -1,0 +1,18 @@
+[
+	{
+		"key": "es_host",
+		"value": "http://alpdvrpaorchv01:9200"
+	},
+	{
+		"key": "orch_host",
+		"value": "https://alpdvrpaorchv01.smartcorp.net"
+	},
+	{
+		"key": "orch_user",
+		"value": "admin"
+	},
+	{
+		"key": "orch_pwd",
+		"value": "890iop"
+	}
+]

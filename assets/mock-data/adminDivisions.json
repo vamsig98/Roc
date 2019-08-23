@@ -1,0 +1,17 @@
+{
+    "status": "SUCCESS",
+    "message": "",
+    "result": [
+        {
+            "_id": {
+                "$oid": "5a9274a1b898abb0e8211f22"
+            },
+            "role": [
+                "Engineering",
+                "Finance",
+                "Human Resources"
+            ]
+        }
+    ],
+    "total": 1
+}

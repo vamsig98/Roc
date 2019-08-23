@@ -1,0 +1,169 @@
+{
+  "result": {
+    "active_work_items": [
+      {
+        "ETA": 0, 
+        "_tm": "", 
+        "botCount": 4, 
+        "botsAvailable": 4, 
+        "botsRunning": 1, 
+        "displayName": "CRS DE 2.0", 
+        "items": 1, 
+        "job_id": "62c00bfd-fac1-4dca-a0e0-3c28cee4e5d5", 
+        "metadata": {
+          "key": "File", 
+          "value": "Test Scenario 3_Normal_6_All_Pass_Humana_run1"
+        }, 
+        "metrics": [
+          {
+            "clickable": true, 
+            "key": "totalRecords", 
+            "label": "Total Records", 
+            "value": 6
+          }, 
+          {
+            "clickable": true, 
+            "key": "totalProcessed", 
+            "label": "Records Processed", 
+            "value": "-"
+          }, 
+          {
+            "clickable": true, 
+            "key": "avgProcessingTime", 
+            "label": "Avg. Processing Time (secs)", 
+            "value": "-"
+          }, 
+          {
+            "clickable": true, 
+            "key": "attentionNeeded", 
+            "label": "Attention Needed", 
+            "value": 0
+          }, 
+          {
+            "clickable": true, 
+            "key": "otherFailures", 
+            "label": "Other Failures", 
+            "value": 0
+          }, 
+          {
+            "clickable": true, 
+            "key": "totalAwaiting", 
+            "label": "Waiting to be Processed", 
+            "value": 6
+          }, 
+          {
+            "clickable": true, 
+            "key": "totalFailed", 
+            "label": "Records Failed", 
+            "value": "-"
+          }
+        ], 
+        "processName": "Chart_Review_DataEntryBOT_2.0_QA_CRS_DataEntry", 
+        "recordDetails": [], 
+        "sourceId": "5d1f32414f9b0d212c2a71dd", 
+        "startCode": "", 
+        "started": "", 
+        "status": "WAITING", 
+        "statusColor": "WAITING", 
+        "stop_id": 34935, 
+        "tmStarted": "2019-Jul-05 07:19 AM", 
+        "totalFailed": 0, 
+        "totalRecords": 6, 
+        "triggeredBy": "File"
+      }
+    ], 
+    "subway_map": {
+      "CDAI_ARR_PRP_ConvertAndCombineChart_CDAI_ARR_PRP": {
+        "attribute": {}, 
+        "key": "CDAI_ARR_PRP_ConvertAndCombineChart_CDAI_ARR_PRP", 
+        "status": "INACTIVE"
+      }, 
+      "CDAI_ARR_PRP_UploadChartToHealthSource_CDAI_ARR_PRP": {
+        "attribute": {}, 
+        "key": "CDAI_ARR_PRP_UploadChartToHealthSource_CDAI_ARR_PRP", 
+        "status": "INACTIVE"
+      }, 
+      "CSRPPD_Purge_MongoDB_Records_PPD BOT Environment": {
+        "attribute": {}, 
+        "key": "CSRPPD_Purge_MongoDB_Records_PPD BOT Environment", 
+        "status": "INACTIVE"
+      }, 
+      "Chart_Review_DataEntryBOT_2.0_QA_CRS_DataEntry": {
+        "attribute": {
+          "active_bots": 1, 
+          "anticipated_time": "0.00", 
+          "avg_processess_time_actual": [
+            0, 
+            0, 
+            80
+          ], 
+          "failed_records_actual": [
+            0, 
+            0, 
+            50
+          ], 
+          "remaining_items_in_queue": 6, 
+          "stand_by_bots": 3, 
+          "total_records_per_day_actual": [
+            20, 
+            350
+          ], 
+          "up_time": "25m:23s"
+        }, 
+        "healthStatus": "healthy", 
+        "key": "Chart_Review_DataEntryBOT_2.0_QA_CRS_DataEntry", 
+        "status": "WAITING"
+      }, 
+      "DECRYPT": {
+        "attribute": {}, 
+        "key": "DECRYPT", 
+        "status": "INACTIVE"
+      }, 
+      "IMS_GenerateInvoiceReportsProcess_BOT_IMS_DEV_ENV": {
+        "attribute": {}, 
+        "key": "IMS_GenerateInvoiceReportsProcess_BOT_IMS_DEV_ENV", 
+        "status": "INACTIVE"
+      }, 
+      "OR_Folders_Lead_Allocator_QA_OR_Transfer": {
+        "attribute": {}, 
+        "key": "OR_Folders_Lead_Allocator_QA_OR_Transfer", 
+        "status": "INACTIVE"
+      }, 
+      "OR_Folders_Lead_Uploader_QA_FolderBOT_ENV": {
+        "attribute": {}, 
+        "key": "OR_Folders_Lead_Uploader_QA_FolderBOT_ENV", 
+        "status": "INACTIVE"
+      }, 
+      "ROC.Simulation.Process1_QA_CRS_DataEntry": {
+        "attribute": {}, 
+        "key": "ROC.Simulation.Process1_QA_CRS_DataEntry", 
+        "status": "INACTIVE"
+      }, 
+      "TNT_GenerateMailingLabel_BOT_TNTHorizontalScaling": {
+        "attribute": {}, 
+        "key": "TNT_GenerateMailingLabel_BOT_TNTHorizontalScaling", 
+        "status": "INACTIVE"
+      }, 
+      "TSR_BOT_QA_TSR": {
+        "attribute": {}, 
+        "key": "TSR_BOT_QA_TSR", 
+        "status": "INACTIVE"
+      }, 
+      "TransferBOT_Decryptor_QA_TransferMonitorBot": {
+        "attribute": {}, 
+        "key": "TransferBOT_Decryptor_QA_TransferMonitorBot", 
+        "status": "INACTIVE"
+      }, 
+      "TransferMonitorBOT2.0_QA_TransferMonitorBot": {
+        "attribute": {}, 
+        "key": "TransferMonitorBOT2.0_QA_TransferMonitorBot", 
+        "status": "INACTIVE"
+      }, 
+      "Transfer_Monitor_BOT_QA_TransferMonitorBot": {
+        "attribute": {}, 
+        "key": "Transfer_Monitor_BOT_QA_TransferMonitorBot", 
+        "status": "INACTIVE"
+      }
+    }
+  }
+}

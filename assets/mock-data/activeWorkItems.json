@@ -1,0 +1,96 @@
+{
+    "total": 2,
+     "result":[ 
+    {
+        "process": 1,
+        "bots_running": 2,
+        "bots_available": 2,
+        "bgcolor": "#566566",
+        "pname": "Process Name",
+        "sourceId": "abf82f79a278979",
+        "status": "Waiting",
+        "head_key": "Head Key",
+        "jobId": "2437a7cd-f4c9-4b6f-9581-ec52d4bc7047",
+        "tmStarted": "2018-02-09 14:42:43",
+        "head_value": "Head Value",
+        "triggeredBy":"2018-02-09 14:42:43",
+        "metrics": [
+            {
+                "key": "Total Records",
+                "value": 20,
+                "label": "Average Processing Time",
+                "clickable": "/#/app/operational/work-item/5a7db3614f9b0d137c188fb2/DataEntryBOT_2.0_QA_CRS_DataEntry/records?filter=totalRecords"
+            },
+            {
+                "key": "totalRecords",
+                "value": 20,
+                "label": "Average Processing Time",
+                "clickable": "/#/app/operational/work-item/5a7db3614f9b0d137c188fb2/DataEntryBOT_2.0_QA_CRS_DataEntry/records?filter=totalRecords"
+            },
+            {
+                "key": "totalProcessed",
+                "value": 0,
+                "label": "Average Processing Time",
+                "color": "#a12324"
+            },
+            {
+                "key": "totalFailed",
+                "label": "Total Records",
+                "value": 0
+            }
+  
+        ],
+        "aggregates": {
+            "failed": 6,
+            "botCount": 2,
+            "processKey": "30379394-03f3-4fcd-be7e-dbb820390076",
+            "items": 2,
+            "processed": 14
+        }
+    },
+    {
+        "process": 1,
+        "bots_running": 2,
+        "bots_available": 2,
+        "bgcolor": "#566566",
+        "pname": "Process Name",
+        "sourceId": "abf82f79a278979",
+        "status": "Waiting",
+        "head_key": "Head Key",
+        "jobId": "2437a7cd-f4c9-4b6f-9581-ec52d4bc7042",
+        "head_value": "Head Value",
+        "triggeredBy":"2018-02-09 14:42:43",
+        "metrics": [
+            {
+                "key": "totalRecords",
+                "value": 20,
+                "label": "Average Processing Time",
+                "clickable": "/#/app/operational/work-item/5a7db3614f9b0d137c188fb2/DataEntryBOT_2.0_QA_CRS_DataEntry/records?filter=totalRecords"
+            },
+            {
+                "key": "totalProcessed",
+                "value": 0,
+                "label": "Average Processing Time",
+                "color": "#a12324"
+            },
+            {
+                "key": "totalFailed",
+                "label": "Total Records",
+                "value": 0
+            },
+            {
+                "key": "Total Records",
+                "label": "Total Records",
+                "value": 0
+            }
+        ],
+        "aggregates": {
+            "failed": 6,
+            "botCount": 2,
+            "processKey": "30379394-03f3-4fcd-be7e-dbb820390076",
+            "items": 2,
+            "processed": 14
+        }
+    }
+  ]
+  }

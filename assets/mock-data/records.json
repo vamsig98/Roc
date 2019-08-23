@@ -1,0 +1,29 @@
+{
+    "result": [
+        {
+            "id": "1",
+            "name": "Record One",
+            "status": "SUCCESS",
+            "timeTaken": "2s"
+        },
+        {
+            "id": "2",
+            "name": "Record Two",
+            "status": "IN-PROGRESS",
+            "timeTaken": "2s"
+        },
+        {
+            "id": "3",
+            "name": "Record Three",
+            "status": "FAILED",
+            "timeTaken": "2s"
+        },
+        {
+            "id": "4",
+            "name": "Record Three",
+            "status": "PENDING",
+            "timeTaken": "2s"
+        }
+    ],
+    "total": 4
+}

@@ -1,0 +1,26 @@
+{
+    "result": [
+        {
+            "email": "Aswani.Ayyagari@cioxhealth.com",
+            "first_name": "Aswani",
+            "groups": [
+                {
+                    "group": "SG"
+                },
+                {
+                    "group": "ROCTS"
+                }
+            ],
+            "last_name": "Ayyagari",
+            "lobs": [
+                {
+                    "lob_id": "ab117b23-4825-4a5f-9bfd-f1a29a84dd89",
+                    "lob_name": "lob1"
+                }
+            ],
+            "lobs_list": ["lob_1" , "lob_2"],
+            "password": "abc",
+            "user_id": "b09c4933-71d3-41f9-8a90-3caca55432d9"
+        }
+    ]
+}
