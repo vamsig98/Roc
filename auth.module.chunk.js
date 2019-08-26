@@ -242,7 +242,7 @@ var LoginComponent = /** @class */ (function () {
         // } else {
         //   console.log("not nav to gotoDashboard");
         // }
-        this._router.navigate(['/app/operational/dashboard']);
+        this._router.navigate(['/app/processes/DECRYPT']);
     };
     LoginComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({

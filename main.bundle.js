@@ -1197,7 +1197,7 @@ var AuthLoginGuardService = /** @class */ (function () {
         if (!this.authService.isAuthenticated()) {
             return true;
         }
-        this.router.navigate(["/app/operational"]);
+        this.router.navigate(["app/processes/DECRYPT"]);
         return false;
     };
     AuthLoginGuardService = __decorate([
