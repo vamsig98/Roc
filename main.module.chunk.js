@@ -251,7 +251,7 @@ var routes = [
         component: __WEBPACK_IMPORTED_MODULE_1__main_init_main_init_component__["a" /* MainInitComponent */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_2__shared_shared_services_auth_guard_auth_guard_service__["b" /* AuthSecuredGuardService */]],
         children: [
-            { path: '', redirectTo: 'operational', pathMatch: 'full' },
+            { path: '', redirectTo: 'processes', pathMatch: 'full' },
             { path: 'change-password', component: __WEBPACK_IMPORTED_MODULE_3__main_init_change_password_change_password_component__["a" /* ChangePasswordComponent */], },
             { path: 'operational', loadChildren: './operational/operational.module#OperationalModule' },
             { path: 'processes', loadChildren: './processes/processes.module#ProcessesModule' },
