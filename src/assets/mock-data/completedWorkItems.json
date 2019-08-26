@@ -1,0 +1,615 @@
+{
+    "result": [
+        {
+            "_tm": "",
+            "botsAvailable": "",
+            "displayName": "",
+            "headers": [
+                "Started",
+                "Total Records",
+                "Records Processed",
+                "Avg. Processing Time (secs)",
+                "Totoal Time Taken (mins)",
+                "Attention Needed",
+                "Other Failures"
+            ],
+            "items": 1,
+            "metadata": {
+                "key": "TimeRange",
+                "value": "01/21/2019 00:00:00 - 01/21/2019 07:11:24"
+            },
+            "metrics": [
+                {
+                    "clickable": true,
+                    "key": "totalRecords",
+                    "label": "Total Records",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "totalProcessed",
+                    "label": "Records Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "totalAwaiting",
+                    "label": "Waiting to be Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "avgProcessingTime",
+                    "label": "Average Processing Time",
+                    "value": "0"
+                },
+                {
+                    "clickable": true,
+                    "key": "totalFailed",
+                    "label": "Records Failed",
+                    "value": 0
+                }
+            ],
+            "processName": "DECRYPT",
+            "recordDetails": [],
+            "sourceId": "a05bc994-8a66-4049-8e70-571c0e2650e3",
+            "startCode": "",
+            "started": "",
+            "status": "SUCCESS",
+            "tmEnded": "Mon, 21 Jan 2019 12:12:15 GMT",
+            "tmStarted": "2019-Jan-21 07:12 AM",
+            "totalTimeTaken": 0.0,
+            "triggeredBy": "TimeRange"
+        },
+        {
+            "_tm": "",
+            "botsAvailable": "",
+            "displayName": "",
+            "headers": [
+                "Started",
+                "Total Records",
+                "Records Processed",
+                "Avg. Processing Time (secs)",
+                "Totoal Time Taken (mins)",
+                "Attention Needed",
+                "Other Failures"
+            ],
+            "items": 1,
+            "metadata": {
+                "key": "TimeRange",
+                "value": "01/11/2019 00:00:00 - 01/21/2019 07:06:51"
+            },
+            "metrics": [
+                {
+                    "clickable": true,
+                    "key": "totalRecords",
+                    "label": "Total Records",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "totalProcessed",
+                    "label": "Records Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "totalAwaiting",
+                    "label": "Waiting to be Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "avgProcessingTime",
+                    "label": "Average Processing Time",
+                    "value": "0"
+                },
+                {
+                    "clickable": true,
+                    "key": "totalFailed",
+                    "label": "Records Failed",
+                    "value": 0
+                }
+            ],
+            "processName": "DECRYPT",
+            "recordDetails": [],
+            "sourceId": "5dedde8e-3093-47f7-8a39-26475746fdef",
+            "startCode": "",
+            "started": "",
+            "status": "SUCCESS",
+            "tmEnded": "Mon, 21 Jan 2019 12:08:02 GMT",
+            "tmStarted": "2019-Jan-21 07:07 AM",
+            "totalTimeTaken": 0.0,
+            "triggeredBy": "TimeRange"
+        },
+        {
+            "_tm": "",
+            "botsAvailable": "",
+            "displayName": "",
+            "headers": [
+                "Started",
+                "Total Records",
+                "Records Processed",
+                "Avg. Processing Time (secs)",
+                "Totoal Time Taken (mins)",
+                "Attention Needed",
+                "Other Failures"
+            ],
+            "items": 1,
+            "metadata": {
+                "key": "TimeRange",
+                "value": "01/07/2019 00:00:00 - 01/08/2019 02:33:48"
+            },
+            "metrics": [
+                {
+                    "clickable": true,
+                    "key": "totalRecords",
+                    "label": "Total Records",
+                    "value": 25
+                },
+                {
+                    "clickable": true,
+                    "key": "totalProcessed",
+                    "label": "Records Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "totalAwaiting",
+                    "label": "Waiting to be Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "avgProcessingTime",
+                    "label": "Average Processing Time",
+                    "value": "0.04"
+                },
+                {
+                    "clickable": true,
+                    "key": "totalFailed",
+                    "label": "Records Failed",
+                    "value": 25
+                }
+            ],
+            "processName": "DECRYPT",
+            "recordDetails": [],
+            "sourceId": "197f7ac8-9de3-47a0-b46e-88feade19217",
+            "startCode": "",
+            "started": "",
+            "status": "SUCCESS",
+            "tmEnded": "Tue, 08 Jan 2019 07:47:17 GMT",
+            "tmStarted": "2019-Jan-08 02:40 AM",
+            "totalTimeTaken": 0.02,
+            "triggeredBy": "TimeRange"
+        },
+        {
+            "_tm": "",
+            "botsAvailable": "",
+            "displayName": "",
+            "headers": [
+                "Started",
+                "Total Records",
+                "Records Processed",
+                "Avg. Processing Time (secs)",
+                "Totoal Time Taken (mins)",
+                "Attention Needed",
+                "Other Failures"
+            ],
+            "items": 1,
+            "metadata": {
+                "key": "TimeRange",
+                "value": "01/06/2019 00:00:00 - 01/07/2019 05:21:14"
+            },
+            "metrics": [
+                {
+                    "clickable": true,
+                    "key": "totalRecords",
+                    "label": "Total Records",
+                    "value": 25
+                },
+                {
+                    "clickable": true,
+                    "key": "totalProcessed",
+                    "label": "Records Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "totalAwaiting",
+                    "label": "Waiting to be Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "avgProcessingTime",
+                    "label": "Average Processing Time",
+                    "value": "0.04"
+                },
+                {
+                    "clickable": true,
+                    "key": "totalFailed",
+                    "label": "Records Failed",
+                    "value": 25
+                }
+            ],
+            "processName": "DECRYPT",
+            "recordDetails": [],
+            "sourceId": "50fa8d23-d7cc-462f-8ea3-c89abc207106",
+            "startCode": "",
+            "started": "",
+            "status": "SUCCESS",
+            "tmEnded": "Mon, 07 Jan 2019 10:29:13 GMT",
+            "tmStarted": "2019-Jan-07 05:25 AM",
+            "totalTimeTaken": 0.02,
+            "triggeredBy": "TimeRange"
+        },
+        {
+            "_tm": "",
+            "botsAvailable": "",
+            "displayName": "",
+            "headers": [
+                "Started",
+                "Total Records",
+                "Records Processed",
+                "Avg. Processing Time (secs)",
+                "Totoal Time Taken (mins)",
+                "Attention Needed",
+                "Other Failures"
+            ],
+            "items": 1,
+            "metadata": {
+                "key": "TimeRange",
+                "value": "01/06/2019 00:00:00 - 01/06/2019 04:13:25"
+            },
+            "metrics": [
+                {
+                    "clickable": true,
+                    "key": "totalRecords",
+                    "label": "Total Records",
+                    "value": 25
+                },
+                {
+                    "clickable": true,
+                    "key": "totalProcessed",
+                    "label": "Records Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "totalAwaiting",
+                    "label": "Waiting to be Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "avgProcessingTime",
+                    "label": "Average Processing Time",
+                    "value": "0.04"
+                },
+                {
+                    "clickable": true,
+                    "key": "totalFailed",
+                    "label": "Records Failed",
+                    "value": 25
+                }
+            ],
+            "processName": "DECRYPT",
+            "recordDetails": [],
+            "sourceId": "2433825e-bec9-40bc-8d1f-570fff91bdae",
+            "startCode": "",
+            "started": "",
+            "status": "SUCCESS",
+            "tmEnded": "Sun, 06 Jan 2019 09:25:34 GMT",
+            "tmStarted": "2019-Jan-06 04:18 AM",
+            "totalTimeTaken": 0.02,
+            "triggeredBy": "TimeRange"
+        },
+        {
+            "_tm": "",
+            "botsAvailable": "",
+            "displayName": "",
+            "headers": [
+                "Started",
+                "Total Records",
+                "Records Processed",
+                "Avg. Processing Time (secs)",
+                "Totoal Time Taken (mins)",
+                "Attention Needed",
+                "Other Failures"
+            ],
+            "items": 1,
+            "metadata": {
+                "key": "TimeRange",
+                "value": "01/06/2019 00:00:00 - 01/06/2019 04:01:41"
+            },
+            "metrics": [
+                {
+                    "clickable": true,
+                    "key": "totalRecords",
+                    "label": "Total Records",
+                    "value": 25
+                },
+                {
+                    "clickable": true,
+                    "key": "totalProcessed",
+                    "label": "Records Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "totalAwaiting",
+                    "label": "Waiting to be Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "avgProcessingTime",
+                    "label": "Average Processing Time",
+                    "value": "0.04"
+                },
+                {
+                    "clickable": true,
+                    "key": "totalFailed",
+                    "label": "Records Failed",
+                    "value": 25
+                }
+            ],
+            "processName": "DECRYPT",
+            "recordDetails": [],
+            "sourceId": "461ace3b-7ff0-4fbf-b8bc-c2ddddca72f7",
+            "startCode": "",
+            "started": "",
+            "status": "SUCCESS",
+            "tmEnded": "Sun, 06 Jan 2019 09:09:17 GMT",
+            "tmStarted": "2019-Jan-06 04:02 AM",
+            "totalTimeTaken": 0.02,
+            "triggeredBy": "TimeRange"
+        },
+        {
+            "_tm": "",
+            "botsAvailable": "",
+            "displayName": "",
+            "headers": [
+                "Started",
+                "Total Records",
+                "Records Processed",
+                "Avg. Processing Time (secs)",
+                "Totoal Time Taken (mins)",
+                "Attention Needed",
+                "Other Failures"
+            ],
+            "items": 1,
+            "metadata": {
+                "key": "TimeRange",
+                "value": "01/06/2019 00:00:00 - 01/06/2019 03:19:42"
+            },
+            "metrics": [
+                {
+                    "clickable": true,
+                    "key": "totalRecords",
+                    "label": "Total Records",
+                    "value": 76
+                },
+                {
+                    "clickable": true,
+                    "key": "totalProcessed",
+                    "label": "Records Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "totalAwaiting",
+                    "label": "Waiting to be Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "avgProcessingTime",
+                    "label": "Average Processing Time",
+                    "value": "0.03"
+                },
+                {
+                    "clickable": true,
+                    "key": "totalFailed",
+                    "label": "Records Failed",
+                    "value": 76
+                }
+            ],
+            "processName": "DECRYPT",
+            "recordDetails": [],
+            "sourceId": "a3e8d5b1-dcf0-499c-bb63-32ccd45cba2c",
+            "startCode": "",
+            "started": "",
+            "status": "SUCCESS",
+            "tmEnded": "Sun, 06 Jan 2019 08:29:47 GMT",
+            "tmStarted": "2019-Jan-06 03:23 AM",
+            "totalTimeTaken": 0.03,
+            "triggeredBy": "TimeRange"
+        },
+        {
+            "_tm": "",
+            "botsAvailable": "",
+            "displayName": "",
+            "headers": [
+                "Started",
+                "Total Records",
+                "Records Processed",
+                "Avg. Processing Time (secs)",
+                "Totoal Time Taken (mins)",
+                "Attention Needed",
+                "Other Failures"
+            ],
+            "items": 1,
+            "metadata": {
+                "key": "TimeRange",
+                "value": "01/06/2019 00:00:00 - 01/06/2019 03:06:18"
+            },
+            "metrics": [
+                {
+                    "clickable": true,
+                    "key": "totalRecords",
+                    "label": "Total Records",
+                    "value": 76
+                },
+                {
+                    "clickable": true,
+                    "key": "totalProcessed",
+                    "label": "Records Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "totalAwaiting",
+                    "label": "Waiting to be Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "avgProcessingTime",
+                    "label": "Average Processing Time",
+                    "value": "0.03"
+                },
+                {
+                    "clickable": true,
+                    "key": "totalFailed",
+                    "label": "Records Failed",
+                    "value": 76
+                }
+            ],
+            "processName": "DECRYPT",
+            "recordDetails": [],
+            "sourceId": "0dbceeba-98c4-4b9b-ad6f-4bdeb7d1eac5",
+            "startCode": "",
+            "started": "",
+            "status": "SUCCESS",
+            "tmEnded": "Sun, 06 Jan 2019 08:17:25 GMT",
+            "tmStarted": "2019-Jan-06 03:10 AM",
+            "totalTimeTaken": 0.03,
+            "triggeredBy": "TimeRange"
+        },
+        {
+            "_tm": "",
+            "botsAvailable": "",
+            "displayName": "",
+            "headers": [
+                "Started",
+                "Total Records",
+                "Records Processed",
+                "Avg. Processing Time (secs)",
+                "Totoal Time Taken (mins)",
+                "Attention Needed",
+                "Other Failures"
+            ],
+            "items": 1,
+            "metadata": {
+                "key": "TimeRange",
+                "value": "01/06/2019 00:00:00 - 01/06/2019 02:47:07"
+            },
+            "metrics": [
+                {
+                    "clickable": true,
+                    "key": "totalRecords",
+                    "label": "Total Records",
+                    "value": 76
+                },
+                {
+                    "clickable": true,
+                    "key": "totalProcessed",
+                    "label": "Records Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "totalAwaiting",
+                    "label": "Waiting to be Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "avgProcessingTime",
+                    "label": "Average Processing Time",
+                    "value": "0.01"
+                },
+                {
+                    "clickable": true,
+                    "key": "totalFailed",
+                    "label": "Records Failed",
+                    "value": 76
+                }
+            ],
+            "processName": "DECRYPT",
+            "recordDetails": [],
+            "sourceId": "2c741c09-8511-4673-9113-bc0a31ee2107",
+            "startCode": "",
+            "started": "",
+            "status": "SUCCESS",
+            "tmEnded": "Sun, 06 Jan 2019 08:01:31 GMT",
+            "tmStarted": "2019-Jan-06 02:51 AM",
+            "totalTimeTaken": 0.02,
+            "triggeredBy": "TimeRange"
+        },
+        {
+            "_tm": "",
+            "botsAvailable": "",
+            "displayName": "",
+            "headers": [
+                "Started",
+                "Total Records",
+                "Records Processed",
+                "Avg. Processing Time (secs)",
+                "Totoal Time Taken (mins)",
+                "Attention Needed",
+                "Other Failures"
+            ],
+            "items": 1,
+            "metadata": {
+                "key": "TimeRange",
+                "value": "01/06/2019 00:00:00 - 01/06/2019 02:37:54"
+            },
+            "metrics": [
+                {
+                    "clickable": true,
+                    "key": "totalRecords",
+                    "label": "Total Records",
+                    "value": 25
+                },
+                {
+                    "clickable": true,
+                    "key": "totalProcessed",
+                    "label": "Records Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "totalAwaiting",
+                    "label": "Waiting to be Processed",
+                    "value": 0
+                },
+                {
+                    "clickable": true,
+                    "key": "avgProcessingTime",
+                    "label": "Average Processing Time",
+                    "value": "0.04"
+                },
+                {
+                    "clickable": true,
+                    "key": "totalFailed",
+                    "label": "Records Failed",
+                    "value": 25
+                }
+            ],
+            "processName": "DECRYPT",
+            "recordDetails": [],
+            "sourceId": "43fbd1ef-9856-47af-91eb-6d6524e0ea29",
+            "startCode": "",
+            "started": "",
+            "status": "SUCCESS",
+            "tmEnded": "Sun, 06 Jan 2019 07:43:03 GMT",
+            "tmStarted": "2019-Jan-06 02:40 AM",
+            "totalTimeTaken": 0.02,
+            "triggeredBy": "TimeRange"
+        }
+    ],
+    "sourceTotal": 493
+}

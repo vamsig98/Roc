@@ -1,0 +1,221 @@
+@import '../../../../var.scss';
+.notification{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.spacer{
+    flex: 1 1 auto;
+}
+
+.profile-name{
+    line-height: 13px;
+    font-size: 13px;
+}
+
+.profile-designation{
+    line-height: 11px;
+    font-size: 11px;
+}
+.topre{
+    margin-top: 16px;
+}
+
+.profile-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0 0 1px 2px $profile-image-box-shadow-color;
+}
+.profile-name-wrapper{
+    margin: 0 10px;
+    text-align: right;
+}
+mat-drawer{
+    	    background: $mat-drawer-background-color !important;
+	}
+
+mat-drawer .menu.show {
+    display: flex;
+}
+mat-drawer .menu{
+    flex-direction: column;
+    height: auto;
+    margin-left: 0;
+    border: 0;
+    display: none;
+}
+mat-drawer .menu li{
+    height: 30px;
+    text-align: left;
+    width: 100%;
+    border: 0;
+    padding: 0 20px;
+    align-items: flex-start !important;
+    margin: 15px 0;
+}
+mat-drawer .menu li:not(.active):hover{
+    background: $mat-drawer-menu-list-hover-background-color;
+}
+.mat-toolbar-row, .mat-toolbar-single-row {
+    height: 41px !important;
+    position: fixed;
+    z-index: 100;
+
+}
+/* .bgColor {
+    background-color: #30394E;
+} */
+
+/* new css */
+
+ .new .mat-toolbar-single-row{
+    height: 41px !important;
+    background: $mat-toolbar-single-row-header-background-color;
+    padding: 0 1%;
+}
+
+.new_logo{
+  background-image: url(../../../../assets/images/pl_logo.png);
+  width: 141px;
+  height: 41px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+.header_title{
+    margin-top: 4px;
+    font-size: 19px;
+    color:$header-title-text-color;
+    padding-left: 4px;
+    font-weight: bold;
+}
+.header_subtitle{
+    margin-top: -13px;
+    margin-left: 8px;
+    font-size: 12px;
+    color: $header-subtitle-text-color;
+    font-weight: 100;
+}
+ .search-container {
+    float: right;
+  }
+
+.search-query:focus + button {
+    z-index: 3;
+}
+.help_icon{
+    display: flex;
+    padding-right: 16px;
+}
+
+.new .profile-designation {
+    line-height: normal;
+    font-size: 12px;
+    color: $header-profile-designation-text-color;
+}
+.new .profile-name {
+    line-height: normal;
+    font-size: 14px;
+    font-weight: bold;
+    color: $header-profile-name-text-color;
+}
+.new .custom_search_input input{
+    border: 1px solid $app-body-custom-search-input-box-border-color;
+    float: left;
+    width: 452px;
+    background: $app-body-custom-search-input-box-background-color;
+    border-right-style: none;
+    height: 32px;
+} .new .custom_search_input button{
+    float: left;
+    width: 5%;
+    background: $app-body-custom-search-button-background-color;
+    color: $app-body-custom-search-button-color;
+    font-size: 12px;
+    border: 1px solid $app-body-custom-search-input-box-border-color;
+    cursor: pointer;
+    border-left-style: none;
+    // background: $app-body-custom-search-input-box-background-color;
+    height: 32px;
+}.new .custom_search_input{
+    padding-left: 16px;
+}
+.new .search_icon{
+    float: right;
+    font-size: 18px;
+}
+  .new .notification{
+      position: relative;
+      margin-right: 0;
+  }
+  .new .badge{
+    background: $app-body-badge-background-color !important;
+    top: 4px !important;
+    left: 11px !important;
+    position: absolute !important;
+    padding: 3px 5px !important;
+  }
+  .new .custom_search_input :focus{
+    box-shadow: none !important;
+    outline: none !important;
+
+  }
+
+  .new .search {
+    width: 100%;
+    position: relative;
+    padding-left:16px;
+  }
+
+  .new .searchTerm {
+    float: left;
+    width: 432px;
+    padding: 5px;
+    height: 32px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid $app-body-search-term-border-color;
+    background: $app-body-search-term-background-color;
+  }
+
+  .new .searchButton {
+    position: absolute;
+    right: -36px;
+    width: 40px;
+    height: 32px;
+    border: 1px solid $app-body-custom-search-input-box-border-color;
+    background: $app-body-custom-search-input-box-background-color;
+    text-align: center;
+    // color: $app-body-custom-search-button-background-color;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    color: $app-body-custom-search-button-color;
+    border-left-style: none;
+
+  }
+
+  /*Resize the wrap to see the search bar change!*/
+  .new .wrap{
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+/* new css */
+.logo_sec {
+    min-width: 100px !important;
+    max-width: 120px !important;
+    text-align: right;
+}
+/deep/.mat-drawer-content{
+    margin-top: 41px !important;
+}

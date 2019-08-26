@@ -1,0 +1,17 @@
+<div class="flex flex-row flex-align-center flex-justify-center log-item-wrapper">
+  <div class="time-cell">
+    <div *ngIf="(idx === 0)" class="log-time-now">Now</div>
+    <div class="time-text plain-value-size">{{tmFormatted}}</div>
+    <div class="time-dot"  
+      *ngIf="(idx !== 0)"
+      [ngClass]="{'error' : (logItem && logItem.status == 'ERROR') }"
+      ></div>
+  </div>
+  <div class="log-cell flex flex-column"
+   [ngClass]="{'error' : (logItem && logItem.status == 'ERROR') }">
+    <div [innerHTML]="sanitizedLogMsg"></div>
+    <div [innerHTML]="sanitizedExtraInfo"></div>
+  </div>
+  <div class="vertical-line"></div>
+  <div class="time-delay plain-value-size">{{timeDelay}}</div>
+</div>

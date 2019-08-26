@@ -1,0 +1,58 @@
+<nav class="breadcrumb">
+    <div class="row">
+      <div class="col-md-6">
+        <a class="breadcrumb-item" [routerLink]="['/admin/configuration/processlist']">Processes</a>
+        <span class="breadcrumb-item active">{{procName}}</span>
+      </div>
+      <div class="col-md-2 save-delete pull-right">
+        <span class="update-spinner"><mat-spinner color="accent" *ngIf="updateLoading" diameter="20"></mat-spinner></span>
+              <button *ngIf="saveButton" class="btn btn-default save pointer" (click)="saveprocess(process)">
+          <em class="fa fa-save"></em> {{button_name}}</button>
+        <button class="btn btn-default delete"><em class="fa fa-trash"></em>Delete</button>
+      </div>
+    </div>
+   </nav>
+  <div class="row process-details-scroll-data">
+    <div class="modal-items-wrapper col-md-10">
+      <mat-card class="mat-elevation-z main-mat-card">
+          <div id="parentDiv" class="card_y_scroll" scrollSpy [spiedTags]="['DIV']" (sectionChange)="onSectionChange($event)">
+          <div id="General">
+              <app-general [process]="process" ></app-general>
+            </div>
+          <!-- <div id="Schedule" class="schedule">
+              <h3 class="schedule-head">Schedule
+              <span class="schedule-spinner">
+                 <mat-spinner color="accent" diameter="20" *ngIf="isLoading"></mat-spinner>
+                </span></h3>
+              <hr class="schedule-hr">
+              <app-schedule *ngIf="scheduledata" [scheduledata]="scheduledata" [process]="process"></app-schedule>
+          </div> -->
+          <div id="Onboarding">
+            <app-onboarding [process]="process"></app-onboarding>
+          </div>
+          <div id="Stakeholders">
+            <app-stakeholders  [process]="process" [stakeholders]="stakeholders"></app-stakeholders>
+          </div>
+        </div> 
+      </mat-card>
+    </div>
+    <div class="col-md-2 process-list-data">
+      <mat-card class="processes-list">
+        <div class="side-tab pointer" [ngClass]="currentSection === 'General' ? 'highlight-clr': ''"
+          (click)="scrollTo('General')">General
+        </div>
+        <!-- <div class="side-tab pointer" [ngClass]="currentSection === 'Schedule' ? 'highlight-clr': ''"
+        [ngStyle]="{'pointer-events': generalList ? 'inherit' : 'none'}"
+          (click)="scrollTo('Schedule')">Schedule
+        </div> -->
+        <div class="side-tab pointer" [ngClass]="currentSection === 'Onboarding' ? 'highlight-clr': ''"
+          (click)="scrollTo('Onboarding')">Onboarding
+        </div>
+        <div class="side-tab pointer" [ngClass]="currentSection === 'Stakeholders' ? 'highlight-clr': ''"
+        [ngStyle]="{'pointer-events': generalList ? 'inherit' : 'none'}"
+          (click)="scrollTo('Stakeholders')">Stakeholders
+        </div>
+      </mat-card>
+    </div>
+  </div>
+  

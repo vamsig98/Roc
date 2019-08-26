@@ -1,0 +1,9 @@
+{
+    "env": "dev",
+    "apiUrl" : "http://localhost:5005/api",
+    "adminApiUrl": "http://localhost:5005/api",
+    "version": "1.0.0-dev",
+    "tmPollingInMs": 20000,
+    "useMockData": true,
+    "subWayMapPollingTime": 20000
+}

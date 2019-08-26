@@ -1,0 +1,277 @@
+/* Color Set */
+.mat-toolbar{
+    background : linear-gradient(to right, $foregroundBg1 , $foregroundBg2);
+}
+.menu li{
+    color: $foregroundColor1;
+    border-color: $mainMenuBorderColor;
+}
+.menu li.active{
+    background: $mainMenuBg1;
+    color: $mainMenuColor1;
+}
+.dash-wrapper{
+    // background: linear-gradient(to right, $primaryBg1 , $primaryBg2);
+    background-color: $primaryBg1;
+    border-color : $accentBg1;
+}
+.dash-headerbar{
+    // background: linear-gradient(to right, $accentBg1 , $accentBg2);
+    color: $accentColor1;
+}
+.dash-headerbar span{
+    color: $backgroundColor1;
+}
+.list-item-value{
+    color: $primaryColor2;
+}
+.index {
+    background:$accentSecondaryBg1;
+    color: $accentSecondaryColor1;
+}
+.record-box{
+    background: $accentBg1;
+}
+.record-box.waiting-status{
+    background: $accentBg3;
+}
+.record-box.notindexed-status{
+    background: $notindexed;
+}
+.record-box.indexed-status{
+    background: $indexed;
+}
+.record-box-item{
+    color: $accentColor1;
+}
+
+.add-bot-popup{
+    background: $mainMenuColor1;
+}
+.add-bot-popup .btn-done{
+    background: $mainMenuBg1;
+    color: $mainMenuColor1;
+}
+.btn-accent.mat-raised-button,
+.btn-accent{
+    background: $mainMenuBg1;
+    color: $mainMenuColor1;
+}
+
+.work-item-header{
+    background-color: $primaryBg3;
+}
+.status-indicator{
+    background:$accentLinkBg1;
+    color:$accentColor1;
+}
+.avg-totals,
+.record-totals{
+    background: $flowBg3;
+}
+.post-processing,
+.processing,
+.pre-processing{
+    background: $flowBg2;
+}
+.processing.active,
+.pre-processing.active{
+    background: $flowBg1;
+}
+.process-dot{
+    background: $dotBg1;
+}
+.process-line{
+    background: $primaryBg1;
+}
+.active-process-line{
+    background: linear-gradient(to right, $activeBg1 , $activeBg2);
+}
+.back{
+    color: $accentColor1;
+}
+.bots-label{
+    color: $accentLinkColor1;
+    cursor: pointer;
+}
+.accent-label-color{
+    color: $accentSecondaryColor2;
+}
+.primary-label-color{
+    color: $accentColor2;
+}
+.plain-value,
+.plain-label{
+    color: $primaryColor1;
+}
+.plain-error-value{
+    color: $warnColor1;
+}
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+    background: $mainMenuBg1;
+}
+.tab-head{
+    color: $tabHeadColor1;
+}
+
+.error-wrapper{
+    color: $errorColor1;
+    background: $errorBg1;
+}
+.seperator-border{
+    border-color: $accentBg1;
+}
+.circle-wrapper .mat-progress-spinner circle, .mat-spinner circle{
+    stroke: $activeBg1;
+}
+.processing-bottom-label.pre-process{
+    border-bottom-color: $dashedLineColorPreProcess;
+}
+.processing-bottom-label.pre-process span{
+    background: $dashedTextBgPreProcess;
+}
+.processing-bottom-label.label-process{
+    border-bottom-color: $dashedLineColorProcess;
+}
+.processing-bottom-label.label-process span{
+    background: $dashedTextBgProcess;
+}
+.processing-bottom-label.post-process{
+    border-bottom-color: $dashedLineColorPostProcess;
+}
+.processing-bottom-label.post-process span{
+    background: $dashedTextBgPostProcess;
+}
+.processing-bottom-label span{
+    border-left-color: #FFF;
+    border-right-color:#FFF;
+}
+special{
+    color: $primaryBg1;
+}
+
+.log-cell{
+    background: $logBg1;
+}
+.log-cell.error{
+    background: $logBgError1;
+}
+.vertical-line{
+    background: $logLineBg1;
+}
+.time-dot.error{
+    background: $logErrorTimeDot;
+    box-shadow: 0 0 0px 2px #FFF, 0 0 3px 2px $logErrorTimeDot;
+}
+.time-dot{
+    background: $logTimeDot;
+    box-shadow: 0 0 0px 2px #FFF, 0 0 3px 2px $logTimeDot;
+}
+.log-time-now{
+    background: $logTimeNowBg;
+    color: $logTimeNowColor;
+}
+.list-sub-header{
+    background: $backgroundBg4;
+}
+.mat-menu-item{
+    color: $subHeadBg2;
+}
+a.tab-head:focus, 
+a.tab-head:hover,
+a:focus, 
+a:hover{
+    text-decoration: underline;
+}
+a.tab-head:focus, 
+a.tab-head:hover,
+.tab-head:hover{
+    color: $tabHeadColor1;
+}
+a.tab-head:focus{
+    text-decoration: none;
+}
+
+.mat-drawer{
+    background: $sidenavBg;
+    color : $sidenavColor;
+}
+mat-drawer .menu li.active{
+    background : $sidenavItemActiveBg;
+}
+
+app-list-item{
+    background-color: $backgroundBg3;
+}
+.record-wrapper{
+    background-color: $accentBg1;
+}
+.record-wrapper.waiting-status{
+    background-color: $accentBg3;
+}
+
+.record-wrapper.notindexed-status{
+    background-color: $notindexed;
+}
+.record-wrapper.indexed-status{
+    background-color: $indexed;
+}
+
+.bottom-border-item{
+    border-bottom-color: $accentColor2;
+}
+.view-button.mat-button,
+.view-button{
+    color: $viewColor1;
+}
+.view-border{
+    border-color: $viewColor1;
+}
+.meta-text-value-color{
+    color: $primaryColor3;
+}
+.meta-text-label-color{
+    color: $primaryColor4;
+}
+.primary-border-color{
+    border-color: $primaryBorderColor1;
+}
+hr{
+    border-top-color: $primaryBorderColor1;
+}
+.dash-wrapper .tab-wrapper{
+    margin: 3px 0px;
+    min-height: calc(100vh - 55px) !important;
+    box-sizing: border-box;
+    box-shadow: 0 0 4px 0 #ceced0;
+    /*border-width: 3px;
+    border-style: solid;*/
+}
+app-work-item .list-item-value{
+    color: $accentColor3;
+}
+.sidecontent{
+    background: #FFF;
+}
+.process-menu .active {
+    color: $logTimeNowBg;
+    background: #FFF;
+    font-weight: 400;
+}
+
+.process-menu li{
+    color: #FFF;
+}
+
+.process-menu li:not(.active):hover{
+    background : rgba(255, 255, 255, 0.247);
+}
+app-processes-init .mat-tab-header,
+app-processes-init .range-bar{
+    background: $backgroundBg5;
+}
+app-processes-init .tab-card-wrapper,
+app-processes-init .metadat-wrapper{
+    background: $backgroundBg6; 
+}
+/* EOF Color Set */

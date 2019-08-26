@@ -1,0 +1,209 @@
+@import '../../../../../src/var.scss';
+.row {
+  margin: 0;
+}
+.mat-card-data {
+  padding: 0 0 0 15px;
+  margin: 54px 0 0 0 !important;
+  overflow: hidden;
+  .resource-header {
+    height: 35px;
+    background: $header-background;
+    align-items: center;
+    display: flex;
+    position: relative;
+    margin: 0 0 0 -15px;
+    .resources-support {
+      color: $header-text;
+      font-weight: bold;
+      font-size: 14px;
+      margin: 10px 0 9px 10px;
+    }
+    .arrow-forward {
+      font-size: 11px;
+      cursor: pointer;
+      background-color: $background-arrow-symbol;
+      padding: 6px;
+      border-radius: 10px;
+      position: absolute;
+      right: 5px;
+      top: 6px;
+    }
+    .arrow-back {
+      margin: 4px 4px;
+      font-size: 11px;
+      cursor: pointer;
+      background-color: $background-arrow-symbol;
+      padding: 6px 4px 6px 8px;
+      border-radius: 10px;
+    }
+  }
+  .info {
+    .about {
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 14px;
+      margin-bottom: 0;
+    }
+    .automate {
+      font-size: 11px;
+      padding: 5px 18px 30px 10px;
+      background: $resource-general-info-background;
+      opacity: 0.8;
+      color: $about-text-color;
+      width: 95%;
+      margin-top: 9px;
+      // min-height: 80px;
+      height: calc(100vh - 540px);
+    overflow: auto;
+    }
+    .automateinfo{
+      font-size: 14px;
+      // padding: 5px 18px 30px 10px;
+      background: $resource-general-info-background;
+      opacity: 0.8;
+      color: $collapse-text-color;
+      width: 95%;
+      margin-top: 9px !important;
+      min-height: 80px;
+      text-align: center;
+      padding-top: 28px;
+    }
+  }
+  .stakeholder-data {
+    .stakeholder-header {
+      color: $about-text-color;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 0 !important;
+      margin-top: 20px;
+    }
+    .stake-holders {
+      width: 95%;
+      padding-left: 10px;
+      margin-top: 5px;
+      height: calc(100vh - 469px);
+      overflow: auto;
+      background: $resource-general-info-background;
+      .business {
+        padding: 10px 0 0;
+        font-size: 11px;
+        font-weight: 600;
+      }
+      .mat-card-header {
+        font-size: 12px;
+        .mat-card-title {
+          font-size: 12px;
+        }
+        .example-header-image {
+          background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+          background-size: cover;
+          width: 38px;
+        }
+      }
+      .mat-card-header .mat-card-subtitle:not(:first-child) {
+        margin-top: -11px !important;
+        font-size: 11px !important;
+        color: $about-text-color;
+      }
+    }
+    .no-holder{
+      text-align: center;
+      padding-top: 20%
+    }
+  }
+  .data {
+    .general-info {
+      font-size: 12px !important;
+      font-weight: 700 !important;
+      margin-top: 22px;
+      margin-bottom: 0;
+      color: $about-text-color;
+    }
+    .general {
+      color: $about-text-color;
+      font-size: 12px;
+      padding: 10px 0 10px 10px;
+      background: $resource-general-info-background;
+      width: 92%;
+      margin: 6px 6px;
+      min-height: 95px;
+    }
+  }
+  .resource-comp {
+    z-index: 1000;
+    background: $collapse-background-color;
+    margin-left: -15px;
+    opacity: 0.9;
+    overflow: hidden;
+    .info {
+      .about {
+        // margin-left: 10px;
+        margin: 0;
+      }
+      .automate {
+        z-index: 1000;
+        background: $collapse-background-color;
+        // height: 36px;
+        overflow: hidden;
+        opacity: 1.0;
+        color: $collapse-text-color;
+        display: flex;
+        width: 10px;
+      }
+      .automateinfo{
+        font-size: 14px;
+        background: $collapse-background-color;
+        opacity: 0.8;
+        color: $collapse-text-color;
+        width: 95%;
+        // margin-top: 15px !important;
+        min-height: 80px;
+        padding: 3px 0 0 11px;
+      }
+    }
+    .stake-holders {
+      z-index: 1000;
+      background: $collapse-background-color;
+      opacity: 0.9;
+      overflow: hidden;
+      // margin-top: 5px;
+      height: calc(120vh - 950px);
+     
+      .example-header-image {
+        z-index: 1000;
+        background: $collapse-background-color;
+        opacity: 0.9;
+        overflow: hidden;
+        background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+        background-size: cover;
+        width: 38px;
+        margin: 0 0 0 7px;
+      }
+      .mat-card-header .mat-card-title {
+        z-index: 1000;
+        background: $collapse-background-color;
+        opacity: 0.9;
+        overflow: hidden;
+        font-size: 12px;
+      }
+    }
+    .no-holder{
+      margin-top: 101px !important;
+      text-align: center;
+      padding-top: 20%
+    }
+    .data {
+      .general-info,
+      .general {
+        margin-left: 14px;
+        z-index: 1000;
+        background: $collapse-background-color;
+        opacity: 0.9;
+        overflow: hidden;
+        min-height: 41px;
+        // height: 52px;
+      }
+    }
+  }
+}

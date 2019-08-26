@@ -1,0 +1,249 @@
+<div class="no-margin-reports">
+  <div class="reports-container" [hidden]="showDrill">
+    <div class="header-report">
+      <div class="report-title no-padding-no-margin">Throughput Report
+      </div>
+
+      <div class="downloadcls pull-right">
+        <span class="pull-right downloadtitle" title="Download as PNG" (click)="getPng()">
+          PNG
+        </span>
+      </div>
+      <div class="downloadcls pull-right download-icon-bg">
+        <mat-icon class="pull-right">save_alt</mat-icon>
+      </div>
+      <button class="pull-right searchbtncls" mat-icon-button (click)="loadReportByFilter(selectedFilter)">
+        Search <mat-icon aria-label="Search">search</mat-icon>
+      </button>
+
+      <div class="col-md-2 pull-right filtercls weekcls" >
+        <mat-form-field class="search-text" >
+          <input class="weekrange" type="number" [disabled]="selectedFilterWeek === 'Month' || selectedFilterWeek === 'Quarter'"  matInput [(ngModel)]="weekrangestart" placeholder="Week From" />
+        </mat-form-field>
+        <mat-form-field class="search-text">
+          <input class="weekrange" type="number" [disabled]="selectedFilterWeek === 'Month' || selectedFilterWeek === 'Quarter'" matInput [(ngModel)]="weekrangeend" placeholder="Week To" />
+        </mat-form-field>
+      </div>
+      <div class="col-md-1 pull-right filtercls totalcls totalclsdiv">
+        <mat-form-field>
+          <mat-select placeholder="status" [(value)]="selectedFilter">
+            <mat-option value="total">Total</mat-option>
+            <mat-option value="success">Success</mat-option>
+            <mat-option value="failed">Failure</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-md-2 pull-right filtercls totalcls">
+        <mat-form-field>
+          <mat-select placeholder="Timeline" [(ngModel)]="selectedFilterWeek" [(value)]="selectedFilterWeek">
+            <mat-option value="Week">Week</mat-option>
+            <mat-option value="Month">Month</mat-option>
+            <mat-option value="Quarter">Quarter</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      
+      <div class="col-md-1 pull-right filtercls totalclsyear">
+        <mat-form-field>
+          <mat-select placeholder="Year" [(ngModel)]="filterYear" (change)="setWeekrange(filterYear)" [(value)]="filterYear">
+            <mat-option value="2018">2018</mat-option>
+            <mat-option value="2019">2019</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-md-2 pull-right filtercls filetr">
+        <mat-form-field *ngIf="processList">
+          <mat-select [(ngModel)]="selectedprocess" placeholder="Processes" multiple>
+            <input class="form-control searchprocessfilter" type="text" placeholder="Processes" [(ngModel)]="searchProcess">
+            <mat-option *ngFor="let item of processList  | filter : 'key' : searchProcess" [(value)]="item.key">{{item.key}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div *ngIf="reportData && reportData.headers.length==1" class="no-data"> No Data Available !</div>
+    <div class="report-container" *ngIf="!isLoading && reportData.headers.length > 1" id="report-container">
+      <div class="tabledivleft">
+        <div class="graphical-view" *ngIf="reportData">
+          <div class="pull-left yaxescls">Units of work
+            <span>&#8594;</span>
+          </div>
+          <nvd3 [options]="leftoptions" [data]="reportData.graph_data"></nvd3>
+          <table id="reports-tbl1" class="table table-bordered headertable">
+            <thead>
+              <ng-container *ngFor="let header of reportData.headers;let first=first;">
+                <th *ngIf="first==true">
+                  <div> {{filterdrilldown}}
+                    <span>&#8594;</span>
+                  </div>
+                </th>
+              </ng-container>
+            </thead>
+            <tbody>
+              <tr *ngFor="let value of reportData.data;let p=index;">
+                <ng-container *ngFor="let header of reportData.headers;let first = first; let i = index;let even=even;let odd=odd;">
+                  <td class="report-table-td-height" *ngIf="first==true" matTooltip="{{value[header] == 0 ?'':value[header]}}">
+                    <div class="colordiv" [ngStyle]="{'background-color': colours[getIndexofColor(value[header])]}"></div>
+                    {{value[header] == 0 ?'':truncateto20(value[header])}}
+                  </td>
+                </ng-container>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tabledivright">
+        <div class="graphical-view" *ngIf="reportData">
+          <nvd3 #nvd3 [options]="options" [data]="reportData.graph_data"></nvd3>
+          <div class="downloadTableCls" id="downloadtableicons">
+            <div class="downloadcls pull-right">
+              <span class="pull-right downloadtitle" title="Download as XLS" (click)="downloadasExcel('xls')">
+                XLS
+              </span>
+              <span class="devider pull-right"></span>
+              <span class="pull-right downloadtitle" title="Download as CSV" (click)="downloadasExcel('csv')">
+                CSV
+              </span>
+            </div>
+            <div class="downloadcls pull-right download-icon-bg">
+              <mat-icon class="pull-right">save_alt</mat-icon>
+            </div>
+          </div>
+          <table id="reports-tbl" class="table table-bordered fixed-table">
+            <thead>
+              <ng-container *ngFor="let header of reportData.headers;let firsthead=first;">
+                <th *ngIf="firsthead==false && header!=='week'">
+                  <div> {{header}}
+                  </div>
+                </th>
+              </ng-container>
+            </thead>
+            <tbody>
+              <tr *ngFor="let value of reportData.data;let p=index;">
+                <ng-container *ngFor="let header of reportData.headers ;let first = first; let i = index;let even=even;let odd=odd;">
+                  <td class="report-table-td-height" [ngClass]="{'custom_value_cls':(value[header] && value[header]['custom']==true),'custom_value_active':(value[header] && value[header]!='0' && value[header].length!=0)}"
+                    *ngIf="first==false && header!=='week'">
+                    <div (click)="filterdrilldown ==='Week'  && (value[header] && value[header]['custom']==false)  ? openDrilldown(header,value[header],value['week'],value['name']):''"
+                      *ngIf="value[header]" [ngClass]="{'setTransparent':(value[header]['value'] == 0 || value[header]['value']==' ')}">{{(value[header]["value"]
+                      == 0 || value[header]["value"]=='')?'-':value[header]["value"]}}</div>
+                  </td>
+                </ng-container>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <mat-spinner class="pull-right" color="accent" diameter="20" *ngIf="isLoading"></mat-spinner>
+
+    <table *ngIf="!isLoading" id="tbldownload" [hidden]="true" class="table table-bordered  report-download">
+      <thead>
+        <tr>
+           
+          <ng-container *ngFor="let header of reportData.headers;let first=false;">
+            <th>
+              <div> {{header}}
+              </div>
+            </th>
+          </ng-container>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let value of reportData.data;let p=index;">
+          <ng-container *ngFor="let header of reportData.headers;let first = first; let i = index;let even=even;let odd=odd;">
+            <td style="height:22px;" *ngIf="first==false">
+              <div *ngIf="value[header]">{{(value[header]["value"] == 0 ||
+                value[header]["value"]=='')?'0':value[header]["value"]}}</div>
+              <div *ngIf="!value[header]">0</div>
+            </td>
+            <td *ngIf="first==true">
+              {{value[header]}}
+            </td>
+          </ng-container>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="reports-container-drill" [hidden]="!showDrill">
+    <div class=" report-drill" *ngIf="selectedRecord">
+    <div class="row">
+      <div class="backcls">
+        <mat-icon (click)="backtoReport()" class="drill-down-back-wr pull-left">arrow_back_ios</mat-icon> Back to
+       Throughput Report
+       
+        <mat-spinner color="accent" diameter="20" *ngIf="isdrillLoading" class="pull-right"></mat-spinner>
+      </div>
+     
+      <div class="headerdetails">
+        <div class="col-md-3 no-margin-no-padding">
+          <div class="procdetails">
+            <span class="procTitle">Process</span>
+            <div class="ProcName" matTooltip="{{selectedRecord.proc_name}}">
+              {{selectedRecord.proc_name}}
+            </div>
+            <div class="procdevider"></div>
+            <div class="ProcDate">
+              {{selectedRecord.DateofWeek}}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 no-margin-no-padding header-mat-container">
+          <mat-card class="header-mat-card active">
+            <div class="dateheadertitle">WEEK {{selectedRecord.week_number}}</div>
+            <div class="dateheadercount">{{selectedRecord.week_value.value}}</div>
+          </mat-card>
+          <div class="arrow-up"></div>
+        </div>
+      </div>
+      <div class="finance-record-drill-down" *ngIf="!isdrillLoading && reportdrillData">
+        <div class="drill-wr">
+          <mat-card (click)="drillRuns(header.day,header.records)" *ngFor="let header of reportdrillData.result"
+            [ngClass]="{'active':selecteddrillDate==header.day}">
+            <div class="datetitle">Day {{getDay(header.day)}}</div>
+            <div class="datetitle dayNumber">{{header.total}}</div>
+          </mat-card>
+        </div>
+        <div class="drill-expand" *ngIf="selecteddrillDate">
+          <table class="table table-responsive table-drill">
+            <thead>
+              <th>
+                Run Name
+              </th>
+              <th>
+                Start Time
+              </th>
+              <th>
+                Finish Time
+              </th>
+              <th>
+                Work Items#
+              </th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of reportdrilldate;let i=index;">
+                <td>
+                  Run {{i+1}}
+                </td>
+                <td>
+                  {{getDate(item["start_time"])}}
+                </td>
+                <td>
+                  {{getDate(item["end_time"])}}
+                </td>
+                <td>
+                  {{item["files_count"]}}
+                </td>
+              </tr>
+              <tr *ngIf="reportdrilldate && reportdrilldate.length==0">
+                <td colspan="8">
+                  No data available !
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

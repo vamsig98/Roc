@@ -1,0 +1,226 @@
+//app-body component
+$profile-image-box-shadow-color: #e6e6e6;
+$mat-drawer-background-color: #181c26;
+$mat-drawer-menu-list-hover-background-color: #2f233d40;
+$mat-toolbar-single-row-header-background-color: #f4f4f4;
+$header-title-text-color: #ff5a11;
+$header-subtitle-text-color: #363535;
+$header-profile-name-text-color: #505050;
+$header-profile-designation-text-color: #6f6f6f;
+$app-body-custom-search-input-box-border-color: #DAD8D9;
+$app-body-custom-search-input-box-background-color: #f6fdff;
+$app-body-custom-search-button-background-color: #ffff;
+$app-body-custom-search-button-color: #808080;
+$app-body-badge-background-color: #d0021b;
+$app-body-search-term-border-color: #DAD8D9;
+$app-body-search-term-background-color:#f6fdff;
+
+//main
+    //operational
+               //operational-dashboard 
+                    $operational-dashboard-dash-wrapper:#131329;
+                    $operational-dashboard-sub-way-wrapper:#38374f;
+                    $operational-dashboard-padding: #979797;
+                    $operational-contentLob:#ffff;
+                    $operational-dashboard-padding-background-color: #222939;
+                    $operational-dashboard-mat-expansion-panel-backgroud-color:#232A3C;
+                    $operational-dashboard-mat-expansion-panel-header-description-color:#a9a9a9;
+               //subway-config component
+                    $subway-config-content-wrapper-background-color:#ffff;
+                    $subway-config-content-wrapper-box-shadow-color:#ceced0;
+                    $subway-config-content-wrapper-border-bottom-color:#979797;
+                    $subway-config-content-map-title-color:#f6f6f6;
+                    $subway-config-content-properties-border-color:#ccc;
+                    $subway-config-content-properties-backgroud-color:#fafafa;
+                    $subway-config-content-wrapper-subway-map-viewer-menu: #1c1b3b;
+                    $subway-config-content-wrapper-mat-toolbar-single-row: #949494;
+    //processes
+            //processes-init component
+                    $processes-init-sidenav-bg:#273043;
+                    $processes-init-sidecontent-backgroud-color:#232939;
+                    $processes-init-sidenav-bodercolor:#373E4E;
+                    $processes-tab-wrapper-bg:#F9F9F9 ;
+                    $processes-tab-wrapper-slider-before-backgroud-color:#ffff;
+                    $processes-mat-tab-label-active:#ff5a11;
+                    $processes-mat-tab-header: #dfe3e5 ;
+                    $processes-slider-backgroud-color:#ccc;
+                    $processes-mat-tab-active-process-color:#a7a7a8;
+                    $processes-mat-tab-active-schedule-color:#B7AFB3;            
+                    // $processes-toggle-left:#435272;
+            //resources and support component
+                $collapse-background-color: #8B8E95;
+                $collapse-text-color: #181616;
+                $about-text-color: #646464;
+                $about-data-background-color: #d8d8d8;
+                $header-text: #646464;
+                $background-arrow-symbol: #BFC3C5;
+                $header-background: #dfe3e5;
+                $resource-general-info-background:#F2F2F2;
+            //work-item-metadata component
+                $header-range-bar-background-color: #dfe3e5;
+                $header-menu-metadata-button-color: #7f8082;
+                $header-menu-metadata-active-button-color: #FF5A11;
+                $body-meta-wrapper-background-color: #f9f9f9;
+            //completed-work-items component
+                $table-border-color: #cccccd;
+                $table-border-bottom-color: #ddd;
+                $table-header-backgroud-color: #e6eef7;
+                $table-header-text-color: #5f6061;
+                $table-body-background-color: #ecf1f7;
+                $table-body-text-color: #5f6061;
+            //process-list component
+                $placeholder-color: #ffffff;
+                $input-search-field-background-color: #202636;
+                $input-search-field-border-color: #3a4663;
+                $input-field-text-color: #ffff;
+                $search-icon-background-color: #202636;
+                $search-icon-border-color: #3a4663;
+                $filter-dropdown-menu-border: #000000;
+                $checkbox-background-color: #d8d8d8;
+                $checkbox-border-color: #979797;
+                $filter-dropdown-menu-fields-color: #4a4a4a;
+                $side-nav-expansion-panel-header: #273043;
+                $side-nav-expansion-panel-border : #373E4E;
+                $side-nav-expansion-panel-active-item: #424f6f;
+            //active-work-items component
+                $status-text-color: #555555;
+                $box-hover-border-color: #4A90E2;
+                $box-active-background-color: #E7F3FF;
+                $box-background-color: #e6eef7;
+                $box-border-color: #dedee0;
+                $box-header-key-text-color: #747474;
+                $box-header-value-text-color: #201f20;
+                $box-border-bottom-color: #cccccd;
+                $box-data-header-text-color: #4a4a4a;
+                $processing-issue-fieldset-border-color: #ef9898;
+                $processing-issue-fieldset-background-color: #fef5f5;
+                $system-issue-count-color: #6b6b6b;
+                $error-text-color: #f44337;
+                $record-details-button-text-color: #ffffff;
+           //view-log-details-component
+                $view-log-details-logs:#989699;
+                $view-log-details-table-header-color:#5f6061;
+                $view-log-details-table-body-background-color:#ecf1f7;
+                $view-log-details-record-table-border-color:#cccccd;
+                $view-log-icon: #0000;
+                $view-table_header:#e7eff7;
+                $view-log-details-table-border-color:#ddd;
+            //view-record-details component
+                $view-record-details-recordli-color:#989699;
+                $view-record-details-menu-item-value:#454446;
+                $view-record-details-icon-custom:#0000;
+                $view-record-details-record-table:#cccccd;
+                $view-record-details-table-header-bg:#e6eef7;
+                $view-record-details-table-border-bottom:#ddd;
+                $view-record-details-table-body-background-color:#ECF1F7;
+                $view-record-details-table-header-color: #4a4a4a;
+                $view-record-details-msg-failure:#d0021b;
+
+    // Financial Dashboard
+            //Financial Records
+                $financial-table-header-border-bottom: lightgrey;
+                $financial-table-header-color: #2a2828;
+                $financial-table-body-tr-text-clr :#00000091;
+                $financial-table-body-increase:green;
+                $financial-table-body-decrease:red;
+                $financial-table-body-equal:#ddd;
+                $financial-mat-icon-element-form-field: white;
+                $financial-table-childname-color:#4a4a4a;
+            //Graphical View
+                $financial-graphical-highcharts-title-color: #d3d3d3;
+                $financial-graphical-highcharts-title-fill: #000000ad;
+                $financial-graphical-highcharts-backdrop: rgba(0,0,0,0.4);
+                $finance-record-drilldown-background-color: #fff;
+                $finance-record-selectedRecordName: #ffffff;    
+                $finanace-record-aggregated-process-level-metrics: #4a4a4a;
+            //summary
+                $financial-summary-background-color:#f9f9f9;
+                $financial-summary-dollar-cls: aquamarine;
+                $financial-summary-header-color: #585757;
+                $financial-summary-finacial-value-color: #44930c;
+                $financial-summary-dollar-color: #ffff;
+        //Reports
+            //throughput-recon component
+                $throughput-background-color:#ffff;
+                $throughput-container-border-color:#ddd;
+//admin
+
+        //basic component
+        $basic-label-color:#545454;
+        $basic-input-color:#808080;
+        $basic-input-border-color:#ffff;
+        $basic-toastr-sucess-color:#13d613;
+        $basic-failure-color:#FF0000;
+        $basic-button-color:#640085;
+    //processes component
+        $table-header-color: #989699;
+        $table-border-color: #cccccd;
+        $table-body-text-color: #4a4a4a;
+        $table-process-name-text-color: #2389ff;
+        $process-component-background-color: #30394E;
+        $table-section-background: #e9eff5;
+        $search-icon-color: #808080;
+        $process-search-icon-background-color: #ffff;
+        $process-search-icon-border-color: #DAD8D9;
+        $fa-caret-icon-color: #000000;
+        $custom-button-color: #FF5A11;
+        $sort-icon-active: #5395E3; 
+    //process-detail component
+        $process-breadcrumb-text-color : #cfcfcf;
+        $process-a-nav-link-active-purple-color: #8B008B;
+        $process-description-text-black-color: #000000;
+        $process-legendfield-text-Gunmetal-color:#333;
+        $process-nav-btn-white-color:#FFFFFF;
+        $process-nav-tab-whitesmoke-color:#DEDEDE;
+        $process-nav-tab-background-color:#F6F6F6;
+        $process-a-nav-active-red-color:#FF0000;
+        $process-select-item-background-color:#80808047;
+        $process-nav-tab-gray-color:#808080;
+        $process-stakeholder-text-color:#a9a9a9;
+        $process-process-list-background-color:#4c556a;
+        $process-right-border-color :#cad2da;
+        $process-breadcrumb-save-delete-button-color:#ccc;
+        $process-breadcrumb-save-delete-background-color:#30394e;
+        $stakeholders-background-color : #F4F4F4;
+    //add-stakeholders
+        $add-stakeholders-save-button-color: #fff;
+        $add-stakeholders-save-button-background-color: #FF5A11;
+        $add-stakeholders-cancel-button-color: #333;
+    //Onboarding component
+        $process-ngx-border-color:#ddd;
+        $process-description-text-black-color: #000000;
+        $process-nav-btn-white-color:#FFFFFF;
+    //lobs component
+        $lobs-template-border-color:#808080;
+        $lobs-template-background-color: #ecf3f7;
+        $lobs-template-button-color: #ffff;
+        $lobs-template-input-field-background-color:#F6F6F6;
+        $lobs-template-button-backgroundcolor: #640085;
+        $lobs-editLobTemplate-breadcrumb-bg-color: #4B4D4F;
+        $lobs-template-toolbar-backgroud-color:#0503032e;
+        $lobs-template-toolbar-snow-backgroud-color:#cccccc2e;
+        $lobs-template-input-field-border-color:#80808052;
+        $lobs-template-label-color : #545454;
+        $lobs-toastr-color:#13d613;
+        $lobs-failure-class:#FF0000;
+    //user-list component
+        $user-list-button-color: #640085;
+        $user-list-input-field-background-color:#F6F6F6;
+        $user-list-text-color:#ffffff ;
+        $user-list-template-background-color: #ecf3f7;
+        $user-list-border-color:#808080;
+        $user-list-label-text-color:#545454;
+        $user-list-breadcrumb-text-color: #4B4D4F; 
+        $user-list-toastr-color:#13d613;
+        $user-list-toolbar-color:#cccccc2e;
+        $user-list-input-field-border-color:#80808052;
+        $user-list-failure-color:#FF0000;
+    //email-template component
+        $email-template-button: #640085;
+        $email-template-textcolor:#ffffff;
+        $email-template-background-color:#ecf3f7;
+        $email-template-border-color:#808080;
+        $email-template-toastr-color:#13d613;
+        $email-template-failure-class-color:#FF0000;
+        $email-template-toolbar-color:#cccccc2e;
+        $email-template-failure-color:#FF0000;

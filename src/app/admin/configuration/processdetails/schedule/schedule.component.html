@@ -1,0 +1,42 @@
+<div class="schedule-main">
+  
+    <p class="p-scheduleprocess">Add cron jobs to schedule this process</p>
+    <div class="row schedule-row">
+      <div class="col-lg-9 schedule-next">
+        <p *ngIf="nextRun" class="nextRun">
+          Next Run: {{scheduledata.next_run}}</p>
+          <span><a class="a-new pointer" (click)="addCorn(schedule)">+ New cron</a></span>
+      </div>
+      <ng-container *ngIf="scheduledata.result?.length > 0" >
+
+      <div class="schedule-scroll col-lg-9">
+      <div class=" schedule-exp" *ngFor="let schedule of scheduledata.result; let i=index" >
+  
+        <div class="row ml-15 rowtwo ">
+          <div class="col-lg-4 cron_name">
+            <p>{{schedule.Name}}</p>
+          </div>
+          <div class="col-lg-4 cron">
+            <p>{{schedule.StartProcessCron}}
+            </p>
+          </div>
+          <div class="col-lg-4 actions">
+                <label class="switch">
+                    <input type="checkbox"  [(ngModel)]="schedule.Enabled"
+                    [ngModelOptions]="{standalone: true}"
+                    (change)="scheduled($event,i,schedule)">
+                    <span class="slider round"></span>
+                  </label>
+              <span class="fonticon"> 
+                <em class="fa fa-pencil pointer" aria-hidden="true" (click)="editScheduleCorn(schedule, i)"></em>
+                <button class="delete-btn" [disabled]="!scheduledata.delete_enabled"  (click)="deleteScheduleorn(schedule,i)"><em class="fa fa-trash fa-lg"></em></button>
+                </span>
+              </div>
+        </div>
+      </div>
+    </div>
+    </ng-container>
+      <h3 class="no_schedule" *ngIf="!scheduledata.result?.length > 0">No Schedules Availble</h3>
+    </div>
+  </div>
+  

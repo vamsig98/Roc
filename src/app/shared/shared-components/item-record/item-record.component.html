@@ -1,0 +1,30 @@
+<div *ngIf="showDetailLink" class="status-bar status-bar-dummy plain-label-size primary-label-color" [ngClass]="{'waiting-status' : (itemRecord && itemRecord.status.toUpperCase() == 'WAITING' ),'notindexed-status':(itemRecord && itemRecord.status.toUpperCase() == 'NOT_INDEXED'),'indexed-status':(itemRecord && itemRecord.status.toUpperCase() == 'INDEXED')}">
+  {{(itemRecord ? (itemRecord && itemRecord.status.toUpperCase() == 'WAITING' ? 'Waiting' : ( itemRecord && itemRecord.status.toUpperCase()
+  == 'SUCCESS' ? 'Processed' : (itemRecord && itemRecord.status.toUpperCase() == 'INCOMPLETE' ? 'Incomplete' : (itemRecord && itemRecord.status.toUpperCase() == 'NOT_INDEXED'?'Started, Waiting': (itemRecord
+  && itemRecord.status.toUpperCase()=='INDEXED'?'Started, Waiting':'Currently Running'))))) : '')}}
+</div>
+<div *ngIf="itemRecord" class="record-wrapper record-wrapper-dummy" [ngClass]="{'waiting-status' :  (itemRecord && itemRecord.status.toUpperCase() == 'WAITING'),'notindexed-status':(itemRecord && itemRecord.status.toUpperCase() == 'NOT_INDEXED'),'indexed-status':(itemRecord && itemRecord.status.toUpperCase() == 'INDEXED')}">
+  <div class="record-head bottom-border-item" (click)="showDetailLink?openWorkItemDetail(''):''">
+    <div class="record-item-field">
+      <div class="record-item-label plain-label-size primary-label-color">Started:</div>
+      <div class="record-item-value plain-value plain-value-size" [ngClass]="{'waiting-color' :  (itemRecord && itemRecord.status.toUpperCase() == 'WAITING')}">
+      {{(itemRecord ? (itemRecord && itemRecord.status.toUpperCase() == 'WAITING' ? 'Waiting' : itemRecord.tmStarted ) : '')}}</div>
+    </div>
+    <div class="record-item-field">
+      <div class="record-item-label plain-label-size primary-label-color">{{itemRecord.metadata.key}}:</div>
+      <div class="record-item-value plain-value plain-value-size" matTooltip="{{itemRecord.metadata[key]}}">{{itemRecord.metadata.value}}</div>
+    </div>
+    <button style="display:none;" *ngIf="showDetailLink" mat-button class="plain-label-size absolute view-button view-border btn-record-head"
+      (click)="openWorkItemDetail('')">
+      <mat-icon class="ico-view">format_align_justify</mat-icon>
+      View Record Details
+    </button>
+  </div>
+  <div class="record-box" [ngClass]="{'waiting-status' : (itemRecord && itemRecord.status.toUpperCase() == 'WAITING' ),'notindexed-status':(itemRecord && itemRecord.status.toUpperCase() == 'NOT_INDEXED'),'indexed-status':(itemRecord && itemRecord.status.toUpperCase() == 'INDEXED')}">
+    <div class="record-box-item" *ngFor="let record of itemRecord.metrics; let i = index;" [ngClass]="{'pointer' : record.clickable && itemRecord.status.toUpperCase() != 'NOT_INDEXED' && itemRecord.status.toUpperCase() != 'INDEXED'}"
+      (click)="itemRecord.sourceId!='NA' && itemRecord.status.toUpperCase() != 'NOT_INDEXED' && itemRecord.status.toUpperCase() != 'INDEXED' && record.clickable && openWorkItemDetail(record.key)">
+      <div class="record-box-label">{{record.label}}</div>
+      <div class="plain-value-big-size value-shadow" matTooltip="{{(itemRecord.sourceId=='NA'|| itemRecord.status.toUpperCase() == 'NOT_INDEXED' || itemRecord.status.toUpperCase() == 'INDEXED')?'-':record.value}}" [ngClass]="{'plain-error-value' : record.key == 'totalFailed' }">{{(itemRecord.sourceId=='NA' || itemRecord.status.toUpperCase() == 'NOT_INDEXED' || itemRecord.status.toUpperCase() == 'INDEXED') ? '-' : record.value}}</div>
+    </div>
+  </div>
+</div>

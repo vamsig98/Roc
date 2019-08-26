@@ -1,0 +1,168 @@
+@import '../../../../var.scss';
+.active-items {
+    height: calc(100vh - 268px);
+    overflow: auto;
+}
+.active-work-item{
+    .status{
+        font-weight: bold;
+        color:$status-text-color;
+        font-size:12px;
+        padding: 10px 0px 6px;
+        position: relative;
+        .active_spinner{
+            position: absolute;
+        }
+    }
+    .active-item {
+        background-color: $box-active-background-color !important;
+        border: 1px solid $box-hover-border-color !important;
+    }
+    .box{
+        height:auto;
+        background:  $box-background-color;
+        border: 1px solid $box-border-color;
+        // background: $box-background-color;
+        // border: 1px solid #cccccd;
+        border-radius: 6px;
+        // padding: 10px 0px 6px;
+        .key{
+            color:$box-header-key-text-color;
+            font-weight:bold;
+ 
+        }
+       .value{
+            color:$box-header-value-text-color;
+            font-size: 14px;
+            font-weight: normal;
+        }
+        .hr{
+            margin-right: 9px;
+            margin-left:9px;
+            // color: $box-border-bottom-color;
+            height:2px;
+            margin-top: 4px;
+            border-bottom: 1px solid $box-border-bottom-color;
+        }
+        .row{
+            margin-right:0 !important;
+            margin-left:0 !important;
+        }
+        .row1{
+            font-size:12px;
+            height:32px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .colum1_key_value{
+            padding-left: 8px !important;
+            padding-top: 6px;
+            padding-right: 0;
+            
+        }
+        .colum2_key_value{
+            font-size:12px;
+            color: $box-data-header-text-color; 
+            margin-top: -16px;
+            
+        }
+        .kill_btn {
+            float: right;
+            background: transparent;
+            font-size: 12px;
+            font-weight: bold;
+            // border-radius: 0;
+            height: 30px !important;
+            padding: 6px 12px;
+            margin-right: 10px;
+        }
+        .row2{
+            font-size:11px;
+            padding-top:4px;
+            // padding-bottom: 10px;
+            .record-box1 {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 5px;
+                height: 75px;
+                margin: 5px 10px;
+                .fonticon{
+                    // color:#f44337;
+                    padding-right: 3px;
+                    float: none !important;
+                 }
+            }
+        }
+      
+        .col1{
+            font-size:16px;
+            font-weight: bold;
+            color: $box-data-header-text-color; 
+            margin-top: 13px;
+        }
+        // .col1_failed_color{
+        //     color:red;
+        // }
+    }
+ 
+ 
+    fieldset {
+         border: 1px solid $processing-issue-fieldset-border-color !important;
+         background-color:$processing-issue-fieldset-background-color;
+        margin-top: -11px !important;
+        width: 100%;
+        height: auto !important;
+        border-radius: 4px;
+        padding: 0 !important;
+     }    
+     legend {
+        color: $box-data-header-text-color;
+        font-size: 12px;
+        font-weight: 500;
+        // margin-bottom: 0px;
+        width: auto !important;
+        border: 1px solid $processing-issue-fieldset-border-color !important;
+        margin: 0 auto;
+        padding: 0 6px;
+        background-color: $processing-issue-fieldset-background-color;
+ 
+        }
+        .system_issues-count{
+            color: $system-issue-count-color;
+            font-size:16px;
+            font-weight:bold;
+ 
+        }
+        .padding0{
+            padding: 4px 0 8px 9px !important;
+        }
+        .attention-needed{
+            font-size:11px; 
+            color: $box-data-header-text-color;
+            width: 100px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .process-issue-value{
+            font-size:16px;
+            font-weight:bold;
+        }
+        .error {
+            color:$error-text-color;
+        }
+        .fonticon2{
+            padding-right: 6px;
+        }
+        .button_records{
+            float: right;
+            background: $box-hover-border-color;
+            color: $record-details-button-text-color;
+            font-size: 12px;
+            font-weight: bold;
+            border: none;
+            border-radius: 0;
+        }
+ }
+ 

@@ -1,0 +1,60 @@
+.log-item-wrapper{
+    position: relative;
+    margin-bottom: 50px;
+}
+.time-cell{
+    width: 110px;
+    flex: 0 0 110px;
+    position: relative;
+}
+.log-cell{
+    flex: 1 1 740px;
+    height: 50px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.vertical-line{
+    height: 110px;
+    width: 2px;
+    position: absolute;
+    left: 42px;
+    top: 25px;
+}
+.time-text{
+    text-align: center;
+    box-sizing: border-box;
+    padding-left: 30px;
+}
+
+.log-time-now{
+    width: 55px;
+    height: 20px;
+    border-radius: 4px;
+    text-align: center;
+    z-index: 4;
+    position: relative;
+    line-height: 20px;
+    left: 15px;
+}
+
+.time-dot{
+    position: absolute;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    top: 3px;
+    left: 38px;
+    z-index: 1;
+}
+
+.time-delay{
+    position: absolute;
+    top: 65px;
+    left: -30px;
+    width: 65px;
+    text-align: right;
+}

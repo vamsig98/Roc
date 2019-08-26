@@ -1,0 +1,18 @@
+.work-item-side-wrapper{
+    height: 55px;
+    display: flex;
+    align-items: center;
+    margin-top: -20px;
+}
+.work_item_title_color{
+    color: #fff !important;
+    font-size: 12px;
+    font-weight: bold;
+}
+.work-item-label{
+    color: #b6b6b6 !important;
+    height: 11px;
+    font-size: 12px !important;
+    font-weight: bold;
+}
+

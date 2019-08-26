@@ -1,0 +1,39 @@
+<div class="complete-work-list" (scroll)="onScroll($event)">
+    <button mat-button color="primary" class="refresh-btn"  (click)="reloadItems()">
+        <mat-icon inline=true>refresh</mat-icon>
+        Refresh
+    </button>
+    <button *ngIf="isLoadingProcessedWorkItems" mat-button color="primary" class="refresh-btn">
+       <mat-spinner inline=true color="accent" diameter="20" ></mat-spinner>
+    </button>
+  <div class="row">
+    <div class="col-md-12">
+    <table class="table table-hover complete-table">
+      <thead class="table-head" *ngIf="sources&& sources.length > 0">
+        <tr>
+          <th class="started_td_width">Started</th>
+          <th class="text-center" *ngFor="let metric of sources[0].metrics" class="text-center" (click)="sort(metric.label)">
+          {{metric.label}}
+          </th>
+        </tr>
+      </thead>
+      <tbody class="table-body" *ngIf="sources && sources.length > 0">
+          <tr *ngIf="isLoading" class="text-center">
+            <td [attr.colspan]="colspan"><mat-spinner color="accent" diameter="20" ></mat-spinner></td>
+          </tr>
+          <ng-container *ngIf="!isLoading">
+            <tr *ngFor="let source of sources;let i=index;" class="pointer">
+              <td class="started_td_width" (click)="openWorkItemDetail(source,source.tmStarted, 'All')">{{ source.tmStarted? source.tmStarted: '-' }}</td>
+              <td class="text-center" *ngFor="let metric of source.metrics; let id=index" class="text-center">
+                <span (click)="openWorkItemDetail(source,source.tmStarted,metric.label,id)" [ngStyle]="{'pointer-events': (metric.label === 'Avg. Processing Time (secs)' || metric.label === 'Total Time Taken (mins)') ? 'none' : 'inherit'}" >{{metric.value}}</span>
+              </td>
+            </tr>
+            <tr *ngIf="sources && sources.length === 0">
+              <td>There is no Data to display.</td>
+            </tr>
+          </ng-container>
+      </tbody>
+    </table>
+  </div>
+ </div>
+</div>

@@ -1,0 +1,235 @@
+@import '../../../../../var.scss';
+
+.financial-table{
+    .financial-table-header{
+        border-bottom: 1px solid $financial-table-header-border-bottom;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: $financial-table-header-color; 
+        
+        th{
+            font-weight:300;
+            padding: 10px 2px 10px 9px;
+            font-size:12px;
+          
+        }
+        .align-center{
+            text-align: center;
+        }
+       .align-left{
+            text-align: left;
+        }
+    }
+    .financial-table-body{  
+        border:0;
+        tr.hoverpull{
+            td.hoverhand{
+                cursor: pointer;
+            }
+        }
+        tr.textclr{
+           color: $financial-table-body-tr-text-clr;
+                td{
+                    .percentagecls{
+                        width: 60px;
+                      
+                        margin-right: 10px;
+                    }
+                    div.mtop{ 
+                        position: relative;
+                        top:8px;
+                    }
+                    span.mleft{
+                        margin-left:16px;
+                    }
+                }
+                td.font-weight-300{
+                    font-weight: 300;
+                }
+                .process-name-ellipse{
+                    max-width: 0 !important;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    cursor:pointer;
+                }
+                .first-td{
+                    width:25%;
+                }
+                .align-right{
+                    text-align:right;
+                }     
+        }
+        tr.firstparent{
+            td{
+                text-align: right;
+                padding: 4px 5px;
+                border:none;
+                font-weight:bold;
+                font-size: 12px;
+                .arrow-down-up-icon{
+                    margin-top: -5px;
+                    vertical-align: text-top;
+                }
+                .percentagecls{
+                    width: 60px;
+                   
+                    margin-right: 10px;
+                }
+                div.mtop{ 
+                    position: relative;
+                    top:8px;
+                }
+                span.mleft{
+                    margin-left:10px;
+                }
+            }
+            td.font-weight-300{
+                font-weight: 300;
+            }
+            .process-name-ellipse{
+                max-width: 0 !important;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                cursor:pointer;
+            }
+            .first-td{
+                width:25%;
+            }
+            .align-right{
+                text-align:right;
+            }
+            
+        }
+        .increase{
+            color: $financial-table-body-increase;
+        }
+        .decrease{
+            color: $financial-table-body-decrease;
+        }
+        .equal{
+            color: $financial-table-body-equal;
+        }
+        
+        .process-icon{
+            background-image: url(../../../../../assets/images/ico-robot-40.png);
+            width: 30px;
+            height: 25px;
+            margin-top:-5px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: left;
+        }
+    }
+}
+.records-search{
+    .filter-wrapper{
+        position: absolute;
+        float:left;
+        top:-30px;
+        right:0;
+        width:300px;
+        .mat-icon{
+            color:$financial-mat-icon-element-form-field;
+        }
+        .mat-input-element{
+            color:$financial-mat-icon-element-form-field;
+        }
+        .mat-form-field-underline{
+            width:100%;
+            background-color:$financial-mat-icon-element-form-field;
+        }
+        .mat-form-field-flex{
+            border-bottom-color:$financial-mat-icon-element-form-field;
+        }
+        .mat-form-field-flex:hover{
+            border-bottom-color: $financial-mat-icon-element-form-field;
+        }
+    }
+}
+.margin-top-5{
+    margin-top:5px;
+    td:nth-child(1){
+        text-align: left;
+    }
+    // td:nth-child(2){
+       
+    // }
+}
+
+.tableHeading {
+    // font-family: Bariol;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $financial-table-header-color;
+    text-align: right;
+}
+.tab-process-name {
+//   font-family: Bariol;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $financial-table-header-color;
+  position: absolute;
+  top: 10px;
+  cursor: context-menu;
+}
+.positionRelative {
+    position: relative;
+}
+.tab-process-value {
+//   font-family: Bariol;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $financial-table-header-color;
+}
+
+.childName {
+    // font-family: Bariol;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $financial-table-childname-color;
+    padding-left: 12px;
+    cursor: pointer;
+}
+.childValue {
+    // font-family: Bariol;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color:$financial-table-childname-color ;
+}
+.tableHeadValues {
+    text-align: right;
+    padding: 12px 0;
+}
+.innerTableValues {
+    text-align: right;
+    padding: 12px 0;
+}
+.emptytd {
+    width: 140px;
+}

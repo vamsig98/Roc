@@ -1,0 +1,88 @@
+@import '../../../../var.scss';
+.record_list{
+   padding-left: 0px !important;
+   padding-right: 0px !important;
+   .records{
+       float: right;
+       color:$view-record-details-recordli-color;
+       padding: 8px 0;
+       font-size: 12px;
+   }
+   .menu_item_value{
+       font-size: 12px;
+       font-weight: bold;
+       color: $view-record-details-menu-item-value;
+   }
+   .icon_custom{
+        color: $view-record-details-icon-custom;
+        font-size: 16px;
+        font-weight: bold;
+   }
+   .table-wrapper {
+        height: 350px;
+        overflow: auto;
+        width: 100%;
+           .record-table{
+                 border: 1px solid $view-record-details-record-table;
+                    .table_header{
+                          background-color: $view-record-details-table-header-bg;
+                          color: $view-record-details-table-header-color !important;
+                          font-size: 12px !important;
+                          border-bottom: solid 1px $view-record-details-record-table !important;
+   
+                             .thead_height>th{
+                             height: 41px !important;
+                             vertical-align: middle !important;
+                             font-weight: normal !important;
+                             }
+                             
+                             .status{
+                             width: 13%;
+                             }
+                             .time-taken{
+                                width: 18%;
+                             }
+                 }
+                 .table_body{
+                    background-color: $view-record-details-table-body-background-color;
+                    font-size: 12px;
+                    color: $view-record-details-table-header-color;
+                    .td_data_hidden{
+                       width: 255px;
+                       text-overflow: ellipsis;
+                       overflow: hidden;
+                       white-space: nowrap;
+                    }
+                    .data{
+                       padding-left: 42px;
+                       }
+                    .tbody_status{
+                       padding-left: 9px;
+                    }
+                    .msg_err {
+                       color: $view-record-details-msg-failure;
+                    }
+                    .loaderGif {
+                       width: 17px;
+                       height: 17px;
+                       background: transparent;
+                    }
+          }
+          .name{
+           width: 30%;
+        }
+     }
+  }
+.table>thead>tr>th {
+   border-bottom: 1px solid $view-record-details-table-border-bottom !important;
+}
+}
+/deep/.mat-tab-body.mat-tab-body-active{
+   overflow: initial !important;
+}
+.name{
+  width: 30%;
+}
+.failed {
+   color: $view-record-details-msg-failure;
+}

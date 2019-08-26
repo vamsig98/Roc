@@ -1,0 +1,30 @@
+<div class="content-wrapper subway-map-custom-style">
+    <mat-toolbar class="subway-map-viewer-menu">
+        <span><mat-icon class="green">lens</mat-icon> Active &amp; flowing</span>
+
+        <span><mat-icon class="yellow">lens</mat-icon> Active &amp; slow</span>
+
+        <span><mat-icon class="blue">lens</mat-icon> Inactive</span>
+
+        <span><mat-icon class="red">lens</mat-icon> Not Responding</span>
+
+        <span><mat-icon class="black">lens</mat-icon> Feature Disabled</span>
+
+
+        <!-- This fills the remaining space of the current row -->
+        <span class="spacer"></span>
+
+        <button mat-icon-button (click)="zoomIn()">
+            <mat-icon aria-label="Zoom In">add</mat-icon>
+        </button>
+        <button mat-icon-button (click)="zoomReset()">
+            <mat-icon aria-label="Zoom In">center_focus_strong</mat-icon>
+        </button>
+        <button mat-icon-button (click)="zoomOut()">
+            <mat-icon aria-label="Zoom Out">remove</mat-icon>
+        </button>
+    </mat-toolbar>
+    <div id="subway-map-viewer">
+
+    </div>
+</div>

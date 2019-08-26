@@ -1,0 +1,13 @@
+<mat-toolbar>
+        <div class="logo_sec">
+            <img class="header-logo1" alt="header-logo" src="{{client_profile? client_profile.logo: 'assets/images/pl_logo.png'}}">
+        </div>
+        <div class="header_title">DOC<div class="header_subtitle">{{client_profile? client_profile.version: ''}}</div>
+    </div>
+</mat-toolbar>
+    
+<mat-drawer-container>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</mat-drawer-container>

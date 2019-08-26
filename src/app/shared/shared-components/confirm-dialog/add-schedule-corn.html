@@ -1,0 +1,48 @@
+ <mat-card class="mat-card-add-stakeholder">
+        <div class="row header-add-stakeholder">
+            <div class="col-md-10 header-add">
+                <p class="header">{{data.title}}</p>
+            </div>
+            <div class="col-md-2 close">
+                <p class="close-icon" (click)="onNoClick()"><i class="fa fa-times" aria-hidden="true"></i>
+                </p>
+            </div>
+        </div>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="row data-details">
+                <div class="col-md-8 data-focus">
+                    <div class="form-group data">
+                        <fieldset class="field-set">
+                                <legend class="expression-legend">Expression Name</legend>
+                                <input id="username" [(ngModel)]="data.name" formControlName="username" class="form-control" autocomplete="off"
+                                placeholder="Enter Expression Name" type="text"
+                                [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+    
+                        </fieldset>
+    
+                    </div>
+                    <div class="form-group data">
+                            <fieldset class="corn-field-set">
+                                    <legend class="corn-legend">Corn Expression</legend>
+            
+                            <textarea id="email" class="form-control" autocomplete="off" formControlName="email" rows="3" cols="30" name="description" [(ngModel)]="data.cornValue"
+                         placeholder="Enter Corn Expression here" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"></textarea>
+    
+                        </fieldset>
+                    </div>
+
+                </div>
+            </div>
+    
+            <div class="row form-group buttons">
+                    <div class="col-md-3 save-button">
+                        <button class="btn-primary save" [disabled]="!registerForm.valid" [mat-dialog-close]="data"
+                            >Save</button>
+                    </div>
+                    <div class="col-md-3 cancel-button">
+                        <button class="btn-default cancel" mat-dialog-close>Cancel</button>
+                    </div>
+                </div>
+    
+        </form>
+    </mat-card>

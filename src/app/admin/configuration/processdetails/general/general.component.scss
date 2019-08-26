@@ -1,0 +1,245 @@
+@import '../../../../../var.scss';
+.general{
+    .save-btn {
+        .general {
+        margin-top: 10px;
+    }
+    }
+    .general-head{
+        font-size: 19px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 15px;
+        font-weight: normal;
+    }
+    .genaral-hr{
+        width: 88%;
+        margin: 10px 0 0 17px !important;
+    }
+    .generalmainone{
+        margin-top: 15px;
+        margin-left: 1px;
+        margin-bottom: 25px;
+        .generalformone{
+            .generalformgrp{
+                .formone {
+                    padding: 0px 0px 0px 15px;
+                }
+                .legendzero{
+                    width: 58px !important;
+                    margin-bottom: 0px;
+                    color:$process-stakeholder-text-color;
+                }
+                .formone select:focus{
+                    outline-color: transparent;
+                }
+                .legend-one{
+                    width:54px !important;
+                }
+                .select-crs{
+                    border:none;
+                    width: 100%;
+                }
+                input{
+                    width: 100%;
+                    outline: none !important;
+                    border: none !important;
+                }
+            }
+            .generalformgrpone {
+                .formtwo{
+                    padding-right: 0px;
+                }
+                .description{
+                    height: 88px;
+                }
+                textarea{
+                  resize:none;
+                  border-radius: 5px;
+                  border:none;
+                  outline:none;
+                  overflow:hidden;
+                 }
+                .legend-two{
+                    width:66px !important;
+                }
+            } 
+            .generalformgrptwo{
+                .formone {
+                    padding: 0px 0px 0px 15px;
+                }
+                .legend-three{
+                   width:62px !important;
+                }
+                .legend-display{
+                    width: 81px !important;
+                    margin-bottom: 0px;
+                    color:$process-stakeholder-text-color;            
+                }
+                .legendzero{
+                    width: 80px !important;
+                    margin-bottom: 0px;
+                    color:$process-stakeholder-text-color;
+                }
+                .legend-infra{
+                    width: 60px !important;
+                    margin-bottom: 0px;
+                    color:$process-stakeholder-text-color;
+                }
+                .select-crs{
+                    border:none;
+                    width: 100%;
+                }
+                input{
+                    width: 100%;
+                    outline: none !important;
+                    border: none !important;
+                }
+                .formone select:focus{
+                    outline-color: transparent;
+                }
+            } 
+            .generalformgrpthree{
+                .formone {
+                    padding: 0px 0px 0px 15px;
+                }
+                .legend-four{
+                    width: 94px !important;
+                }
+                .legend-five{
+                    width: 113px !important;
+                }
+                .legend-record{
+                    width: 125px !important;
+                }
+
+                .select-crs{
+                border:none;
+                width: 125px;
+                }
+                input{
+                    width: 100%;
+                    outline: none !important;
+                    border: none !important;
+                }
+                .formone select:focus{
+                    outline-color: transparent;
+                }
+                .legend-six{
+                    width: 88px !important;
+                }
+                
+            }
+           
+        }
+        .generalimageone{
+            .imageone{
+                width: 200px;
+                margin-top: 13%;
+            }
+            .image-para{
+                width: 226px;
+                margin-left: 142px;
+            
+            }
+        }
+         
+        
+    }
+    .generalmaintwo{
+            margin-left: 1px;
+            margin-bottom: 25px; 
+            padding-left: 20px;
+            margin-top: 15px;
+            .formthree{
+                padding: 0px 0px;
+            }
+            .p-parazero{
+                margin: 0 5px 10px;  
+            }
+            .a-new{
+                float:right;
+            }
+            .generalformfive{
+                .formone {
+                    padding: 0px 0px 0px 15px;
+                }
+                .legend-seven {
+                    width:59px !important;
+                }
+                
+                .value{
+                    padding-left: 0px;
+                }
+                input{
+                    width: 100%;
+                    outline: none !important;
+                    border: none !important;
+                    overflow: hidden !important;
+                    text-overflow: ellipsis !important;
+                    white-space: nowrap !important;
+                }
+            }
+            .generalformcheckbox{
+                .checkbox{
+                    margin-left: 110px !important;
+                    label{
+                        margin-bottom:  inherit !important;
+                        font-weight: bold !important;
+                    
+                    input[type=checkbox] {
+                        cursor: pointer;
+                        width: 18px !important;
+                        height: 18px !important;
+                        margin-right: 5px;
+                        text-align: center;
+                        padding: 10px !important;
+                        margin-left: -20px !important;
+                        margin-top: 2px !important;
+                    }
+                    input[type=checkbox]::after{
+                        background:  #DEDEDE !important;
+                        border-radius: 3px !important;
+                    }
+                    }
+                } 
+            }
+            .generalimagetwo{
+                margin-top: 115px;
+                .imagetwo{
+                    width: 200px;
+                }
+                .image-para{
+                    width: 226px;
+                    margin-left: 142px;
+                
+                }
+    
+            }
+    } 
+  
+}
+fieldset {
+    border: 1px solid $process-stakeholder-text-color!important;
+    margin: 0 2px !important;
+    padding: 0.35em 0.625em 0.75em !important;
+    height: 48px;
+    border-radius: 5px;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+legend{
+     border-bottom: none !important;
+     font-size: 12px;
+    font-weight: 600;
+    width: 80px !important;
+    margin-bottom: 0px;
+    color:$process-stakeholder-text-color;
+}
+
+input[type="text"] {
+    margin-top: 2px !important;
+}
+select{
+    margin-top: 4px !important;
+}

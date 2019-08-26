@@ -1,0 +1,44 @@
+<mat-toolbar>
+  <div class="logo_sec">
+      <img class="header-logo1" src="{{client_profile? client_profile.logo: 'assets/images/pl_logo.png'}}" alt="profile-logo">
+  </div>
+  <div class="header_title">DOC<div class="header_subtitle">{{client_profile? client_profile.version: ''}}</div>
+</div>
+<span class="spacer"></span>
+
+<div  class="profile flex full-height flex-justify-center flex-align-center pointer"
+                [matMenuTriggerFor]="profileMenu">
+                <div class="profile-name-wrapper ">
+                    <div class="profile-name">{{firstname}} {{lastname}}</div>
+                    <div class="profile-designation">{{email}}</div>
+                </div>
+                <div class="profile-img" [ngStyle]="{'background-image': 'url(assets/images/bg-no-profile.png)'}">
+                </div>
+                <div class="down-arrow full-height flex flex-align-center">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                </div>
+            </div>
+            <mat-menu class="pointer" #profileMenu="matMenu" overlapTrigger="false">
+              <button mat-menu-item [routerLink]="['/admin/configuration']" *ngIf="isSuperAdmin">
+                <mat-icon>settings</mat-icon>
+                <span>switch to DOC Admin</span>
+            </button>
+                <button mat-menu-item (click)="logout()">
+                    <mat-icon>exit_to_app</mat-icon>
+                    <span>Logout</span>
+                </button>
+            </mat-menu>
+</mat-toolbar>
+<mat-drawer-container>
+  <div class="text-center emailtext">
+    <h4>You are not associated to any Organizational Unit.</h4> <p>Please click on Send Email button to notify the administrator</p>
+  </div>
+  <div class="col-sm-12 text-center">
+    <button *ngIf="!isbuttonactive" [disabled]="isdisabled"  type="button" class="btn btn-primary" (click)="sendemail()">Send Email</button>
+
+    <button *ngIf="isbuttonactive"  type="button" class="btn btn-primary">
+    <em class="fas fa-spinner stop-circle_icon"></em>Sending...
+    </button>
+    
+  </div>
+</mat-drawer-container>

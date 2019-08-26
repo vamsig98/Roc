@@ -1,0 +1,16 @@
+{
+    "display_name":"general",
+
+    "org_unit":"org",
+
+    "description":"testing with mock data",
+    "hosted_on":"3/10",
+    "infra_type":"mock",
+    "snapshot_name":"test snapshot",
+    "environment_name":"test environment",
+    "maximum_bots":"10",
+    "kpi_name":"volume",
+    "volume_backlog_kpi":"backlog-kpi"
+
+ }
+

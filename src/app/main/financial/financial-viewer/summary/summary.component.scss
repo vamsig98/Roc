@@ -1,0 +1,72 @@
+@import '../../../../../var.scss';
+
+.financial-summary{ 
+    
+    .padding-margin-10{
+        padding:10px;
+        background-color: $financial-summary-background-color;
+    }
+    .leftheade2{
+        margin-right: -1px;
+    }
+    .rightheade2{
+        background-color: $financial-summary-background-color;
+     height: 96px;
+    margin-left: -12px;
+    padding-left: 38px;
+    }
+  
+    .dollar-cls{
+        padding: 10px 2px 2px 8px;
+        color: $financial-summary-dollar-color;
+        margin-top: 8px;
+        border-radius: 50px;
+        background-color: $financial-summary-dollar-cls;
+    }
+    .link-filter{
+        margin-top: 20px;
+    }
+    .top-header{
+        margin:40px 0;
+    }
+    .bottom-header{
+        margin: 48px 0;
+        margin-top: 66px;
+    }
+    .value-headerhead{
+        // font-family: Bariol;
+        font-size: 14px;
+        font-weight: bold;
+        color: $financial-summary-header-color;
+    }
+    
+     .value-header1{
+        // font-family: Bariol;
+        font-size: 12px;
+        font-weight: normal;
+        color: $financial-summary-header-color;
+    }
+    
+    .value-bigsz{
+        // font-family: Bariol;
+        font-size: 34px;
+        font-weight: bold;
+        color: $financial-summary-finacial-value-color;
+
+    }
+    .value-smallsz1{
+        // font-family: Bariol;
+        font-size: 18px;
+        font-weight: bold;
+        color: $financial-summary-finacial-value-color;
+    }
+    .savings-icon{
+        background-image: url(../../../../../assets/images/total_savings.png);
+        width: 30px;
+        height: 60px;
+        margin-top:-5px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+}

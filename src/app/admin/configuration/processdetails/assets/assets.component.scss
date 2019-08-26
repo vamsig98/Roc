@@ -1,0 +1,55 @@
+@import '../../../../../var.scss';
+.assets-main{
+  .assets-head{
+    margin-left: 15px;
+  }
+  .assets-hr{
+    width: 88%;
+    margin: 10px 0 0 17px !important;
+  }
+  .p-para{
+    margin-top:15px; 
+    margin-left: 15px;
+  }
+  .assetssub{ 
+    .assetsone{
+      .a-newcron{
+        float:right;
+      }
+    }
+    .assetstwo{
+      .assets-frstfield{
+        background-color: $process-nav-tab-whitesmoke-color;
+        border-bottom: 1px solid $process-nav-btn-white-color;
+        margin-left: 30px;
+        margin-right: -29px;
+        .assets{
+          background-color:$process-nav-tab-whitesmoke-color;  
+          height: 20px;
+          line-height: 20px;
+          margin-bottom: 3px;
+          color:$process-stakeholder-text-color;
+        }
+      }
+      
+    }
+    .assetsthree{
+      margin-left: 15px;
+      .rowtwo{
+        margin-left: 15px;
+        .cron{
+          background-color: $process-nav-tab-whitesmoke-color;  
+          height: 55px;
+          line-height: 55px;
+          margin-bottom: 5px;
+          .fonticon{
+            float:right; 
+          }
+          .para-border{
+            border-right:2px solid $process-right-border-color;
+          }
+        } 
+      }
+    } 
+}
+}

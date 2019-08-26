@@ -1,0 +1,26 @@
+{
+    "status": "SUCCESS",
+    "message": "",
+    "result": {
+        "_id": {
+            "$oid": "5a94ed2455772a19008b70fd"
+        },
+        "username": "user2",
+        "firstname": "changeme",
+        "lastname": "B",
+        "role": {
+            "id": 3,
+            "name": "TestNewRole",
+            "type": "Operator",
+            "processes": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "password": "a7470858e79c282bc2f6adfd831b132672dfd1224c1e78cbf5bcd057",
+        "first_login": "False"
+    }
+}

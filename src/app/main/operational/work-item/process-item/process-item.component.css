@@ -1,0 +1,33 @@
+
+.process-dot{
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    border: 2px solid transparent;
+}
+.process-loader{
+    width: 6px;
+    height: 6px;
+    border-radius: 10px;
+    border: 2px solid #F6F6F6;
+    margin-bottom: 5px;
+}
+
+.process-dot.active{
+    border: 2px solid #07FD6D;
+    box-shadow: 0 0 14px 0px #07FD6D;
+}
+
+.active-process-line{
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    top: 40px;
+    left: 98px;
+}
+
+.label-wrapper{
+    flex: 0 0 30%;
+    overflow: auto;
+}

@@ -1,0 +1,214 @@
+<div class="admin-sec"><mat-card class="tab-wrapper customreport mat-elevation-z0 tab-card-wrapper">
+  <mat-tab-group class="demo-tab-group">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        Throughput Reconciliation
+      </ng-template>
+      <div class="container col-md-5 col-sm-5 container-border">
+        <span class="container-title-throughput">Select</span>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="processes" class="control-label col-sm-4">Process
+              <mat-spinner color="accent" diameter="20" *ngIf="isLoadingProcess" class="pull-right"></mat-spinner>
+            </label>
+            <div class="col-sm-8">
+              <mat-select class="customselect form-control" name="multipleselectprocess" [(ngModel)]="search.selectedProcess">
+                <ng-container *ngFor="let item of processesList">
+                  <mat-option [value]="item.name">
+                    {{item.display_name}}
+                  </mat-option>
+                </ng-container>
+              </mat-select>
+
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="year" class="control-label col-sm-4">Year</label>
+            <div class="col-sm-8">
+              <select name="year" class="form-control" [(ngModel)]="search.year">
+                <option value='2018' selected>2018</option>
+                <option value='2019' selected>2019</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="weeknmber" class="control-label col-sm-4">Week Number</label>
+            <div class="col-sm-8">
+              <select name="weeknmber" class="form-control" [(ngModel)]="search.weekNumber">
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+                <option value='10'>10</option>
+                <option value='11'>11</option>
+                <option value='12'>12</option>
+                <option value='13'>13</option>
+                <option value='14'>14</option>
+                <option value='15'>15</option>
+                <option value='16'>16</option>
+                <option value='17'>17</option>
+                <option value='18'>18</option>
+                <option value='19'>19</option>
+                <option value='20'>20</option>
+                <option value='21'>21</option>
+                <option value='22'>22</option>
+                <option value='23'>23</option>
+                <option value='24'>24</option>
+                <option value='25'>25</option>
+                <option value='26'>26</option>
+                <option value='27'>27</option>
+                <option value='28'>28</option>
+                <option value='29'>29</option>
+                <option value='30'>30</option>
+                <option value='31'>31</option>
+                <option value='32'>32</option>
+                <option value='33'>33</option>
+                <option value='34'>34</option>
+                <option value='35'>35</option>
+                <option value='36'>36</option>
+                <option value='37'>37</option>
+                <option value='38'>38</option>
+                <option value='39'>39</option>
+                <option value='40'>40</option>
+                <option value='41'>41</option>
+                <option value='42'>42</option>
+                <option value='43'>43</option>
+                <option value='44'>44</option>
+                <option value='45'>45</option>
+                <option value='46'>46</option>
+                <option value='47'>47</option>
+                <option value='48'>48</option>
+                <option value='49'>49</option>
+                <option value='50'>50</option>
+                <option value='51'>51</option>
+                <option value='52'>52</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-8">
+              <button class="btn link" class="btn btn-default" (click)="searchReport(search)">
+                Search
+                <mat-spinner color="accent" diameter="20" *ngIf="isLoadingSearch"></mat-spinner>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-5 col-sm-5 container-border" *ngIf="reportCount && reportCount.length!=0">
+        <span class="container-title">Search Result</span>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="splunkval" class="control-label col-sm-4">Log source</label>
+            <div class="col-sm-8">
+              <input class="form-control" disabled="disabled" type="text" readonly name="splunkval" id="splinkval" [value]="reportResult.splunk">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="year" class="control-label col-sm-4">Current Aggregate</label>
+            <div class="col-sm-8">
+              <input class="form-control" disabled="disabled" type="text" readonly name="elval" [value]="reportResult.existing">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="weeknmber" class="control-label col-sm-4">New Aggregate</label>
+            <div class="col-sm-8">
+              <input class="form-control" type="number" name="weekcount" [(ngModel)]="weekCount">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-8">
+              <button class="btn link" class="btn btn-default" (click)="saveWeekCount(search,weekCount)">
+                Save
+                <mat-spinner color="accent" diameter="20" *ngIf="isLoadingSaving"></mat-spinner>
+              </button>
+            </div>
+          </div>
+        </form>
+        <table class="table table-bordered" style="display:none;">
+          <ng-container *ngFor="let item of reportCount">
+            <tr *ngIf="isIdExist(item)">
+              <td> {{item}} </td>
+              <td>
+                <strong>{{reportResult[item]}}</strong>
+              </td>
+            </tr>
+          </ng-container>
+          <tr>
+            <td>
+              Value
+            </td>
+            <td>
+              <input class="form-control" type="number" name="weekcount" [(ngModel)]="weekCount">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="clear"></div>
+      <div class="col-md-8 col-sm-8 customResultsCls" *ngIf="customResults">
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Reconciliation History
+              </mat-panel-title>
+              <mat-panel-description>
+
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <table class="table table-bordered">
+              <thead>
+                <th>
+                  Process Name
+                </th>
+                <th>
+                  #Year - #Week
+                </th>
+                <th>
+                  Throughput
+                </th>
+                <th>
+                  Date updated
+                </th>
+                <th>
+
+                </th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of customResults">
+                  <td>
+                    <div class="process-name-custom-ellipse" matTooltip="{{item['pname']}}"> {{item["pname"]}}</div>
+                  </td>
+                  <td>
+                    {{item["year"]}} - {{item["week_num"]}}
+                  </td>
+                  <td>
+                    {{item["week_count"]}}
+                  </td>
+                  <td>
+                    {{getDate(item["insert_time"])}}
+                  </td>
+                  <td>
+                    <button class="btn link" (click)="deleteRecord(item._id)">
+                      Roll back
+                      <mat-spinner color="accent" diameter="20" *ngIf="isLoadingDeleting"></mat-spinner>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </mat-expansion-panel>
+        </mat-accordion>
+
+      </div>
+    </mat-tab>
+
+  </mat-tab-group>
+</mat-card>
+</div>

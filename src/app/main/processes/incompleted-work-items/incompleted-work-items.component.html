@@ -1,0 +1,5 @@
+<div class="source-list-wrapper" [ngClass]="{'auto-height': showAllSource}" *ngIf="sources.length">
+  <app-item-record *ngFor="let record of sources;trackBy: trackById" [itemRecord]="record" [showDetailLink]="true"></app-item-record>
+</div>
+
+<div *ngIf="!sources.length"><p>0 records!</p></div>

@@ -1,0 +1,129 @@
+@import '../../../../var.scss';
+.btn-save{
+  background: $email-template-button;
+  color: white;
+  border: 1px solid $email-template-button;
+  font-size: 14px;
+  height: 34px;
+  border-radius: 3px;
+  margin-bottom: 10px
+}
+.table-row{
+  background: $email-template-textcolor;
+  height: 45px
+}
+.bottom-edit-template{
+  margin-bottom: 22px;
+}
+.template{
+  border-bottom: 1px solid $email-template-border-color;
+  background-color: $email-template-background-color;
+  padding-left: 0;
+}
+.ql-toolbar{
+background-color:$email-template-toolbar-color !important;
+margin-left: 21px !important;
+}
+.marginemail{
+  margin-top: 50px;
+}
+.color-temp{
+color:$email-template-border-color;
+}
+.material-icons {
+  vertical-align: middle !important;
+  padding-bottom: 3px;
+}
+.ql-container.ql-snow{
+  height:234px;
+  margin-left: 21px;
+}
+.ql-toolbar.ql-snow {
+background-color:$email-template-toolbar-color !important;
+margin-left: 21px !important;
+}
+.margintop1{
+  margin-top: 20px;
+}
+.paddingtemplate{
+  padding-right: 20px
+}
+.breadcrumb-text{
+  text-decoration: underline;
+  color: $email-template-border-color;
+  font-size: 13px;
+}
+.breadcrumb-bg{
+  background: transparent;
+}
+.breadcrumb-temp{
+  color: $email-template-border-color;
+  font-size: 13px;
+}
+.success_class{
+  color: $email-template-toastr-color;
+}
+.failure_class{
+  color:$email-template-failure-class-color;
+}
+.btn-setting{
+  color:$email-template-button;
+  border:1px solid $email-template-button;
+  margin-right: 30px;
+}
+.margin-class{
+  margin-top: 40px
+}
+.text{
+margin-right: 20px;
+}
+.inputfield{
+  margin-left: 18px;
+  height: 42px;
+  width: 45%;
+  font-size: 13px;
+  padding-left: 20px;
+  color: $email-template-border-color;
+  border-radius: 3px;
+  background: $email-template-textcolor;
+  border: 1px solid $email-template-toolbar-color;
+  outline: none;
+}
+.label{
+font-size: 13px;
+margin-left: 12px;
+color: $email-template-border-color;
+font-weight: 600
+}
+.descpfield{
+  height: 80px !important;
+  padding: 9px 0px 0px 9px;
+  outline: none;
+  border: 1px solid $email-template-toolbar-color;
+}
+.footer{
+background: transparent;
+border-top: none;
+}
+.btn-save_template{
+background: $email-template-button;
+color: white;
+border: 1px solid $email-template-button
+}
+.btn-cancel{
+background: transparent;
+margin-left: 5px;
+border: none;
+box-shadow: none;
+font-weight: 600;
+color: $email-template-button;
+}
+.cursor{
+  cursor: pointer;
+}
+.lob_padding{
+padding: 0 5%;
+}
+.td_padding_left{
+padding-left: 0 !important;
+}

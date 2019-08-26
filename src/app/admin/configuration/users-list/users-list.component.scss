@@ -1,0 +1,132 @@
+@import '../../../../var.scss';
+.btn-save{
+  background: $user-list-button-color;
+  color: $user-list-text-color;
+  border: 1px solid $user-list-button-color;
+  font-size: 14px;
+  height: 34px;
+  border-radius: 3px;
+  margin-bottom: 10px
+}
+.table-row{
+  background: $user-list-text-color;
+  height: 45px
+}
+.bottom-edit-template{
+  margin-bottom: 22px;
+}
+.template{
+  border-bottom: 1px solid $user-list-border-color;
+  background-color: $user-list-template-background-color;
+  padding-left: 0;
+}
+.ql-toolbar{
+background-color:$user-list-toolbar-color !important;
+margin-left: 21px !important;
+}
+.marginemail{
+  margin-top: 50px;
+}
+.color-temp{
+color:$user-list-border-color;
+}
+.material-icons {
+  vertical-align: middle !important;
+  padding-bottom: 3px;
+}
+.ql-container.ql-snow{
+  height:234px;
+  margin-left: 21px;
+}
+.ql-toolbar.ql-snow {
+background-color:$user-list-toolbar-color !important;
+margin-left: 21px !important;
+}
+.margintop1{
+  margin-top: 20px;
+}
+.paddingtemplate{
+  padding-right: 20px
+}
+.breadcrumb-text{
+  text-decoration: underline;
+  color: $user-list-breadcrumb-text-color;
+  font-size: 13px;
+}
+.breadcrumb-bg{
+  background: transparent;
+}
+.breadcrumb-temp{
+  color: $user-list-breadcrumb-text-color;
+  font-size: 13px;
+}
+.success_class{
+  color: $user-list-toastr-color;
+}
+.failure_class{
+  color:$user-list-failure-color;
+}
+.btn-setting{
+  color:$user-list-button-color;
+  border:1px solid $user-list-button-color;
+  margin-right: 30px;
+}
+.margin-class{
+  margin-top: 40px
+}
+.text{
+margin-right: 20px;
+}
+.inputfield{
+  margin-left: 18px;
+  height: 42px;
+  width: 45%;
+  font-size: 13px;
+  padding-left: 20px;
+  color: $user-list-border-color;
+  border-radius: 3px;
+  background: $user-list-input-field-background-color;
+  border: 1px solid$user-list-input-field-border-color;
+  outline: none;
+}
+.label{
+font-size: 13px;
+margin-left: 12px;
+color: $user-list-label-text-color;
+font-weight: 600
+}
+.descpfield{
+  height: 80px !important;
+  padding: 9px 0px 0px 9px;
+  outline: none;
+  border: 1px solid $user-list-input-field-border-color;
+}
+.footer{
+background: transparent;
+border-top: none;
+}
+.btn-save_template{
+background: $user-list-button-color;
+color: white;
+border: 1px solid $user-list-button-color
+}
+.btn-cancel{
+background: transparent;
+margin-left: 5px;
+border: none;
+box-shadow: none;
+font-weight: 600;
+color: $user-list-button-color;
+}
+.table>tbody>tr>td {
+vertical-align: middle;
+}
+.lob_padding{
+padding: 0 5%;
+}
+.cursor{
+cursor: pointer;
+}
+.spinnerCenter {
+margin: 0 auto;
+}

@@ -1,0 +1,7 @@
+<div class="tab-body-wrapper">
+  <div [hidden]="(!logTimelineData || logTimelineData.length)" class="no-data-msg">
+    <hr/> There are no errors in the workitem processed <hr/>
+  </div>
+  <mat-spinner color="accent" diameter="20" *ngIf="isLoading"></mat-spinner>
+  <app-log-item *ngFor="let logItem of logTimelineData, let idx =index" [logItem]="logItem" [idx]="idx" [tmPreviousLog]="(logTimelineData[idx+1] ? logTimelineData[idx+1].tmLog : 0)"></app-log-item>
+</div>

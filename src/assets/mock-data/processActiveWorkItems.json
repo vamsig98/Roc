@@ -1,0 +1,160 @@
+{
+    "result": {
+        "active_work_items": [
+            {
+                "ETA": 3.2,
+                "_tm": "",
+                "botCount": 1,
+                "botsAvailable": 1,
+                "botsRunning": 1,
+                "displayName": " CRS DE 2.0",
+                "items": 1,
+                "metadata": {},
+                "metrics": [
+                    {
+                        "clickable": true,
+                        "key": "totalRecords",
+                        "label": "Total Records",
+                        "value": 80
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalProcessed",
+                        "label": "Records Processed",
+                        "value": 54
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalAwaiting",
+                        "label": "Waiting to be Processed",
+                        "value": 16
+                    },
+                    {
+                        "clickable": true,
+                        "key": "avgProcessingTime",
+                        "label": "Average Processing Time",
+                        "value": "0.2s"
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalFailed",
+                        "label": "Records Failed",
+                        "value": [
+                            {
+                                "clickable": false,
+                                "key": "attentionNeeded",
+                                "label": "Attention Needed",
+                                "value": 7
+                            },
+                            {
+                                "clickable": false,
+                                "key": "systemFailures",
+                                "label": "System Failures",
+                                "value": 3
+                            }
+                        ]
+                    }
+                    
+                ],
+                "processName": "Chart_Review_DataEntryBOT_2.0_QA_CRS_DataEntry",
+                "recordDetails": [],
+                "sourceId": "",
+                "startCode": "",
+                "started": "",
+                "status": "ACTIVE_FLOWING",
+                "statusColor": "ACTIVE_NOT_FLOWING",
+                "tmStarted": "2019-Feb-20 19:00 PM",
+                "totalFailed": 10,
+                "totalRecords": 80,
+                "triggeredBy": "File"
+            },
+            {
+                "ETA": 3.2,
+                "_tm": "",
+                "botCount": 1,
+                "botsAvailable": 1,
+                "botsRunning": 1,
+                "displayName": " CRS DE 2.0",
+                "items": 1,
+                "metadata": {},
+                "metrics": [
+                    {
+                        "clickable": true,
+                        "key": "totalRecords",
+                        "label": "Total Records",
+                        "value": 80
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalProcessed",
+                        "label": "Records Processed",
+                        "value": 54
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalAwaiting",
+                        "label": "Waiting to be Processed",
+                        "value": 16
+                    },
+                    {
+                        "clickable": true,
+                        "key": "avgProcessingTime",
+                        "label": "Average Processing Time",
+                        "value": "0.2s"
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalFailed",
+                        "label": "Records Failed",
+                        "value": 10
+                    }
+                    
+                ],
+                "processName": "Chart_Review_DataEntryBOT_2.0_QA_CRS_DataEntry",
+                "recordDetails": [],
+                "sourceId": "",
+                "startCode": "",
+                "started": "",
+                "status": "ACTIVE_FLOWING",
+                "statusColor": "ACTIVE_NOT_FLOWING",
+                "tmStarted": "2019-Feb-22 15:00 PM",
+                "totalFailed": 10,
+                "totalRecords": 80,
+                "triggeredBy": "File"
+            }
+        ],
+        "subway_map": {
+            "AWS_Sample_Bot_DOC": {
+                "attribute": {},
+                "key": "AWS_Sample_Bot_DOC",
+                "status": "INACTIVE"
+            },
+            "Chart_Review_DataEntryBOT_2.0_QA_CRS_DataEntry": {
+                "attribute": {
+                    "active_bots": 1,
+                    "anticipated_time": "3.20",
+                    "avg_processess_time_actual": [
+                        0.32,
+                        0.2,
+                        5
+                    ],
+                    "failed_records_actual": [
+                        12,
+                        0,
+                        5
+                    ],
+                    "remaining_items_in_queue": 16,
+                    "stand_by_bots": 0,
+                    "total_records_per_day_actual": [
+                        0,
+                        1000
+                    ],
+                    "up_time": "326h:25m:21s"
+                },
+                "healthStatus": "healthy",
+                "key": "Chart_Review_DataEntryBOT_2.0_QA_CRS_DataEntry",
+                "status": "ACTIVE_NOT_FLOWING"
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+<div class="admin-sec">
+  <div class="container-fluid lob_padding" *ngIf="defaultView">
+    <div class="row marginemail marginlr0">
+      <div class="col-sm-12 row template marginlr0">
+        <div class="col-sm-9 paddinglr0">
+          <label class="header">Users List</label>
+        </div>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+
+    <div class="row marginlr0">
+      <div class="col-sm-12 paddinglr0">
+        <table class="table margintop1">
+          <thead>
+            <td>Email</td>
+            <td>First Name</td>
+            <td>Last name</td>
+            <td>LOBs</td>
+            <td>Update LOBs</td>
+          </thead>
+          <tbody *ngIf="isLoading">
+            <tr>
+              <td colspan="5">
+                <mat-spinner class="spinnerCenter" color="accent" diameter="20"></mat-spinner>
+              </td>
+            </tr>
+          </tbody>
+          <tbody *ngIf="!isLoading">
+            <tr class="table-row" *ngFor="let user of usersList; let i=index">
+              <td class="color-temp">{{user["email"]}}</td>
+              <td class="color-temp">{{user["first_name"]}}</td>
+              <td class="color-temp">{{user["last_name"]}}</td>
+              <td>
+                <mat-form-field>
+                  <mat-select [placeholder]="user.lobs_list === '' ? 'Choose Lobs': 'Lobs'"
+                    [disabled]="disableSelect !== i" multiple [(ngModel)]="user.lobs">
+                    <mat-option *ngFor="let topping of allLob" [value]="topping">{{topping}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </td>
+              <td>
+                <button type="submit" class="btn btn-default btn-save_template"
+                  (click)="updateLobs(user,i)">{{ is_update === i ? "Update" : "Edit" }}</button>
+                  
+                <button type="submit" class="btn btn-default btn-save_template" (click)="deleteUser(user)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+
+  </div>
+</div>

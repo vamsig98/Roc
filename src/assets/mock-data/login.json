@@ -1,0 +1,22 @@
+{
+    "_id": {
+        "$oid": "5a97df2355772a2bb8b07805"
+    },
+    "username": "NewUser2",
+    "firstname": "changeme",
+    "lastname": "B",
+    "role": {
+        "id": 3,
+        "name": "TestNewRole",
+        "type": "Operator",
+        "processes": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ]
+    },
+    "first_login": false,
+    "session_user": "TAN234239798HKD763232342=="
+}

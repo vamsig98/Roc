@@ -1,0 +1,503 @@
+{
+  "result": {
+    "graphdata": {
+      "savings": {
+        "data": [
+          742.6, 
+          6721.7, 
+          2861.1, 
+          535.0, 
+          2451.0, 
+          269.0, 
+          399.0, 
+          435, 
+          1.8, 
+          15062.2, 
+          0, 
+          0, 
+          0, 
+          0, 
+          0,742.6, 
+          6721.7, 
+          2861.1, 
+          535.0
+        ], 
+        "name": "Savings Achieved"
+      }, 
+      "series": [
+        {
+          "data": [
+            0, 
+            507, 
+            230, 
+            0, 
+            0, 
+            0, 
+            0, 
+            8, 
+            0, 
+            3000, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0,
+            111,222,333,444
+          ], 
+          "name": "CDAI: Transfer BOT-Decryptor"
+        }, 
+        {
+          "data": [
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            36, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0
+          ], 
+          "name": "CRI: CSR PPD Allocate"
+        }, 
+        {
+          "data": [
+            33, 
+            770, 
+            319, 
+            0, 
+            0, 
+            0, 
+            0, 
+            79, 
+            0, 
+            10, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0
+          ], 
+          "name": "CDAI: Transfer Monitor-2.0"
+        }, 
+        {
+          "data": [
+            2690, 
+            1330, 
+            430, 
+            2675, 
+            12255, 
+            1345, 
+            1995, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0
+          ], 
+          "name": "CDAI: Transfer"
+        }, 
+        {
+          "data": [
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            1, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0
+          ], 
+          "name": "others: Refunds"
+        }, 
+        {
+          "data": [
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            6, 
+            1, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0
+          ], 
+          "name": "others: IMS Submit Invoice"
+        }, 
+        {
+          "data": [
+            132, 
+            35, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            3, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0
+          ], 
+          "name": "CDAI: CRS DE"
+        }, 
+        {
+          "data": [
+            0, 
+            86, 
+            43, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0
+          ], 
+          "name": "FINANCE: Transaction Status Response"
+        }
+      ], 
+      "xAxis": {
+        "categories": [
+          "2019-01-02", 
+          "2019-01-03", 
+          "2019-01-04", 
+          "2019-01-05", 
+          "2019-01-06", 
+          "2019-01-07", 
+          "2019-01-08", 
+          "2019-01-09", 
+          "2019-01-10", 
+          "2019-01-11", 
+          "2019-01-12", 
+          "2019-01-13", 
+          "2019-01-14", 
+          "2019-01-15", 
+          "2019-01-16",
+          "2019-01-17", 
+          "2019-01-18", 
+          "2019-01-19", 
+          "2019-01-20", 
+          "2019-01-21", 
+          "2019-01-22", 
+          "2019-01-23",
+          "2019-01-24"
+        ]
+      }, 
+      "yAxis": [
+        {
+          "titleText": "Number of records"
+        }, 
+        {
+          "opposite": true, 
+          "titleText": "Savings Achieved"
+        }
+      ]
+    }, 
+    "live_summary": {
+      "month": "29478.40", 
+      "today": "0.20", 
+      "week": "0.00", 
+      "year": "29478.40"
+    }, 
+    "processes_count": 8, 
+    "records": [
+      {
+        "group": {
+          "child": [
+            {
+              "avgRecordsperRun": 1032.7272727272727, 
+              "avgSavingsPerRun": 206.54545454545453, 
+              "displayName": "Transfer", 
+              "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot", 
+              "savingAchievedToDate": 4544.0, 
+              "savingsBaseLine": 3200.0, 
+              "throughputtoDate": 22720, 
+              "tooltip": [
+                {
+                  "Operations Start Date": "2019-01-01"
+                }, 
+                {
+                  "Volume KPI": 1000
+                }, 
+                {
+                  "Bot Cost per Record": 0.3
+                }, 
+                {
+                  "Manual Cost per Record": 0.5
+                }
+              ], 
+              "trending_percentage": 29
+            }, 
+            {
+              "avgRecordsperRun": 15.454545454545455, 
+              "avgSavingsPerRun": 4.636363636363637, 
+              "displayName": "CRS DE", 
+              "processName": "Chart_Review_DataEntryBOT_2.0_QA_CRS_DataEntry", 
+              "savingAchievedToDate": 51.0, 
+              "savingsBaseLine": 1680.0, 
+              "throughputtoDate": 170, 
+              "tooltip": [
+                {
+                  "Operations Start Date": "2019-01-01"
+                }, 
+                {
+                  "Volume KPI": 350
+                }, 
+                {
+                  "Bot Cost per Record": 0.2
+                }, 
+                {
+                  "Manual Cost per Record": 0.5
+                }
+              ], 
+              "trending_percentage": -3194
+            }, 
+            {
+              "avgRecordsperRun": 25.76595744680851, 
+              "avgSavingsPerRun": 128.82978723404256, 
+              "displayName": "Transfer Monitor-2.0", 
+              "processName": "TransferMonitorBOT2.0_QA_TransferMonitorBot", 
+              "savingAchievedToDate": 6055, 
+              "savingsBaseLine": 80000, 
+              "throughputtoDate": 1211, 
+              "tooltip": [
+                {
+                  "Operations Start Date": "2019-01-01"
+                }, 
+                {
+                  "Volume KPI": 1000
+                }, 
+                {
+                  "Bot Cost per Record": 5
+                }, 
+                {
+                  "Manual Cost per Record": 10
+                }
+              ], 
+              "trending_percentage": -1221
+            }, 
+            {
+              "avgRecordsperRun": 340.45454545454544, 
+              "avgSavingsPerRun": 1702.2727272727273, 
+              "displayName": "Transfer BOT-Decryptor", 
+              "processName": "TransferBOT_Decryptor_QA_TransferMonitorBot", 
+              "savingAchievedToDate": 18725, 
+              "savingsBaseLine": 80000, 
+              "throughputtoDate": 3745, 
+              "tooltip": [
+                {
+                  "Operations Start Date": "2019-01-01"
+                }, 
+                {
+                  "Volume KPI": 1000
+                }, 
+                {
+                  "Bot Cost per Record": 5
+                }, 
+                {
+                  "Manual Cost per Record": 10
+                }
+              ], 
+              "trending_percentage": -327
+            }
+          ], 
+          "parent": {
+            "avgRecordsperRun": 1414.4023210831722, 
+            "avgSavingsPerRun": 2042.284332688588, 
+            "displayName": "CDAI", 
+            "savingAchievedToDate": 29375.0, 
+            "savingsBaseLine": 164880.0, 
+            "throughputtoDate": 27846
+          }
+        }
+      }, 
+      {
+        "group": {
+          "child": [
+            {
+              "avgRecordsperRun": 12.0, 
+              "avgSavingsPerRun": 3.5999999999999996, 
+              "displayName": "CSR PPD Allocate", 
+              "processName": "CSR_Provider_Packet_Distribution_CSR_Provider_Packet_Distribution_HS", 
+              "savingAchievedToDate": 10.799999999999999, 
+              "savingsBaseLine": 57.599999999999994, 
+              "throughputtoDate": 36, 
+              "tooltip": [
+                {
+                  "Operations Start Date": "2019-01-01"
+                }, 
+                {
+                  "Volume KPI": 12
+                }, 
+                {
+                  "Bot Cost per Record": 0.2
+                }, 
+                {
+                  "Manual Cost per Record": 0.5
+                }
+              ], 
+              "trending_percentage": -433
+            }
+          ], 
+          "parent": {
+            "avgRecordsperRun": 12.0, 
+            "avgSavingsPerRun": 3.5999999999999996, 
+            "displayName": "CRI", 
+            "savingAchievedToDate": 10.799999999999999, 
+            "savingsBaseLine": 57.599999999999994, 
+            "throughputtoDate": 36
+          }
+        }
+      }, 
+      {
+        "group": {
+          "child": [], 
+          "parent": {
+            "avgRecordsperRun": 0, 
+            "avgSavingsPerRun": 0, 
+            "displayName": "HR", 
+            "savingAchievedToDate": 0, 
+            "savingsBaseLine": 0, 
+            "throughputtoDate": 0
+          }
+        }
+      }, 
+      {
+        "group": {
+          "child": [
+            {
+              "avgRecordsperRun": 1.0, 
+              "avgSavingsPerRun": 0.2, 
+              "displayName": "Refunds", 
+              "processName": "Refunds_Requests_Processor_QA_RefundsBOT", 
+              "savingAchievedToDate": 0.2, 
+              "savingsBaseLine": 320.0, 
+              "throughputtoDate": 1, 
+              "tooltip": [
+                {
+                  "Operations Start Date": "2019-01-01"
+                }, 
+                {
+                  "Volume KPI": 100
+                }, 
+                {
+                  "Bot Cost per Record": 0.3
+                }, 
+                {
+                  "Manual Cost per Record": 0.5
+                }
+              ], 
+              "trending_percentage": -159900
+            }, 
+            {
+              "avgRecordsperRun": 3.5, 
+              "avgSavingsPerRun": 1.0499999999999998, 
+              "displayName": "IMS Submit Invoice", 
+              "processName": "IMS_SubmitInvoiceDetailsProcessor_BOT_IMS_QA", 
+              "savingAchievedToDate": 2.0999999999999996, 
+              "savingsBaseLine": 240.0, 
+              "throughputtoDate": 7, 
+              "tooltip": [
+                {
+                  "Operations Start Date": "2019-01-01"
+                }, 
+                {
+                  "Volume KPI": 50
+                }, 
+                {
+                  "Bot Cost per Record": 0.2
+                }, 
+                {
+                  "Manual Cost per Record": 0.5
+                }
+              ], 
+              "trending_percentage": -11328
+            }
+          ], 
+          "parent": {
+            "avgRecordsperRun": 4.5, 
+            "avgSavingsPerRun": 1.2499999999999998, 
+            "displayName": "others", 
+            "savingAchievedToDate": 2.3, 
+            "savingsBaseLine": 560.0, 
+            "throughputtoDate": 8
+          }
+        }
+      }, 
+      {
+        "group": {
+          "child": [
+            {
+              "avgRecordsperRun": 43.0, 
+              "avgSavingsPerRun": 30.099999999999998, 
+              "displayName": "Transaction Status Response", 
+              "processName": "TSR_BOT_QA_TSR", 
+              "savingAchievedToDate": 90.3, 
+              "savingsBaseLine": 5600.0, 
+              "throughputtoDate": 129, 
+              "tooltip": [
+                {
+                  "Operations Start Date": "2019-01-01"
+                }, 
+                {
+                  "Volume KPI": 500
+                }, 
+                {
+                  "Bot Cost per Record": 0.3
+                }, 
+                {
+                  "Manual Cost per Record": 1
+                }
+              ], 
+              "trending_percentage": -6101
+            }
+          ], 
+          "parent": {
+            "avgRecordsperRun": 43.0, 
+            "avgSavingsPerRun": 30.099999999999998, 
+            "displayName": "FINANCE", 
+            "savingAchievedToDate": 90.3, 
+            "savingsBaseLine": 5600.0, 
+            "throughputtoDate": 129
+          }
+        }
+      }
+    ], 
+    "summary": {
+      "avgSavingsPerRecord": "1.05", 
+      "avgSavingsPerRun": "294.78", 
+      "totalSavings": "29478.40"
+    }
+  }
+}

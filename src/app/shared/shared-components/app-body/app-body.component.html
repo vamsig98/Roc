@@ -1,0 +1,185 @@
+<div *ngIf="!isAdminHead">
+    <mat-toolbar>
+        <div class="logo_sec">
+            <img class="header-logo1" [ngStyle]="{'width': showEnso ? '100%' : 'initial'}" src="{{client_profile? client_profile.logo : 'assets/images/pl_logo.png'}}" *ngIf="!isLogoLoading" alt="logo">
+        </div>
+        <mat-spinner class="spinnerCenter" color="accent" diameter="20" *ngIf="isLogoLoading"></mat-spinner>
+        <div class="header_title" *ngIf="!showEnso">DOC<div class="header_subtitle">{{client_profile? client_profile.version: ''}}</div>
+    </div>
+        <div class="menu-wrapper" *ngIf="loggedInUserDetails?.email">
+            <ul class="menu">
+                <li [routerLink]="['/app/operational/dashboard']" [routerLinkActive]="['active','remove-cursor-event']">
+                    <span>Operational</span>
+                    <span>Dashboard</span>
+                </li>
+                <li [routerLink]="['/','app', 'processes', processKey]" [ngClass]="{'active remove-cursor-event': isActive('processes')}">
+                    <span>Processes</span>
+                </li>
+                <li [routerLink]="['/app/financial/viewer']" *ngIf="isSuperAdmin || isAdmin" [ngClass]="{'active remove-cursor-event': isActive('financial')}">
+                    <span>Financial</span>
+                    <span>Dashboard</span>
+                </li>
+            
+                <li [ngClass]="{'active remove-cursor-event': isActive('reports')}" [matMenuTriggerFor]="reportsMenu">
+                    <span>Reports 
+                        <em class="fa fa-angle-down" style="font-size: 15px"></em>
+                    </span>
+                </li>
+                <mat-menu  class="pointer topre" overlapTrigger="false" #reportsMenu="matMenu">
+                        <button mat-menu-item  [routerLink]="['/app/reports/viewer']">
+                            <span>Throughput Report</span>
+                        </button>
+                      
+                    </mat-menu>
+               
+            </ul>
+    
+           
+        </div>
+        <span class="spacer"></span>
+               <div *ngIf="loggedInUserDetails?.email" class="profile flex full-height flex-justify-center flex-align-center pointer"
+            [matMenuTriggerFor]="profileMenu">
+            <div class="profile-name-wrapper ">
+                <div class="profile-name">{{loggedInUserDetails?.firstname}} {{loggedInUserDetails?.lastname}}</div>
+                <div class="profile-designation">{{loggedInUserDetails?.email}}</div>
+            </div>
+            <div class="profile-img" [ngStyle]="{'background-image': 'url(assets/images/bg-no-profile.png)'}">
+            </div>
+            <div class="down-arrow full-height flex flex-align-center">
+                <mat-icon>keyboard_arrow_down</mat-icon>
+            </div>
+        </div>
+        <mat-menu class="pointer" #profileMenu="matMenu" overlapTrigger="false">
+            <button mat-menu-item [routerLink]="['/admin/configuration']" *ngIf="isSuperAdmin">
+                <mat-icon>settings</mat-icon>
+                <span>switch to DOC Admin</span>
+            </button>
+           
+            <button mat-menu-item (click)="logout()">
+                <mat-icon>exit_to_app</mat-icon>
+                <span>Logout</span>
+            </button>
+           
+        </mat-menu>
+    </mat-toolbar>
+    
+    <mat-drawer-container>
+        <mat-drawer mode="side" [opened]="isSuperAdmin && _router.url.includes('configuration')">
+            <ul class="menu" [routerLinkActive]="['show']">
+                <li [routerLink]="['/admin/configuration/processlist']" [routerLinkActive]="['active','remove-cursor-event']">
+                    Processes
+                </li>
+                <li [routerLink]="['/admin/configuration/subwaymap']" [routerLinkActive]="['active','remove-cursor-event']">
+                    Subway Map
+                </li>
+                <li [routerLink]="['/admin/configuration/throughput']" [routerLinkActive]="['active','remove-cursor-event']">
+                    Throughput
+                </li>
+               
+                <li [routerLink]="['/admin/configuration/EmailTemaplte']" [routerLinkActive]="['active','remove-cursor-event']">
+                   Email Templates
+                </li>
+               
+                 <li [routerLink]="['/admin/configuration/UsersList']" [routerLinkActive]="['active','remove-cursor-event']">
+                    Users List
+                 </li>
+    
+            </ul>
+    
+          
+        </mat-drawer>
+    
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-container>
+    </div>
+    <!-- old header -->
+    
+    
+    <!-- new header -->
+    <div *ngIf="isSuperAdmin && isAdminHead">
+    <div class="new">
+    <mat-toolbar >
+            <div class="logo_sec">
+                <img class="header-logo1" [ngStyle]="{'width': showEnso ? '100%' : 'initial'}" src="{{client_profile? client_profile.logo: 'assets/images/pl_logo.png'}}" *ngIf="!isLogoLoading" alt="logo">
+            </div>
+            <mat-spinner class="spinnerCenter" color="accent" diameter="20" *ngIf="isLogoLoading"></mat-spinner>
+            <div class="header_title" *ngIf="!showEnso">DOC<div class="header_subtitle">admin</div></div>
+                  
+    
+    
+                        <div class="search" *ngIf="false">
+                           <input type="text" class="searchTerm form-control" placeholder="What are you looking for?">
+                           <button type="submit" class="searchButton">
+                             <em class="fa fa-search"></em>
+                          </button>
+                        </div>
+    
+    
+    
+                <span class="spacer"></span>
+                <div class="help_icon" *ngIf="false">
+                    <mat-icon class="pointer">help</mat-icon>
+                </div>
+              
+                <div *ngIf="loggedInUserDetails?.email" class="profile flex full-height flex-justify-center flex-align-center pointer"
+                    [matMenuTriggerFor]="profileMenu">
+                    <div class="profile-name-wrapper ">
+                        <div class="profile-name">{{loggedInUserDetails?.firstname}} {{loggedInUserDetails?.lastname}}</div>
+                        <div class="profile-designation">{{loggedInUserDetails?.email}}</div>
+                    </div>
+                    <div class="profile-img" [ngStyle]="{'background-image': 'url(assets/images/bg-no-profile.png)'}">
+                    </div>
+                    <div class="down-arrow full-height flex flex-align-center">
+                        <mat-icon>keyboard_arrow_down</mat-icon>
+                    </div>
+                </div>
+                <mat-menu class="pointer" #profileMenu="matMenu" overlapTrigger="false">
+                    <button mat-menu-item [routerLink]="['/app/operational/dashboard']" *ngIf="isSuperAdmin">
+                        <mat-icon>settings</mat-icon>
+                        <span>switch to Doc</span>
+                    </button>
+                   
+                    <button mat-menu-item (click)="logout()">
+                        <mat-icon>exit_to_app</mat-icon>
+                        <span>Logout</span>
+                    </button>
+                    
+                </mat-menu>
+        </mat-toolbar>
+    </div>
+        <mat-drawer-container>
+                <mat-drawer mode="side" [opened]="isSuperAdmin && _router.url.includes('configuration')">
+                    <ul class="menu" [routerLinkActive]="['show']">
+                        <li [routerLink]="['/admin/configuration/processlist']" [routerLinkActive]="['active','remove-cursor-event']">
+                            Processes
+                        </li>
+                        <li [routerLink]="['/admin/configuration/subwaymap']" [routerLinkActive]="['active','remove-cursor-event']">
+                            Subway Map
+                        </li>
+                        <li [routerLink]="['/admin/configuration/throughput']" [routerLinkActive]="['active','remove-cursor-event']">
+                            Throughput
+                        </li>
+                       
+                        <li [routerLink]="['/admin/configuration/EmailTemaplte']" [routerLinkActive]="['active','remove-cursor-event']">
+                           Email Templates
+                        </li>
+                      
+                         <li [routerLink]="['/admin/configuration/UsersList']" [routerLinkActive]="['active','remove-cursor-event']">
+                            Users List
+                         </li>
+                    </ul>
+    
+                
+                </mat-drawer>
+    
+                <div>
+                    <router-outlet></router-outlet>
+                </div>
+            </mat-drawer-container>
+        </div>
+    <!-- new header -->
+    
+    
+    

@@ -1,0 +1,105 @@
+
+<div class="processes-sec">
+  <div class="row aligntext process-head1">
+    <div class="col-lg-6 lobs">
+      <span class="lobclass" *ngIf="false">Org Units :</span>
+      <span class="all pointer" *ngIf="false">{{selected}}
+        <i [matMenuTriggerFor]="menu" class="fa fa-angle-down pointer" aria-hidden="true"></i>
+      </span>
+      <mat-menu #menu="matMenu" *ngIf="false">
+        <ng-container *ngFor="let opt of orgUnits">
+          <button class="menu_width pointer" mat-menu-item (click)="lobChanged(opt)">{{opt}}</button>
+        </ng-container>
+      </mat-menu>
+
+    </div>
+    <div class="col-lg-6">
+      <button type="button" class="custom-btn">
+        <i class="fa fa-plus-circle" aria-hidden="true"></i>CREATE PROCESS
+      </button>
+
+    </div>
+  </div>
+  <div class="row process-head2">
+    <div [style.height.px]="tableHeight" *ngIf="isProcessesLoading">
+      <mat-spinner color="accent" diameter="20"></mat-spinner>
+    </div>
+    <div [style.height.px]="tableHeight">
+      <table class="table-hover table-sec" id="table-sec" *ngIf="!isProcessesLoading && columnData">
+        <tr>
+          <th class="table-header" *ngFor="let head of columnData.headers">
+            <div class="position-relative">{{head.value}}
+              <i class="fa fa-caret-up "
+                [ngStyle]="{color:(sortfield.key == head.key && sortfield.sort_order == '1')? '#2389ff': ''}"
+                aria-hidden="true" (click)="changeSort(head.key, '1')"></i>
+              <i class="fa fa-caret-down"
+                [ngStyle]="{color:(sortfield.key === head.key && sortfield.sort_order === '-1')? '#2389ff': ''}"
+                aria-hidden="true" (click)="changeSort(head.key, '-1')"></i>
+            </div>
+          </th>
+          <th class="actions">Actions</th>
+        </tr>
+        <tr>
+          <th *ngFor="let head of columnData.headers" class="example">
+            <div *ngIf="head.type== 'string'">
+              <input type="text" name="search" [(ngModel)]="head.searchFilter" (keyup.enter)="changeFilter()">
+              <button type="submit" (click)="changeFilter()">
+                <em class="fa fa-search"></em>
+              </button>
+            </div>
+            <div *ngIf="head.type== 'datetime'" class="datetime_position">
+              <input type="text" name="search" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1"
+                [(ngModel)]="head.searchFilter" (keyup.backspace)="getAlldata($event)" disabled>
+              <span class="date_clear" *ngIf="head.searchFilter.length != 0" (click)="clearDateTime(head.key)"><em
+                  class="fa fa-close"></em></span>
+              <button>
+                <em class="fa fa-calendar" [owlDateTimeTrigger]="dt1"></em></button>
+              <owl-date-time [pickerMode]="'dialog'" #dt1 (afterPickerClosed)="chosenDateTime(dt1)"></owl-date-time>
+            </div>
+          </th>
+        </tr>
+        <tr>
+          <td *ngIf="columnData.data.length === 0" colspan="6" class="no-data-display">
+            there is no data to display.
+          </td>
+        </tr>
+        <tr
+          *ngFor="let process of columnData.data | paginate: { itemsPerPage: itemsPerPage, currentPage: page , totalItems: total}; let ind=index;"
+          class="table-head">
+
+          <td class="textcolor pointer">
+            <p class="ellipsis process-name" [routerLink]="[process._id,process.name]" matTooltip="{{process.name}}">
+              {{process.name}}
+              
+            </p>
+          </td>
+          <td>
+            <p class="ellipsis" matTooltip="{{ process.display_name}}">{{ process.display_name }}</p>
+          </td>
+          <td>
+            <p class="ellipsis">{{process.org_unit?process.org_unit: '-'}}</p>
+          </td>
+          <td>
+            <p class="ellipsis">{{process.hosted_on? process.hosted_on: '-'}}</p>
+          </td>
+          <td>
+            <p class="ellipsis">{{process.last_modified_on? process.last_modified_on: '-'}}</p>
+          </td>
+
+          <td class="text-center">
+            <i class="fa fa-pencil-square-o pencil-icon pointer" aria-hidden="true"
+            [routerLink]="[process._id,process.name]"></i>
+          <i class="fa fa-trash delete-icon pointer" aria-hidden="true" (click)="deleteProcess(process,ind)"></i>
+          </td>
+        </tr>
+
+        <tr>
+          <th colspan='6' class="pagination-sec">
+            <pagination-controls (pageChange)="pageChange($event)"></pagination-controls>
+          </th>
+        </tr>
+
+      </table>
+    </div>
+  </div>
+</div>

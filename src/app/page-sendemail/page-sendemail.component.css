@@ -1,0 +1,56 @@
+.emailtext{
+    margin-top: 40px;
+}
+.logo_sec {
+    min-width: 100px !important;
+    max-width: 120px !important;
+    text-align: right;
+}
+.header_title{
+    margin-top: -10px;
+    font-size: 19px;
+    color: #ff5a11;
+    padding-left: 4px;
+    font-weight: bold;
+}
+.header_subtitle{
+    margin-top: -13px;
+    margin-left: 8px;
+    font-size: 12px;
+    color: #363535;
+    font-weight: 100;
+}
+
+.spacer{
+    flex: 1 1 auto;
+}
+
+.profile-name{
+    line-height: 13px;
+    font-size: 13px;
+}
+
+.profile-designation{
+    line-height: 11px;
+    font-size: 11px;
+}
+.profile-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0 0 1px 2px #e6e6e6;
+}
+.profile-name-wrapper{
+    margin: 0 10px;
+    text-align: right;
+}
+.stop-circle_icon{
+    font-size: 14px !important;
+    padding-right: 5px ;
+  }
+  .mat-toolbar-single-row {
+    height: 41px !important;
+}

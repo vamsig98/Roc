@@ -1,0 +1,39 @@
+{
+    "jobId": "234JKD",
+    "tmStarted": 1516383242684,
+    "metadata": {
+        "File Name": "VNSNY Choice - Bot - 938 Chases.xlsx"
+    },
+    "process": "Data Entry",
+    "triggeredBy": [
+        "File"
+    ],
+    "status": "RUNNING",
+    "botsRunning": 4,
+    "metrics": [
+        {
+            "key": "totalProcessed",
+            "label": "Records Processed",
+            "value": 444,
+            "clickable": false
+        },
+        {
+            "key": "totalAwaiting",
+            "label": "Records Awaiting Process",
+            "value": 200,
+            "clickable": false
+        },
+        {
+            "key": "avgTimePerRecord",
+            "label": "Avg Time/Record",
+            "value": "5 secs",
+            "clickable": false
+        },
+        {
+            "key": "totalFailed",
+            "label": "Records Failed",
+            "value": 2,
+            "clickable": true
+        }
+    ]
+}

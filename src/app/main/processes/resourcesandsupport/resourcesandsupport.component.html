@@ -1,0 +1,45 @@
+<mat-card class="mat-card-data">
+
+  <div class="row resource-header">
+    <p class="resources-support" [ngStyle]="{'display': this.arrow_back ? 'none':'inline'}">Resources and Support</p>
+    <span *ngIf="arrow_forward"><em class="material-icons arrow-forward" (click)="hideResource($event)">
+        arrow_forward_ios
+      </em></span>
+    <span *ngIf="arrow_back"><em class="material-icons arrow-back" (click)="showResource($event)">
+        arrow_back_ios
+      </em></span>
+  </div>
+  <div [ngClass]="this.arrow_back ? 'resource-comp':''">
+    <div class="row info">
+      <p class="about">About</p>
+      <p class="automateinfo" *ngIf="stakeholderInformation.onboarding == null">No Information found</p>
+      <p class="automate" *ngIf="stakeholderInformation.onboarding != null" innerHTML={{stakeholderInformation.onboarding}}>{{stakeholderInformation.onboarding}}</p>
+    </div>
+    <div class="row stakeholder-data">
+      <p class="stakeholder-header">Stakeholders ({{ getStakeholderCount(stakeholderInformation.stakeholder_information)}})</p>
+      <div class="stake-holders" *ngIf="stakeholderInformation.stakeholder_information">
+        <ng-container *ngFor="let item of stakeholderInformation.stakeholder_information | keyvalue">
+            <p class="business">{{item.key}} ({{item.val.length}})</p>
+            <mat-card-header class="mat-card-header" *ngFor="let user of item.val; let id=index">
+              <mat-card-title class="mat-card-title">{{user.name}}</mat-card-title>
+              <mat-card-subtitle class="subtitle">{{user.phonenum}} </mat-card-subtitle>
+              <mat-card-subtitle class="subtitle">{{user.email}}</mat-card-subtitle>
+            </mat-card-header>
+        </ng-container>
+      </div>
+      <div class="stake-holders no-holder" *ngIf="!stakeholderInformation.stakeholder_information">
+            <img src="../../../../assets/images/no-stakeholder.png" alt="">
+            <p>No Stakeholders found</p>
+      </div>
+    </div>
+
+    <div class="row data">
+      <p class="general-info">General Information</p>
+      <div class="general">
+       <p> <strong>LOB:</strong> {{stakeholderInformation.general_information.lob}}</p>
+       <p><strong>Operations Start Date:</strong> {{stakeholderInformation.general_information.operations_start_date ? stakeholderInformation.general_information.operations_start_date : "-" }}</p>
+       <p *ngIf="false">Mode: {{stakeholderInformation.general_information.Mode}}</p>
+      </div>
+    </div>
+  </div>
+</mat-card>

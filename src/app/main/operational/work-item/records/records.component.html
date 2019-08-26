@@ -1,0 +1,51 @@
+<div class="tab-body-wrapper">
+  <div class="filter-wrapper">
+    <mat-form-field class="search-text">
+      <input class="" matInput [(ngModel)]="searchText" placeholder="Search" (keyup)="filterRecords()" />
+    </mat-form-field>
+    <mat-icon>search</mat-icon>
+  </div>
+  <div class="recods-wrapper" *ngIf="sourceLength == 0">
+    <hr>
+    records Data Not Avaialable
+    <hr>
+  </div>
+  <div class="recods-wrapper" *ngIf="sourceLength != 0"> 
+      <mat-table #table [dataSource]="dataSource">
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let record"> {{record.recordId}} </mat-cell>
+      </ng-container>
+
+      <!-- Message Column -->
+      <ng-container matColumnDef="message">
+        <mat-header-cell *matHeaderCellDef> Log Message </mat-header-cell>
+        <mat-cell *matCellDef="let record" style="padding-right:10px;"> {{record.message}} </mat-cell>
+      </ng-container>
+
+       <!-- Status Column -->
+      <ng-container matColumnDef="status">
+        <mat-header-cell *matHeaderCellDef  class="align-center"> Status </mat-header-cell>
+        <mat-cell *matCellDef="let record" class="align-center"> 
+          <mat-icon color="warn" *ngIf="record.status == 'FAILED'" matTooltip="{{record.status}}">warning</mat-icon>
+          <mat-icon color="primary" *ngIf="record.status == 'COMPLETED'" matTooltip="{{record.status}}">check</mat-icon>
+          <mat-spinner color="accent" [diameter]="20" *ngIf="(record.status != 'COMPLETED' && record.status != 'FAILED')" matTooltip="{{record.status}}"></mat-spinner>
+        </mat-cell>
+      </ng-container>
+
+      <!-- Time-taken Column -->
+      <ng-container matColumnDef="timeTaken">
+        <mat-header-cell *matHeaderCellDef> Time Taken </mat-header-cell>
+        <mat-cell *matCellDef="let record"> {{record.processingTime}} SEC</mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]">
+    </mat-paginator>
+  </div>
+</div>

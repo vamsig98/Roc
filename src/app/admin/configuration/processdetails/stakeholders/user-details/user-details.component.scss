@@ -1,0 +1,59 @@
+@import '../../../../../../var.scss';
+
+.stakeholders{
+    background-color: $stakeholders-background-color;
+    min-height:300px;
+    border:none;
+    margin-left: 20px;
+    width: 30%;
+    margin-top: 10px;
+    .p-para{
+        margin-top:15px;
+        margin-left: 0;
+ 
+    .fonticon{
+        float:right;
+
+        a:hover{
+            text-decoration: none;
+        }
+    }
+
+    }
+    .row-one{
+        margin-top:15px;
+        font-size: 12px;
+ 
+        .user-icon-circle{
+            padding-right: 5px;
+            padding-left: 5px
+        }
+        .p-stakeholder{
+            color:$process-stakeholder-text-color;
+            font-size: 10px;
+        }
+ 
+        .p-stakeholderone{
+            font-size:10px;
+        }
+ 
+    }
+    .action_buttons{
+        display: flex;
+        position: absolute;
+        top: 22px;
+        right: -29px;
+
+        .action-icons{
+            padding-right: 5px;
+            padding-left: 5px
+
+        }
+    }
+    .no_stakeholders{
+        text-align: center;
+        margin-top: 80px;
+    }
+ }
+
+    

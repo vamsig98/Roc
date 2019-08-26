@@ -1,0 +1,25 @@
+<div class="col-lg-3 stakeholders">
+  <p class="p-para">{{owner.key}} <span class="fonticon pointer"><a (click)="saveStakeholder(owner.key)">+
+        Add</a></span></p>
+  <hr>
+  <ng-container *ngIf="owner">
+    <div class="row row-one" *ngFor="let user of owner.val; let idx=index">
+      <div class="col-lg-2">
+        <i class="fa fa-user-circle fa-2x user-icon-circle" aria-hidden="true"></i>
+      </div>
+      <div class="col-lg-8" (mouseenter)="changeStyle($event, idx)" (mouseleave)="changeStyle1($event, idx)">
+        <p class="p-stakeholder"> <strong>{{user.name}}</strong></p>
+        <p>{{user.phonenum}}</p>
+        <p class="p-stakeholderone">{{user.email}}</p>
+        ​
+        <span class="action_buttons" *ngIf="isHovered && hoverInd== idx;">
+          <i class="fa fa-pencil-square-o pencil-icon pointer action-icons" aria-hidden="true"
+            (click)="editStakeholder(user,owner.key,idx)"></i>
+          <i class="fa fa-trash delete-icon pointer action-icons" (click)="deleteStakeholder(idx,owner.key)"
+            aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+  </ng-container>
+  <p class="no_stakeholders" *ngIf="owner.val.length == 0">No Stakeholders have been added yet</p>
+</div>

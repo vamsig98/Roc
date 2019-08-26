@@ -1,0 +1,124 @@
+@import '../../../../var.scss';
+.mat-card-add-stakeholder {
+    // ::ng-deep.mat-dialog-container {
+        padding: 0;
+        display: inline;
+    // }
+    .header-add-stakeholder {
+.header-add{
+.header {
+    font-weight: 600;
+}
+}
+.close {
+    .close-icon {
+        cursor: pointer;
+    }
+    }
+}
+.data-details {
+    .data-focus {
+        margin-top: 20px;
+        .data {
+            // padding-bottom: 18px;
+            .field-set {
+                width: 100%;
+                .form-control:focus {
+                    border: none !important;
+                    outline: none !important;
+                }
+                input {
+                    margin-top: -8px !important;
+                    font-family: inherit;
+                    line-height: inherit;
+                    border: none;
+                    outline-color: transparent !important;
+                    font-size: 11px;
+                    width: 100%;
+                }
+                .business-legend {
+                    width: 115px !important;
+                    font-size: 11px;
+                }
+                .email-legend{
+                    width: 30px !important;
+                    font-size: 11px;
+                }
+                .num-legend {
+                        width: 81px !important;
+                        font-size: 11px;
+                }
+            }
+            
+        }
+    }
+}
+.buttons {
+    .save-button {
+        .save{
+            border-color: transparent;
+            color: $add-stakeholders-save-button-color;
+            background-color: $add-stakeholders-save-button-background-color;
+            margin: 16px 0 0 7px;
+            padding: 10px 29px 10px 29px;
+            border-radius: 3px;
+        }
+    }
+    .cancel-button {
+        .cancel{
+            color: $add-stakeholders-cancel-button-color;
+            background-color: $add-stakeholders-save-button-color;
+            border: 1px solid$add-stakeholders-cancel-button-color !important;
+            padding: 10px 29px 10px 29px;
+            border-radius: 3px;
+            margin: 16px 0 0 7px;
+        }
+    }
+}
+}
+// .legend{
+//     width: 80px !important;
+//     margin-bottom: 0px;
+//     border-bottom: none !important;
+//     color:$process-stakeholder-text-color;
+// }
+
+
+
+
+
+.business-legend {
+    width: 115px !important;
+    font-size: 11px;
+}
+.close-icon {
+    cursor: pointer;
+}
+.corn-legend{
+    font-size: 11px;
+    width: 84px !important;
+}
+textarea{
+     resize: none !important;
+     border: none !important;
+      }
+ .expression-legend{
+    font-size: 11px;
+    width:90px !important;
+ }
+ fieldset{
+     height: none !important;
+ }
+ /deep/.corn-field-set{
+     height: 110px !important;
+ }
+ input{
+     width:100% !important;
+     
+ }
+ .form-control{
+     box-shadow: none !important;
+ }
+ .form-control:focus{
+     box-shadow: none !important;
+ }

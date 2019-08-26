@@ -1,0 +1,32 @@
+<div class="log_list">
+    <span class="logs">Logs: 
+      <span class="pointer">
+          <span class="menu_item_value">{{selected}}</span>
+          <i [matMenuTriggerFor]="menu" class="fa fa-angle-down pointer icon_custom" aria-hidden="true"></i>
+        </span>
+      </span>
+     
+
+         <mat-menu #menu="matMenu">
+        <ng-container *ngFor="let opt of orgUnits">
+        <button class="menu_width pointer" mat-menu-item (click)="lobChanged(opt)">{{opt}}</button>
+      </ng-container>
+      </mat-menu>
+      
+    <table   class="table table-responsive table-hover record-table">
+        <thead class="table_header">
+          <tr>
+            <td class="time_td_width">Time</td>
+            <td class="time_sec_td_width">Time Taken(secs)</td>
+            <td>Message</td>
+          </tr>
+        </thead>
+        <tbody class="table_body">
+          <tr>
+            <td >today 3:40P</td>
+            <td class="data">5</td>
+            <td class="data1">5</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>

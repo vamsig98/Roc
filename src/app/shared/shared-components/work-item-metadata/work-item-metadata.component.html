@@ -1,0 +1,72 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row header">
+          <div class="relative range-bar" *ngIf="showFilterMenu">
+
+        <div class="col-md-9">
+          <div class="menu-metadata">
+            <img src="../../../../assets/images/filter2.png" alt="">
+            <button mat-button (click)="showDatewiseFilter('YTD')"
+            [ngClass]="{'active': (ddSelected == 'YTD') }">YTD</button>
+            <button mat-button (click)="showDatewiseFilter('MTD')"
+            [ngClass]="{'active': (ddSelected == 'MTD') }">MTD</button>
+            <button mat-button (click)="showDatewiseFilter('WTD')"
+              [ngClass]="{'active': (ddSelected == 'WTD') }">WTD</button>
+              <button mat-button (click)="showDatewiseFilter('ALL')"
+              [ngClass]="{'active': (ddSelected == 'ALL') }">ALL</button>
+            <button mat-button (click)="showDatePicker()" [ngClass]="{'active': (ddSelected == 'Range') }">Custom Date
+              Range</button>
+            <mat-spinner diameter="20" *ngIf="isLoading"></mat-spinner>
+            <span class="date-dummy" #datePlaceholder daterangepicker [options]="options"
+              (selected)="selectedDate($event, daterange)"></span>
+
+
+          </div>
+
+        </div>
+      <div class="col-md-3" *ngIf="false">
+        <span style="float: right">
+          <img class="fonticon" src="../../../../assets/images/sorting.png" alt="sorting">
+        <span class="customizemtr">Customize Metric</span>
+      </span>
+      </div>
+    </div>
+
+      </div>
+      <div class="row">
+          <div class="flex flex_row_bg ">
+              <div [ngClass]="parentData ? 'col-md-10':'col-md-9'" class=" meta-wrapper flex flex-row flex-justify-space-around flex-align-center  metadat-wrapper">
+                  <div class="record_padding">
+                      <div class="text-center record-box-label meta-text-label-color">Items</div>
+                      <div class="text-center record-item-value meta-text-value-color plain-value-size">{{metadata?.items ?metadata?.items :'0'}}</div>
+                    </div>
+                <div class="record_padding">
+                  <div class="text-center record-box-label meta-text-label-color">Total Records</div>
+                  <div class="text-center record-item-value meta-text-value-color plain-value-size">{{metadata?.totalRecords ?metadata?.totalRecords :'0'}}</div>
+                </div>
+                <div class="record_padding">
+                  <div class="text-center record-box-label meta-text-label-color">Records Processed</div>
+                  <div class="text-center record-item-value meta-text-value-color plain-value-size">{{metadata?.recordsProcessed ? metadata?.recordsProcessed :'0' }}</div>
+                </div>
+                <div class="record_padding">
+                  <div class="text-center record-box-label meta-text-label-color">Attention Needed</div>
+                  <div class="text-center record-item-value meta-text-value-color plain-value-size">{{metadata?.attentionNeeded ? metadata?.attentionNeeded :'0'}}</div>
+                </div>
+                <div class="record_padding">
+                  <div class="text-center record-box-label meta-text-label-color">Other Failures</div>
+                  <div class="text-center record-item-value meta-text-value-color plain-value-size">{{metadata?.otherFailures ? metadata?.otherFailures : '0'}}</div>
+                </div>
+                <div class="record_padding">
+                  <div class="text-center record-box-label meta-text-label-color">No.Of Bots Allocated</div>
+                  <div class="text-center record-item-value meta-text-value-color plain-value-size">{{metadata?.botCount ? metadata?.botCount : '0'}}</div>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+

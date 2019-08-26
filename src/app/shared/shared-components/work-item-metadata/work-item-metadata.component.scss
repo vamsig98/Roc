@@ -1,0 +1,84 @@
+@import '../../../../var.scss';
+.metadat-wrapper{
+    height: 70px;
+    position: relative;
+    padding: 0 !important;
+}
+.container-fluid{
+    box-shadow: none !important;
+  }
+.range-bar{
+    height: 20px;
+    display: flex;
+    align-items: center;
+    background: $header-range-bar-background-color;
+}
+
+.time-dd{
+    position: absolute;
+    top: 0px;
+    right: 12px;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    cursor: pointer;
+}
+
+.meta-wrapper{
+    align-items: center;
+    background: $body-meta-wrapper-background-color;
+}
+.flex_row_bg{
+    background: $body-meta-wrapper-background-color;
+
+}
+
+.menu-metadata{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* padding-left: 15px; */
+    padding-left: 0;
+}
+
+.menu-metadata button.active{
+    color: $header-menu-metadata-active-button-color;
+    border-bottom: 2px solid $header-menu-metadata-active-button-color;
+}
+.menu-metadata button{  
+    height: 25px;
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    justify-content: center;
+    min-width: 45px;
+    padding: 0;
+    line-height: 25px;
+    font-weight: bold;
+    color: $header-menu-metadata-button-color;
+}
+.menu-metadata button span.mat-button-wrapper{
+    line-height: 25px;
+
+}
+.customizemtr
+{
+   color:$header-menu-metadata-active-button-color;
+   font-size: 13px;
+   font-weight: bold;
+   float: right;
+
+ }
+.fonticon{
+   color:$header-menu-metadata-active-button-color;
+   padding-right: 8px;
+   font-size: 19px;
+}
+.record-box-label{
+    font-weight: bold !important;
+}
+.record_padding{
+    padding-right: 30px;
+}

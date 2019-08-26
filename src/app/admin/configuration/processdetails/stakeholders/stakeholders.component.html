@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-10">
+    <h3 class="stakeholders-head">Stakeholders</h3>
+  </div>
+  <hr class="stakeholders-hr">
+</div>
+<p class="p-para">Stake holders who are responsible for the process,can be configured here.</p>
+
+<div>
+  <div class="row stakeholdersmain">
+    <div *ngFor="let item of stakeholders | keyvalue">
+      <app-user-details [process]="process" [owner]="item" (save)="saveData($event)"></app-user-details>
+    </div>
+  </div>
+</div>

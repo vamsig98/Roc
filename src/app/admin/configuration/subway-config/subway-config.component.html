@@ -1,0 +1,32 @@
+<div class="subway-configure-admin admin-sec" id="subway-map-config-viewer">
+  <div class="content-wrapper">
+    <mat-toolbar class="subway-map-viewer-menu map-toolbar">
+      <span class="map-title-font">Subway Map Configuration
+        <mat-spinner color="accent" diameter="20" *ngIf="isLoading" class="pull-right"></mat-spinner>
+      </span>
+      <!-- This fills the remaining space of the current row -->
+      <span class="fill-space"></span>
+
+      <span class="spacer"></span>
+
+      <div class="devider"></div>
+      <button mat-icon-button (click)="save()">
+        <mat-icon aria-label="Zoom In">save</mat-icon>
+      </button>
+      <button mat-icon-button (click)="zoomIn()">
+        <mat-icon aria-label="Zoom In">zoom_in</mat-icon>
+      </button>
+      <button mat-icon-button (click)="zoomReset()">
+        <mat-icon aria-label="Zoom In">center_focus_strong</mat-icon>
+      </button>
+      <button mat-icon-button (click)="zoomOut()">
+        <mat-icon aria-label="Zoom Out">zoom_out</mat-icon>
+      </button>
+    </mat-toolbar>
+    <div class="modeler">
+      <div id="canvas"></div>
+      <div [hidden]="edited" id="properties"></div>
+    </div>
+
+  </div>
+</div>

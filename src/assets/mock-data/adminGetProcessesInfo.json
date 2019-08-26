@@ -1,0 +1,23 @@
+{
+    "status": "SUCCESS",
+    "message": "",
+    "result": [
+        {
+            "processId": "1",
+            "processLabel": "Process One"
+        },
+        {
+            "processId": "2",
+            "processLabel": "Process Two"
+        },
+        {
+            "processId": "3",
+            "processLabel": "Process Three"
+        },
+        {
+            "processId": "4",
+            "processLabel": "Process Four"
+        }
+    ],
+    "total": 4
+}

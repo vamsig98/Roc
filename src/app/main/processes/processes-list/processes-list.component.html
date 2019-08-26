@@ -1,0 +1,52 @@
+<mat-spinner color="accent" diameter="20" *ngIf="isLoading"></mat-spinner>
+<div>
+  <div class="input-container" *ngIf="allProcessesTemp && allProcessesTemp.length !== 0">
+
+    <input class="input-field" type="text" placeholder="Search..." [(ngModel)]="searchString" />
+    <img class="icon" alt="search-image" src="../../../../assets/images/search.png" alt="">
+    <span class="sidenav_filter_icon pointer"><img (click)="openLobFilter()" class="filter-icon hand"
+        src="assets/images/filter1.png" alt="filter-img" style="position: relative">
+      <ul class="filter-dropdown-menu" *ngIf="showLobFilter">
+        <li class="all-cases">
+          <input class="input-checkbox hand" type="checkbox" value="allcases" [checked]="checkedAll"
+            (click)="toggleselection('All')">
+          <span class="hand process_name" (click)="toggleselection('All')">All</span></li>
+        <li *ngFor="let item of participants ">
+          <input class="input-checkbox hand" type="checkbox" value="{{item}}"
+            [checked]="selectedStatus.indexOf(item)>-1" (click)="toggleselection(item)">
+          <span class="hand process_name" (click)="toggleselection(item)">{{item}}</span>
+        </li>
+      </ul>
+    </span>
+    <!-- show filters -->
+
+  </div>
+
+  <div class="sidenav_accordion" *ngIf="true">
+    <mat-accordion *ngFor="let process of allProcessesTemp | filterproc :searchString; first as isFirst; ">
+      <mat-expansion-panel [expanded]="isFirst || process.group.parent.display_name ==  parent_name ? true : false" #example (click)="hideLobFilter()">
+        <mat-expansion-panel-header [collapsedHeight]="customCollapsedHeight" [expandedHeight]="customExpandedHeight">
+          <mat-panel-title>
+            <span>
+              <mat-icon *ngIf="!example.expanded">arrow_right</mat-icon>
+              <mat-icon *ngIf="example.expanded">arrow_drop_down</mat-icon>
+            </span>
+            {{process.group.parent.display_name }}
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+
+        <ul class="acc_ul">
+          <li class="acc_li" *ngFor="let eachchild of process.group.child | filterproc :searchString; first as isFirst;"
+            [ngClass]="{'active-process' : _workItemService.activeProcess === eachchild.displayName}"
+            [routerLink]="['/app','processes', eachchild.name]" [routerLinkActive]="['active','remove-cursor-event']"
+            (click)="changeSelectedProcess(eachchild.name); activeSelectedProcess(eachchild.displayName)">
+            <span matTooltip="{{ eachchild.displayName }}">{{eachchild.displayName  }}</span>
+          </li>
+        </ul>
+
+
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

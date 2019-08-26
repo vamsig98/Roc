@@ -1,0 +1,278 @@
+@import '../../../../var.scss';
+.no-margin-financial{
+    margin:0 !important;
+    background-color:#1c1b3b;
+}
+.drill-down-back{
+    margin: 3px 10px 0px -15px;
+    color:white;
+    float:left;
+    cursor:pointer;
+}
+.margiright{
+    margin-right:2.5px;
+}
+.headeing-first {
+    font-size: 12px;
+    color: #9c9c9c;
+}
+.p-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.p1 {
+    border-left: 1px solid lightgrey;
+}
+.d10 {
+    display: inline-flex;
+}
+
+.sidenav{
+// background-color: #252d40;
+background-color: #282b4b;
+border-right: 2px solid #3e445c;
+padding-top: 8px;
+width: 95%;
+.head-text{
+    padding: 10px 10px;
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+}
+
+.process-mennu2 li{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 30px;
+    color:white;
+    line-height: 35px;
+    cursor: pointer;
+    outline: none;
+    padding: 0px 10px;
+    transition: all .3s ease 0s;
+    font-size: 12px;
+     li:active{
+    background-color:#424f6f;
+}
+}
+.process-mennu2 .active{
+    background: rgb(66,79,111);
+    color:white;
+    font-weight: 400;
+}
+}
+.h11 {
+    background-color: #e5e5e5;
+    font-size: 12px;
+    padding-top: 11px;
+    font-weight: 600;
+    color: #000000a3;
+   }
+.c1 {
+    margin-top: 15px;
+}
+.menu-metadata button {
+    min-width: 28px !important;
+    padding: 0px 8px;
+    line-height: 25px;
+    font-size: 12px;
+    color: rgb(199,199,199);
+}
+.menu-metadata button.active{
+    border-bottom:3px solid rgb(151,151,151);
+    color: #000000;
+}
+.financial-viewer{
+    .clear{
+        clear:both;
+    }
+    padding-top:10px;
+    margin-left: 15px;
+        .summary-header-title{
+        color: #565656;
+    padding: 6px 6px 6px 0;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 12px;
+    padding-left: 12px;
+    background-color: #e5e5e5;
+    }
+    .summary-header-title .head1{
+        background-color: #e5e5e5;
+        color: #000000a3;
+        padding-left: 10px;
+        font-size: 12px;
+        font-weight: bold;
+      
+    }
+    .daterangepicker{
+        right:100px !important;
+        width:565px !important;
+    }
+    .header3{
+    margin-top: 2px;
+    }
+    
+    .lifetodate{
+        // background-color:#fff;
+        // margin:0px;
+        // margin-right:-15px;
+        // margin-left: -15px;
+        margin: 0px;
+        margin-right: -12px;
+        margin-left: -15px;
+        .mat-button{
+            line-height: 25px;
+            min-width:auto !important;
+            padding:0 10px;
+        }
+        .active{
+            color:#ff5a11;
+        }
+        .mat-button-toogle-first-child{
+            background-color:#e0dcdc !important;
+            color:black;
+        }
+    }
+    .padding-margin-10{
+        padding:10px;
+        background-color:white;
+        border-right: 1px solid #d3d3d3;
+    }
+    .borderheader{
+        border-top: 1px solid #d3d3d3;
+    }
+    .summary{
+        height: 420px;
+        }
+        .leftheadepadding{
+        padding: 70px 14px;
+        font-size: 12px;
+        }
+        .value-bigsz{
+            padding-top: 10px;
+            font-size: 18px;
+            padding-bottom: 36px;
+            // font-family: Bariol;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #544f4e;
+        }
+      
+    .highcharts-exporting-group{
+        display:none !important;
+    }
+    .highcharts-credits{
+        display:none !important;
+    }
+    .highcharts-title{
+    color: #d3d3d3 !important;
+        font-size: 11px !important;
+        fill: #000000ad !important;
+        font-weight: bold !important;
+    }
+    .finance-records{
+        height:calc(100vh - 290px - 90px);
+        overflow-y: auto;
+    }
+    .finance-record-drilldown{
+        height:calc(100vh - 98px);
+        overflow-y: auto;
+        background-color:white;
+        padding:20px;
+        .table{
+            th,td{
+                padding:10px;
+                border:none;
+            }
+            th{
+                font-size: 12px;
+                border-bottom: 1px solid #dddddd;
+            }
+        }
+    }
+    .finance-records::-webkit-scrollbar,.full-wrapper::-webkit-scrollbar {
+        width: 5px !important;
+        height: 8px !important;
+        background-color: #ddd !important; /* or add it to the track */
+      }
+      /* Add a thumb */
+      .finance-records::-webkit-scrollbar-thumb, .full-wrapper::-webkit-scrollbar-thumb {
+          background: #4a90e2 !important; 
+      }
+}
+.no-padding-no-margin{
+    padding:0;
+    margin:0;
+}
+
+.header1 {
+    color: gray;
+    font-size: 13px;
+}
+
+
+.aggretedSec {
+    .aggregatedFinancial {
+        // font-family: Bariol;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: $finanace-record-aggregated-process-level-metrics;
+    }
+    .for-all-lobs {
+        width: 69px;
+        height: 12px;
+        // font-family: Bariol;
+        font-size: 12px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: $finanace-record-aggregated-process-level-metrics;
+    }
+    .processes {
+        // font-family: Bariol;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: right;
+        color: $finanace-record-aggregated-process-level-metrics;
+        float: right;
+    }
+}
+
+.process-level-metrics {
+    // font-family: Bariol;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $finanace-record-aggregated-process-level-metrics;
+}
+
+
+.finance-record-drilldown {
+    background-color: $finance-record-drilldown-background-color;
+        padding: 32px;
+        width: 97%;
+        margin-left: 15px;
+}
+.selectedRecordName {
+    color: $finance-record-selectedRecordName;
+    position: relative;
+    top: 6px;
+}

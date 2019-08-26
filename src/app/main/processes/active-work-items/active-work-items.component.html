@@ -1,0 +1,67 @@
+<div [ngClass]="parentData ? 'col-md-12':'col-md-9'" class="active-items">
+    <div class="active-work-item" *ngFor="let item of sources;  let idx=index;">
+      <div class="status">
+        {{(item ? (item && item.status.toUpperCase() == 'WAITING' ? 'Waiting' : ( item && item.status.toUpperCase()
+          == 'SUCCESS' ? 'Processed' : (item && item.status.toUpperCase() == 'INCOMPLETE' ? 'Incomplete' : (item && item.status.toUpperCase() == 'NOT_INDEXED'?'Started, Waiting': (item
+          && item.status.toUpperCase()=='INDEXED'?'Started, Waiting':'Currently Running'))))) : '')}}
+          <span  class="active_spinner" *ngIf="selectedidx === idx">
+              <mat-spinner color="accent" diameter="20" ></mat-spinner>
+            </span>
+      </div>
+      <div>
+        <div (mouseenter)="changeStyle($event, idx)" (mouseleave)="changeStyle1($event, idx)">
+          <div class="box" [ngClass]="{'active-item': isHovered && hoverInd== idx}">
+            <div class="row row1 ">
+              <div class="col-md-3 colum1_key_value">
+                <span class="key">Started:</span>
+                <span class="tmvalue">{{ item.tmStarted }}</span>
+              </div>
+              <div class="col-md-3 colum1_key_value">
+                <span class="key" *ngIf="item.sourceType">{{sourceKey}}:</span>
+                <span class="tmvalue" *ngIf="item.sourceType">{{ item.sourceType }}</span>
+              </div>
+              <div class="col-md-6" *ngIf="isHovered && hoverInd== idx;">
+                <button type="button" class=" button_records btn btn-primary"
+                  (click)="openWorkItemDetail(item,item.processName, 'All', idx)">
+                  <img class="fonticon2" src="../../../../assets/images/view-details.png" alt="">
+                  View Records Details</button>
+              </div>
+            </div>
+            <div class="hr"></div>
+            <div class="row row2">
+              <div >
+                <div class="record-box1">
+                  <ng-container *ngFor="let metric of item.metrics">
+                      <div calss="items-top">
+                    <div class="record-box-item" *ngIf='isObject(metric.value) !== "object"'>
+                      <div class="colum2_key_value" *ngIf="metric['key'] !== 'processingIssues'">
+                        <div>{{ metric.label }}</div>
+                        <div class="col1">{{ metric.value }}</div>
+                      </div>
+                    </div>
+                      </div>
+                    <div *ngIf='isObject(metric.value) === "object"'>
+                      <fieldset>
+                        <legend>Processing issues <span>({{getSum(metric.value)}})</span></legend>
+                        <div class="row">
+                          <div class="col-md-6 padding0" *ngFor="let pro_issue of metric.value">
+                            <div class=" attention-needed" matTooltip="{{pro_issue.label}}">{{ pro_issue.label }}</div>
+                            <div class="text-center process-issue-value">
+                              <img class="fonticon pointer" src="../../../../assets/images/high-priority.png" alt=""
+                                *ngIf="pro_issue.value > 0" (click)="goToFailedRecords(item, item.processName,pro_issue.label, idx)">
+                              <span *ngIf="pro_issue.value !== 0" class="error pointer" (click)="goToFailedRecords(item, item.processName,pro_issue.label, idx)"><u>{{ pro_issue.value }}</u></span>
+                              <span *ngIf="pro_issue.value === 0">{{ pro_issue.value }}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

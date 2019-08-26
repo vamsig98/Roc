@@ -1,0 +1,86 @@
+<div class="admin-sec">
+  <div class="container-fluid lob_padding" *ngIf="defaultEmailTemplate">
+    <div class="row marginemail marginlr0">
+      <div class="col-sm-12 row template marginlr0">
+        <div class="col-sm-9 paddinglr0">
+          <label class="header">Email Templates</label>
+        </div>
+        <div class="col-sm-3 text-right paddinglr0">
+          <button class="btn-btn-default btn-save" (click)="editTemplate('new')">Add New Template</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row marginlr0">
+      <div class="col-sm-12 paddinglr0">
+        <table class="table margintop1">
+          <thead>
+            <td >Template Name</td>
+            <td>Description</td>
+            <td>Actions</td>
+          </thead>
+          <tbody>
+            <tr class="table-row" *ngFor="let data of email_templates; let i=index">
+              <td class="color-temp">{{data["template_name"]}}</td>
+              <td class="color-temp">{{data["template_description"]}}</td>
+              <td class="td_padding_left">
+                <em class="glyphicon glyphicon-pencil cursor" (click)="editTemplate(data._id)" style="padding-right: 20px"></em>
+                <em class="glyphicon glyphicon-trash cursor" (click)="deleteTemplate(data._id,data.template_name,i)"></em>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+  <div class="container-fluid" *ngIf="editEmailTemplate">
+    <ol class="breadcrumb breadcrumb-bg">
+      <li>
+        <a href="#" class="breadcrumb-text" (click)="defaultEmailTemplate=true;editEmailTemplate=false">Email Templates</a>
+      </li>
+      <li>
+        <a href="#" class="breadcrumb-temp">Create New Template</a>
+      </li>
+    </ol>
+    <div class="container-fluid">
+      <div class="row marginlr0">
+        <div class="col-xs-10">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="bottom-edit-template">
+                <label class="label">Template Name</label>
+                <br>
+                <input class="inputfield" type="text" placeholder="Enter Template Name" [(ngModel)]="Template.template_name"
+                  required name="tempname" />
+                <br>
+              </div>
+              <div>
+                <label class="label">Description</label>
+                <br>
+                <textarea class="inputfield descpfield" placeholder="Enter Template Description" [(ngModel)]="Template.template_description"
+                  required name="title"></textarea>
+                <br>
+              </div>
+              <div>
+                <label class="label">Create Email Template</label>
+              </div>
+              <div>
+                <div>
+                    <quill-editor [(ngModel)]="Template.content" [style]="{'height':'234px','margin-left':'21px'}"></quill-editor>
+                </div>
+                <div class="panel-footer footer">
+                  <button type="submit" class="btn btn-default btn-save_template" *ngIf="update_template" (click)="putEmailTemaplte(Template,Template_id)">Update</button>
+                  <button type="submit" class="btn btn-default btn-save_template" *ngIf="post_template" (click)="postEmailTemaplte(Template)">Save</button>
+                  <button type="submit" class="btn btn-default btn-cancel" (click)="cancelEditTemplate()">Cancel</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-2">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    

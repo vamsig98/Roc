@@ -1,0 +1,250 @@
+<div class="no-margin-reports">
+  <div class="reports-container-drill" [hidden]="showDrill">
+    <div *ngIf="reportData && reportData.headers && reportData.headers.length==1" class="no-data"> No Data Available !</div>
+    <div class="report-drill" *ngIf="reportData && reportData.headers && reportData.headers.length > 1" id="report-container">
+      <div class="row">
+        <div class="headerdetailsdata">
+          <div class="row rowmargin">
+            <div class="col-md-3 no-margin-no-padding healthpadding healthtop">
+              <div class="procdetails healthfloat">
+                <span class="procTitle"></span>
+                <div class="ProcName">
+                  Health Check Report
+                </div>
+                <div class="procdevider"></div>
+                <div class="ProcDate">
+                  2018
+                </div>
+              </div>
+              <i class="fa fa-arrow-circle-left fa-2x healthtop" [ngClass]="{'disabledbtn': start_index===0}" (click)="leftweek()"
+                aria-hidden="true"></i>
+            </div>
+            <div class="col-md-8 no-margin-no-padding topmove">
+              <div *ngFor="let header of header_data | slice:0:5; let i=index;let first=first;let last=last;">
+                <div *ngIf="header !== 'week'">
+                  <div class="col-md-2 no-margin-no-padding header-mat-container healthwidth">
+                    <div class="header-mat-card" [ngClass]="{'active':i==0}">
+
+                      <div class="dateheadertitle">WEEK {{header}}</div>
+
+
+                      <div class="dateheadercount"></div>
+                    </div>
+                    <div *ngIf="i==0" class="arrow-up"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-1 no-margin-no-padding healthpadding healthmargin">
+              <i class="fa fa-arrow-circle-right fa-2x healthtop" [ngClass]="{'disabledbtn': start_index+5 >= reportData.headers.length}"
+                (click)="rightweek()" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="row middleproc rowmargin">
+            <div class="col-md-3 margintop">Process Name</div>
+            <div class="col-md-5 no-margin-no-padding"></div>
+            <div class="col-md-2 margintop">
+              <p class="dot-circle dot-circle-success"></p>
+              Successful Runs
+            </div>
+            <div class="col-md-2 margintop">
+              <p class="dot-circle dot-circle-error"></p>
+              Failure Runs
+            </div>
+
+          </div>
+
+          <div class="finance-record-drill-down heightdrill">
+            <div class="row rowmargin">
+              <div class="col-md-3 no-margin-no-padding">
+                <div class="drill-wr">
+                  <div class="matdata drillheight" *ngFor="let value of reportData.data;let p=index;">
+                    <div *ngFor="let headerres of reportData.headers;let first = first; let i = index;let even=even;let odd=odd;">
+                      <div *ngIf="first==true">
+                        <div class="procname healthpad" matTooltip="{{value['week'] ? value['week'] :'0'}}">
+                          <div class="process-icon pull-left"></div> {{value['week'] ?
+                          value['week'] :'0'}}
+                        </div>
+                        <div class="datetitle dayNumber"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 no-margin-no-padding" *ngIf="isLoading">
+                <mat-spinner class="pull-center" color="accent" diameter="20" *ngIf="isLoading"></mat-spinner>
+              </div>
+
+              <div class="col-md-8 no-margin-no-padding marginrit" *ngIf="!isLoading">
+
+
+                <div *ngFor="let value of reportData.data ;let p=index;" class="clear backcolor">
+                  <div *ngFor="let header of header_data  | slice:0:5;let first = first; let i = index;let even=even;let odd=odd;">
+                    <div *ngIf="header !=='week'">
+                      <div class="col-md-2 borderwidth">
+                        <div *ngIf="!value[header]" class="hoverdiv">
+                          0
+                        </div>
+                        <div (click)="openDrilldown(header,value[header],value['week'],value['name'])" *ngIf="value[header]"
+                          [ngClass]="{'setTransparent':(value[header]['value'] == 0 || value[header]['value']==' ')}"
+                          class="hoverdivpcenter hoverdiv">
+                          <span class="successcolor">{{(value[header]["success"]
+                            == 0 || value[header]["success"]=='')?'0':value[header]["success"]}} </span>/<span class="failcolor">{{(value[header]["failed"]
+                            == 0 || value[header]["failed"]=='')?'0':value[header]["failed"]}}</span></div>
+
+                      </div>
+                      <div class="clear" *ngIf="index+1==header_data.length"></div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="reports-container-drill" [hidden]="!showDrill">
+    <div class="report-drill" *ngIf="selectedRecord">
+      <div class="row">
+        <div class="backcls">
+          <mat-icon (click)="backtoReport()" class="drill-down-back-wr pull-left">arrow_back_ios</mat-icon> Back to
+          Health Check Reports
+          <mat-spinner color="accent" diameter="20" *ngIf="isdrillLoading" class="pull-right"></mat-spinner>
+        </div>
+        <div class="headerdetails heightheader">
+          <div class="row rowmargin">
+            <div class="col-md-3 no-margin-no-padding healthpadding">
+
+              <div class="procdetails healthfloat">
+                <span class="procTitle">Process</span>
+                <div class="ProcName" matTooltip="{{selectedRecord.proc_name}}">
+                  {{selectedRecord.proc_name}}
+                </div>
+                <div class="procdevider"></div>
+                <div class="ProcDate">
+                  {{selectedRecord.DateofWeek}}
+                </div>
+              </div>
+              <i class="fa fa-arrow-circle-left fa-2x healthtop1" [ngClass]="{'disabledbtn': start_index===0}" (click)="leftweek()"
+                aria-hidden="true"></i>
+            </div>
+            <div class="col-md-8 no-margin-no-padding topmove">
+              <div *ngFor="let value of reportData.data ;let p=index;">
+                <div *ngIf="value['week'] === selectedRecord.proc_name">
+                  <div *ngFor="let header of header_data | slice:0:5; let i=index;let first=first;let last=last;">
+                    <div *ngIf="header !== 'week'">
+                      <div class="col-md-2 no-margin-no-padding header-mat-container healthwidth" (click)="openDrilldown(header,value[header],value['week'],value['name'])">
+                        <div class="header-mat-card" [ngClass]="{'active':header === selectedRecord.week_number }">
+                          <div class="dateheadertitle">WEEK {{header}}</div>
+                          <div class="dateheadercount"  *ngIf="value[header]">
+                            <span class="successcolor">{{(value[header]["success"]
+                              == 0 || value[header]["success"]=='')?'0':value[header]["success"]}} </span>/
+                              <span class="failcolor">{{(value[header]["failed"]
+                              == 0 || value[header]["failed"]=='')?'0':value[header]["failed"]}}</span>
+                          </div>
+                          <div *ngIf="!value[header]"  class="dateheadercount">
+                              0
+                            </div>
+                        </div>
+                        <div *ngIf="header === selectedRecord.week_number" class="arrow-up"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-1 no-margin-no-padding healthpadding healthmargin">
+              <i class="fa fa-arrow-circle-right fa-2x healthtop" [ngClass]="{'disabledbtn': start_index+5 >= reportData.headers.length}"
+                (click)="rightweek()" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="!showDrillData" class="finance-record-drill-down textcenter"> No Health reports data Avialable</div>
+        <div class="finance-record-drill-down" *ngIf="!isdrillLoading && reportdrillData && showDrillData">
+          <div class="drill-wr">
+            <mat-card (click)="drillRuns(header.day,header.records)" *ngFor="let header of reportdrillData.result"
+              [ngClass]="{'active':selecteddrillDate==header.day}">
+              <div class="datetitle">Day {{getDay(header.day)}}</div>
+              <div class="datetitle dayNumber healthfont">
+                <span class="successcolor">{{header.sc}}/</span>
+                <span class="failcolor">{{header.fc}}</span>
+              </div>
+            </mat-card>
+          </div>
+          <div class="drill-expand" *ngIf="selecteddrillDate">
+            <table class="table table-responsive table-drill">
+              <thead>
+                <th>
+                  Run Name
+                </th>
+                <th>
+                  Health Check Time
+                </th>
+                <th>
+                  Email
+                </th>
+                <th>
+                  SQL
+                </th>
+                <th>
+                  Mongo
+                </th>
+                <th>
+                  File
+                </th>
+                <th>
+                  Path
+                </th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of reportdrilldate;let i=index;">
+                  <td>
+                    Run {{i+1}}
+                  </td>
+                  <td>
+                    {{getDate(item["end_time"])}}
+                  </td>
+                  <td>
+                    <mat-icon *ngIf="item['Email'] == 'SUCCESS'" [ngStyle]="{'color':'green'}">check_box</mat-icon>
+                    <mat-icon *ngIf="item['Email']== 'NA'" > block</mat-icon>
+                    <mat-icon *ngIf="item['Email']== 'FAILED'" [ngStyle]="{'color':'red'}">cancel</mat-icon>
+                  </td>
+                  <td>
+                    <mat-icon *ngIf="item['Sql'] == 'SUCCESS'" [ngStyle]="{'color':'green'}">check_box</mat-icon>
+                    <mat-icon *ngIf="item['Sql']== 'NA'">block</mat-icon>
+                    <mat-icon *ngIf="item['Sql']== 'FAILED'" [ngStyle]="{'color':'red'}">cancel</mat-icon>
+                  </td>
+                  <td>
+                    <mat-icon *ngIf="item['Mongo'] == 'SUCCESS'" [ngStyle]="{'color':'green'}">check_box</mat-icon>
+                    <mat-icon *ngIf="item['Mongo'] == 'FAILED'" [ngStyle]="{'color':'red'}">cancel</mat-icon>
+                    <mat-icon *ngIf="item['Mongo']== 'NA'" >block</mat-icon>
+
+                  </td>
+                  <td>
+                    <mat-icon *ngIf="item['File'] == 'SUCCESS'" [ngStyle]="{'color':'green'}">check_box</mat-icon>
+                    <mat-icon *ngIf="item['File']== 'FAILED'" [ngStyle]="{'color':'red'}">cancel</mat-icon>
+                    <mat-icon *ngIf="item['File']== 'NA'">block</mat-icon>
+                  </td>
+
+                  <td>
+                    <mat-icon *ngIf="item['Path'] == 'SUCCESS'" [ngStyle]="{'color':'green'}">check_box</mat-icon>
+                    <mat-icon *ngIf="item['Path']== 'FAILED'" [ngStyle]="{'color':'red'}">cancel</mat-icon>
+                    <mat-icon *ngIf="item['Path']== 'NA'">block</mat-icon>
+                  </td>
+                </tr>
+                <tr *ngIf="reportdrilldate && reportdrilldate.length==0">
+                  <td colspan="8">
+                    No data available !
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

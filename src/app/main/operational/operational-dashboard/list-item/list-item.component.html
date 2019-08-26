@@ -1,0 +1,78 @@
+
+<div class="dash-rightSidebar" *ngIf="booleanActive">
+  <div class="work-item-sec">
+    <ul>
+      <li>
+     
+        <div class="work-item-box">
+          <div class="row">
+           
+            <div class="col-sm-7" >
+              <div class="counter">{{(index + 1)}}</div>
+              <div class="title-headnig-metdata procname">
+                <ng-container>
+                    <span class="metadata-key">{{workItem.metadata.key}} :</span>
+                 <span  matTooltip= "{{workItem.metadata.value}}" matTooltipPosition="above" matTooltipClass="toolt" class="metadata-value">{{workItem.metadata.value}}</span>
+                </ng-container>
+              </div>
+            </div>
+
+            <div class="col-sm-5 lisize">
+              <div class="active-inactive-sec">
+                <ul class="ulist" [ngClass]="{'waiting-status' : (workItem && workItem.status == 'WAITING' ),'notindexed-status':(workItem && workItem.status == 'NOT_INDEXED'),'indexed-status':(workItem && workItem.status == 'INDEXED')}">
+                  <ng-container *ngFor="let record of workItem.metrics; let i = index;">
+                    <li class="col-sm-3" (click)="workItem.sourceId!='NA' && workItem.status != 'NOT_INDEXED' && workItem.status != 'INDEXED' && record.clickable"
+                      *ngIf="record.key == 'totalRecords' || record.key == 'totalProcessed'  || record.key== 'totalFailed' || record.key == 'totalAwaiting'"
+                      [ngClass]="{'plain-error-value' : record.key == 'totalFailed' }">
+                      <span matTooltip= "{{ getFormattedValue(record.key) }}" matTooltipPosition="above" matTooltipClass="toolt" class="dot-circle" [ngClass]="{'dot-circle-success':record.key=='totalProcessed','dot-circle-error':record.key=='totalFailed','dot-circle-warning':record.key == 'totalAwaiting'}"></span>
+                      <span> {{(workItem.sourceId=='NA' ||
+                        workItem.status == 'NOT_INDEXED' || workItem.status == 'INDEXED' || !record.value || record.value == '-') ? '0' :
+                        record.value}}</span>
+                    </li>
+                  </ng-container>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="progress progress-bar-striped">
+            <div class="running-text">{{calcProgress(workItem.metrics)}} %
+              
+            </div>
+            <div class="progress-bar" [ngClass]="{'highlight-green' : (workItem && workItem.statusColor == 'ACTIVE_FLOWING' ),'highlight-yellow':(workItem && workItem.statusColor == 'ACTIVE_SLOW'),'highlight-white':(workItem && workItem.statusColor == 'INACTIVE'),'highlight-darkgrey' : (workItem && workItem.statusColor == 'INDEXED' ),'highlight-darkgrey' : (workItem && workItem.statusColor == 'NOT_INDEXED' ),'highlight-black' : (workItem && workItem.statusColor == 'FEATURE_OFFLINE' ),'highlight-red' : (workItem && workItem.statusColor == 'ACTIVE_NOT_FLOWING' )}"
+              [style.width.%]="calcProgress(workItem.metrics)"></div>
+          </div>
+         
+        </div>
+        
+      </li>
+
+      <div class="Process-time-sec row padding-margin-0">
+        <ul>
+          <li class="col-sm-3">
+              <div class="procname" matTooltip= "{{workItem.displayName}}" matTooltipPosition="above" matTooltipClass="toolt"> {{workItem.displayName}} </div>
+          </li>
+          <li class="bottom2-sec">
+            Started: &nbsp;
+            
+
+            <span class="started-value started-sec metadata-value" [ngClass]="{'waiting-color' :  (workItem && workItem.status == 'WAITING')}">
+              {{(workItem.tmStarted ?  workItem.tmStarted :
+              '-')}}
+            </span>
+            <span class="time-sec">
+                <ng-container class="pull-right" *ngFor="let record of workItem.metrics; let i = index;">
+                  <li *ngIf="record.key =='avgProcessingTime'" (click)="workItem.sourceId!='NA' && workItem.status != 'NOT_INDEXED' && workItem.status != 'INDEXED' && record.clickable && openWorkItemDetail(record.key)">Avg
+                    Time/Record:<span class="metadata-value"> &nbsp;{{(workItem.sourceId=='NA' || workItem.status== 'NOT_INDEXED' ||
+                      workItem.status ==
+                      'INDEXED' || !record.value || record.value == '-') ? '0' : record.value}}</span></li>
+                </ng-container>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+    </ul>
+  </div>
+
+</div>

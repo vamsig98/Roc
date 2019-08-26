@@ -1,0 +1,35 @@
+{
+	"status": "SUCCESS",
+	"message": "",
+	"result": [
+		{
+			"_id": {
+				"$oid": "5a97de2155772a2bb8b07803"
+			},
+			"id": 2,
+			"name": "Role2",
+			"type": "Admin",
+			"processes": [
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"_id": {
+				"$oid": "5a97e08655772a2bb8b07806"
+			},
+			"id": 3,
+			"name": "TestNewRole",
+			"type": "Operator",
+			"processes": [
+				1,
+				2,
+				3,
+				4,
+				5
+			]
+		}
+	],
+	"total": 2
+}

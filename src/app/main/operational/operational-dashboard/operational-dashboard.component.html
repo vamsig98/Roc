@@ -1,0 +1,117 @@
+<div class="operational-div" [ngClass]="{'dash-wrapper':!subway ,'dash-wrappersubwa':subway}" *ngIf="subwayDashboard">
+  <div class="subway-map-new-filter-select" *ngIf="true">
+    <div class="filder-div">
+      <span class="show-legend hand" (click)="showLegend()"> Show Legend</span>
+      <span class="position-relation"></span>
+      <span class="apply-filter-symbol" *ngIf="selectedStatus.length > 0"></span>
+      <img src="assets/images/filter.png" alt="filter-image" class="filter-icon hand" (click)="showFilters()" >
+    </div>
+
+    <!-- show legend -->
+    <div class="legend-box" *ngIf="showLegendBox">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="legend-head">Processes Performance</div>
+          <div class="row">
+            <div class="col-lg-4 legend-status ">
+              <img class="processes-icon gif_radius" src="../assets/images/loader.gif" alt="img" />
+              <span class="status-desc">Initiated, waiting</span>
+            </div>
+            <div class="col-lg-4 legend-status">
+              <img class="processes-icon" src="../assets/images/active- issues.png" alt="img" />
+              <span class="status-desc">Active, issues</span>
+            </div>
+            <div class="col-lg-4 legend-status">
+              <img class="processes-icon" src="../assets/images/active-acceptable.png" alt="img" />
+              <span class="status-desc">Active, acceptable</span>
+            </div>
+            <div class="col-lg-4 legend-status">
+              <img class="processes-icon" src="../assets/images/active-average.png" alt="img" />
+              <span class="status-desc">Active, average</span>
+            </div>
+            <div class="col-lg-4 legend-status">
+              <img class="processes-icon" src="../assets/images/inactive.png" alt="img" />
+              <span class="status-desc">Inactive</span>
+            </div>
+            <div class="col-lg-4 legend-status">
+              <img class="processes-icon" src="../assets/images/not-automated.png" alt="img" />
+              <span class="status-desc">Not Automated</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 bots-health">
+          <div class="legend-head">Bots Health</div>
+          <div class="un-healthy">
+            <span><img src="../assets/images/bitmapred.png" alt="" /></span>
+            <span class="status-desc">Unhealthy</span>
+          </div>
+          <div>
+            <span><img src="../assets/images/bitmapgreen.png" alt="" /></span>
+            <span class="status-desc">Healthy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- show filters -->
+    <div (mouseleave)="showfilterBox=false;">
+      <ul class="filter-dropdown-menu" *ngIf="showfilterBox">
+        <li class="all-cases">
+          <input class="input-checkbox hand" type="checkbox" value="allcases" [checked]="checkedAll"
+            (click)="toggleselection('All')">
+          <span class="hand process-name" (click)="toggleselection('All')">All</span></li>
+        <li *ngFor="let item of participants ">
+          <input class="input-checkbox hand" type="checkbox" value="{{item.name}}"
+            [checked]="selectedStatus.indexOf(item.name)>-1" (click)="toggleselection(item.name)">
+          <span class="hand process-name" (click)="toggleselection(item.name)">{{item.name}}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="map-div" *ngIf="participants.length > 0">
+    <div *ngFor="let item of temporaryList;let idx=index;">
+      <mat-accordion>
+        <mat-expansion-panel [expanded]="allExpandState" #example >
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <em *ngIf="!example.expanded" class="material-icons arrow_icon">
+                  arrow_right
+              </em>
+              <em *ngIf="example.expanded" class="material-icons arrow_icon">
+                arrow_drop_down
+              </em>
+              <span class="subway_name">{{item.name}}</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <app-subway-viewer [bpmn_id]="item.name" [xmlData]="item.bpmn" name="item.name"></app-subway-viewer>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
+  <div class="map-div" *ngIf="isProcesses">
+      <p class="contentLob" >Loading Processes Please wait....</p>
+  </div>
+  <div class="map-div" *ngIf="isNotConfigured">
+      <p class="contentLob" >Processes not configured, please contact administrator.</p>
+      <app-subway-viewer></app-subway-viewer>
+  </div>
+
+</div>
+<div class="sub-way-wrapper" *ngIf="activedashborad">
+  <div>
+    <div class="operational-dashboard-padding"
+      [ngClass]="{'dash-headerbar':!activedashboard,'dash-headerbaractive':activedashboard}">Active
+      Work Items
+      <span> ({{totalActiveWorkItem}})</span>
+      <mat-spinner color="accent" diameter="20" *ngIf="isLoading"></mat-spinner>
+    </div>
+    <div class="operational-dashboard-padding work-item-list"
+      [ngClass]="{'work-item-list':!activedashboard,'work-item-listActive':activedashboard}">
+      <div *ngIf="(totalActiveWorkItem==0)" class="no-data-wt">There are no active workitems at the moment</div>
+      <span *ngIf="(totalActiveWorkItem>0)">
+        <app-list-item *ngFor="let item of workItems; let idx=index;trackBy: trackByJobId" [workItem]="item"
+          [booleanActive]="true" [index]="idx"></app-list-item>
+      </span>
+    </div>
+  </div>
+</div>

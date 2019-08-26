@@ -1,0 +1,60 @@
+<div class="extended-dash-wrapper">
+<div class="dash-wrapper">
+  <div class="work-item-header">
+    <div class="work-item-sub-header">
+      <div class="work-item-side-wrapper">
+        <div class="flex second-header">
+          <div class="back" (click)="openOperationalDashboard()">
+            <mat-icon>arrow_back</mat-icon>
+          </div>
+          <div class="process">
+            <div class="list-item-label primary-label-color">Process</div>
+            <div class="list-item-value">{{recordItem?.processName || recordItem?.key}}</div>
+          </div>
+          <div class="type primary-border-color">
+            <div class="list-item-label primary-label-color">Work Item</div>
+            <div class="list-item-value">{{recordItem?.triggeredBy}}</div>
+          </div>
+          <div class="status">
+            <div class="status-indicator" *ngIf="recordItem?.status === 'SUCCESS'">COMPLETED</div>
+            <div class="status-indicator" *ngIf="recordItem?.status === 'ACTIVE_FLOWING' ||recordItem?.status == 'ACTIVE_SLOW' || recordItem?.status === 'ACTIVE_NOT_FLOWING'">RUNNING</div>
+
+            <div class="status-indicator" *ngIf="recordItem?.status !== 'SUCCESS' && recordItem?.status !== 'ACTIVE_FLOWING' && recordItem?.status !== 'ACTIVE_SLOW' && recordItem?.status !== 'ACTIVE_NOT_FLOWING'">NA</div>
+
+          </div>
+          <mat-spinner color="accent" diameter="20" *ngIf="isLoading"></mat-spinner>
+          <span class="spacer"></span>
+          <div class=" flex flex-align-center flex-justify-center">
+            <span class="list-item-value">{{(recordItem?.botsRunning || recordItem?.botsAvailable || 0) }} {{(recordItem?.botsRunning || recordItem?.botsAvailable
+              || 0) == 1 ? 'Bot' : 'Bots'}}</span>
+            <a class="bots-label" (click)="isShowAddBot = !isShowAddBot" *ngIf="isPendingExists">
+              <mat-icon class="bot-edit">mode_edit</mat-icon>
+            </a>
+            <app-add-bot *ngIf="isShowAddBot" [availableBots]="(recordItem?.availableBots || ((recordItem?.botsRunning ? recordItem?.botsRunning : (recordItem?.botsAvailable ? recordItem?.botsAvailable : 0 )) + 1))"
+              [botsAdded]="(recordItem?.botsRunning || recordItem?.botsAvailable ||  0)" class="add-bot" [id]="recordItem?.jobId"
+              (onClose)="closeAddBot($event)"></app-add-bot>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="source-list-wrapper">
+      <app-item-record [itemRecord]="source" [showDetailLink]="false"></app-item-record>
+    </div>
+
+  </div>
+</div>
+<div class="dash-wrapper">
+  <mat-card class="tab-wrapper">
+    <nav mat-tab-nav-bar aria-label="weather navigation links">
+      <a mat-tab-link routerLink="records"  [active]="activeLinkIndex === 0" (click)="activeLinkIndex = 0" class="tab-head">
+        Records
+      </a>
+      <a mat-tab-link routerLink="log-items" (click)="activeLinkIndex = 1" [active]="activeLinkIndex === 1" class="tab-head">
+        Errors Timeline
+      </a>
+    </nav>
+    <router-outlet *ngIf="source"></router-outlet>
+  </mat-card>
+</div>

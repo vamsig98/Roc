@@ -1,0 +1,19 @@
+{
+    "result": [
+          {
+            "lob_id": "fe8951c7-8803-4a22-af0f-9064e9fb3081",
+            "lob_name": "lob_1",
+            "lob_description": "desc1"
+        },
+          {
+            "lob_id": "bd16e0ca-f343-4f66-9709-15f0f247ab29",
+            "lob_name": "lob_2",
+            "lob_description": "desc2"
+        },
+          {
+            "lob_id": "25b7586a-7c9e-40db-a06e-679722ee3360",
+            "lob_name": "lob_3",
+            "lob_description": "desc3"
+        }
+    ]
+}

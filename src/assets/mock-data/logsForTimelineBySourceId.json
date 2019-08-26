@@ -1,0 +1,26 @@
+{
+    "result": [
+        {
+            "status": "SUCCESS",
+            "logMessage": "<special>Record 2</special> is being processed",
+            "extraInfo": "",
+            "logTimeFormatted": "5:57PM",
+            "tmLog": 1517645399000
+        },
+        {
+            "status": "FAILED",
+            "logMessage": "Data entry failure",
+            "extraInfo": "",
+            "logTimeFormatted": "5:55PM",
+            "tmLog": 1517645398000
+        },
+        {
+            "status": "IN-PROGRESS",
+            "logMessage": "<special>Record 1</special> is being processed",
+            "extraInfo": "2+ Bots",
+            "logTimeFormatted": "5:55PM",
+            "tmLog": 1517645396785
+        }
+    ],
+    "total": 0
+}

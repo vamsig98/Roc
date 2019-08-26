@@ -1,0 +1,9 @@
+.no-data-msg{
+  min-height: 60px;
+  width: 60%;
+}
+
+mat-spinner{
+  position: absolute;
+  margin-top: -20px;
+}

@@ -1,0 +1,32 @@
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.bubble.css';
+@import '~quill/dist/quill.snow.css';
+
+.process-list-table{
+    .mat-table{
+        width:96%;
+        margin-left:2%;
+        .mat-header-row{
+            min-height: 24px;
+             background-color: #edf4f7;
+             .mat-header-cell{
+                 color:black;
+                 font-size:12px;
+             }
+             mat-header-cell:nth-child(2){
+                 max-width: 140px;
+             }
+        }
+        .mat-row{
+            border-bottom-width: 6px;
+            border-bottom-color:#edf4f7;
+            min-height:56px;
+            .mat-cell{
+                font-size: 14px;
+            }
+            mat-cell:nth-child(2){
+                max-width: 140px;
+            }
+        }
+    }
+}

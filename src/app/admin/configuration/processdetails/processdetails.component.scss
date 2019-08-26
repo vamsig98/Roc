@@ -1,0 +1,187 @@
+@import '../../../../../src/var.scss';
+
+.breadcrumb {
+    padding: 24px 30px;
+    margin-bottom: -26px;
+    list-style: none;
+    background-color: #30394e;
+    // border-radius: 4px;
+    .save-delete {
+        // margin-right: 18px !important;
+        .save{
+            color: $process-breadcrumb-save-delete-button-color;
+            background-color: $process-breadcrumb-save-delete-background-color;
+            border-color: $process-breadcrumb-save-delete-button-color;
+            position: absolute;
+            right: 324px;
+            padding-right: 5px;
+
+        }
+        .delete {
+            color: $process-breadcrumb-save-delete-button-color;
+            background-color: $process-breadcrumb-save-delete-background-color;
+            border-color: $process-breadcrumb-save-delete-button-color;
+            position: absolute;
+            right: 224px;
+            .fa.fa-trash {
+                padding-right: 5px;
+            }
+    }
+}
+    a.breadcrumb-item,.breadcrumb-item.active{
+        color: $process-breadcrumb-text-color !important;
+        font-size: 12px;
+    }
+    .breadcrumb-item+.breadcrumb-item::before{
+    display: inline-block;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    content: ">";  
+}
+}
+mat-card{
+    padding:20px;
+    margin:20px;
+    background-color:$process-nav-tab-whitesmoke-color;
+    position:fixed;
+}
+.process-details-scroll-data {
+    background: #30394e;
+    margin: 0 auto;
+.modal-items-wrapper {
+    margin: 0 auto;
+    margin-left: -4px;
+    height: 100%;
+    background-color: transparent;
+.mat-elevation-z {
+    height: calc(100vh - 126px);
+    overflow: auto;
+    overflow-y: hidden;
+    .scroll {
+        height: calc(100vh - 96px) !important;
+        overflow-y: scroll !important;
+        overflow-x: hidden !important;
+        padding: 24px;
+        #Stakeholders {
+            padding-bottom: 98px;
+            min-height: 500px;
+        }
+    }
+  }
+}
+.process-list-data {
+    margin-left: -60px !important;
+.processes-list {
+    background-color:$process-process-list-background-color;
+    // margin-left: -40px;
+    width: 100%;
+
+    .side-tab{
+        color:$process-nav-btn-white-color;
+        font-size: 12px;
+        font-weight: normal;
+        padding:  8px
+     }
+        .highlight-clr {
+            // border-left: 4px solid $process-a-nav-active-red-color;
+            color: $process-nav-btn-white-color;
+            font-weight:bold;
+            // margin: 0px 0 0 -4px;
+        }
+        .highlight-clr:before{
+            content: "";
+            display: inline-flex;
+            height: 18px;
+             border-left: 4px solid $process-a-nav-active-red-color ;
+             position: absolute;
+             margin-left: -10px;
+         }
+            .side-tab p{
+                display: inline-block;
+                margin: 0px 3px;
+            }
+            .highlight-clr p{
+                font-weight: 700;
+            }
+}
+}
+}
+ /* You can add global styles to this file, and also import other style files */
+ fieldset {
+    border: 1px solid $process-stakeholder-text-color!important;
+    margin: 0 2px !important;
+    padding: 0.35em 0.625em 0.75em !important;
+    height: 48px;
+    border-radius: 5px;
+}
+
+legend{
+    width: 80px !important;
+    margin-bottom: 0px;
+    border-bottom: none !important;
+    color:$process-stakeholder-text-color;
+}
+
+.side-tab{
+    color:$process-nav-btn-white-color;
+    font-size: 12px;
+    font-weight: normal;
+    padding:  8px
+ }
+ .highlight-clr:before{
+    content: "";
+    display: inline-flex;
+    height: 16px;
+     border-left: 4px solid $process-a-nav-active-red-color ;
+     position: absolute;
+     margin-left: -6px
+ }
+ .side-tab p{
+    display: inline-block;
+    margin: 0px 3px;
+ }
+ .highlight-clr p{
+    font-weight: 700;
+ }
+ .card_y_scroll {
+    height: calc(100vh - 96px) !important;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    padding: 24px;
+ }
+ 
+ .main-mat-card{
+ padding: 0px !important;
+ }
+ 
+ .stackholders_scroll{
+    padding-bottom:50px;
+ }
+ .hidebtn{
+    display: none;
+ }
+#Stakeholders{
+    min-height: 500px;
+}
+.schedule{
+    min-height: 200px !important;
+    .schedule-head{
+        margin-left: 15px;
+        position: relative;
+    }
+    .schedule-hr{
+        width: 88%;
+        margin: 10px 0 0 17px !important;
+    }
+    .schedule-spinner{
+        position: absolute;
+        top: 3px;
+        left: 115px;
+    }
+}
+
+.update-spinner{
+    position: absolute;
+    left: -255px;
+    top: 3px;
+}

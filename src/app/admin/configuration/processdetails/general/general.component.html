@@ -1,0 +1,200 @@
+<div class="row general">
+  <div class="col-md-10">
+    <h3 class="general-head">General</h3>
+  </div>
+  <hr class="genaral-hr">
+  <div class="form-group row generalmainone">
+    <form class="col-lg-5 generalformone">
+      <div class=" form-group row generalformgrp ">
+        <div class="col-lg-6 formone">
+          <fieldset>
+            <legend class="legend-display">Display name</legend>
+            <input id="display_name" name="displayname" [(ngModel)]="process.display_name" type="text">
+          </fieldset>
+        </div>
+        <div class="col-lg-6 formone">
+          <fieldset>
+            <legend class="legend-one">Org Unit</legend>
+            <select class="select-crs" id="org_unit" name="orgunit" [(ngModel)]="process.lobs">
+              <option *ngFor="let lobs of Loblist" [value]="lobs">{{lobs}}</option>
+            </select>
+          </fieldset>
+        </div>
+      </div>
+      <div class="form-group row generalformgrpone">
+        <div class="col-lg-12 formtwo">
+          <fieldset class="description">
+            <legend class="legend-two">Description</legend>
+            <textarea rows="3" cols="40" name="description" placeholder="Enter Description"
+              [(ngModel)]="process.description"></textarea>
+          </fieldset>
+        </div>
+      </div>
+      <div class=" form-group row generalformgrptwo">
+        <div class="col-lg-6 formone">
+          <fieldset>
+            <legend class="legend-three">Hosted on</legend>
+            <input id="hosted_on" type="text" value="UI path" name="hostedon" [(ngModel)]="process.hosted_on">
+          </fieldset>
+        </div>
+        <div class="col-lg-6 formone">
+          <fieldset>
+            <legend class="legend-infra"> Infra type
+            </legend>
+            <select class="select-crs" name="infratype" [(ngModel)]="process.infra_type">
+              <option [ngValue]='process.infra_type === "" ? "Static"  : process.infra_type ' selected>Static</option>
+              <option value="Dynamic">Dynamic</option>
+            </select>
+          </fieldset>
+        </div>
+      </div>
+      <div class="form-group row generalformgrpthree">
+        <div class="col-lg-6 formone">
+          <fieldset>
+            <legend class="legend-four">Snapshot Name</legend>
+            <input id="snapshot_name" name="snapshotname" [(ngModel)]="process.snapshot_name" type="text"
+              value="Snapshot_lorem">
+          </fieldset>
+        </div>
+        <div class="col-lg-6 formone">
+          <fieldset>
+            <legend class="legend-six" for="ex1">Maximum bots
+            </legend>
+            <input id="maximum_bots" name="maximumbots" [(ngModel)]="process.bot_count" type="text" value="4">
+          </fieldset>
+        </div>
+      </div>
+
+    </form>
+    <div class="col-lg-7 text-center generalimageone">
+      <img class="imageone" src="../../../../../assets/images/basic-information.png" alt="">
+      <p class="image-para">The basic information about the process</p>
+    </div>
+  </div>
+  <div class="form-group row  generalmaintwo">
+    <form class="col-lg-5">
+      <div class="form-group row ">
+        <div class="formthree">
+          <p class="p-parazero">KPIs <a class="a-new">+ New KPI</a></p>
+
+          <div class=" form-group row generalformfive">
+            <div class="col-lg-6 formone" matTooltip="Volume Backlog KPI/Day(#)">
+              <fieldset>
+                <legend class="legend-seven">KPI Name</legend>
+                <input id="kpi_name" name="kpiname" type="text" value="Volume Backlog KPI/Day(#)" readonly>
+              </fieldset>
+            </div>
+            <div class="col-lg-6 value">
+              <fieldset>
+                <legend class="legend-seven">Kpi Value </legend>
+                <input name="volume_backlog_kpi" type="number" [(ngModel)]="process.volume_backlog_kpi">
+              </fieldset>
+            </div>
+          </div>
+          <div class="form-group row generalformfive">
+            <div class="col-lg-6 formone" matTooltip="Ideal Process Time(Sec)">
+              <fieldset>
+                <legend class="legend-seven">KPI Name</legend>
+                <input type="text" value="Ideal Process Time(Sec)" readonly>
+              </fieldset>
+            </div>
+            <div class="col-lg-6 value">
+              <fieldset>
+                <legend class="legend-seven">Kpi Value </legend>
+                <input type="number" name="processing_time_kpi" [(ngModel)]="process.processing_time_kpi">
+              </fieldset>
+            </div>
+          </div>
+          <div class=" form-group row generalformfive">
+            <div class="col-lg-6 formone" matTooltip="Anticipated Failure Records(%)">
+              <fieldset>
+                <legend class="legend-seven">KPI Name</legend>
+                <input id="kpi_name" name="kpiname" type="text" value="Anticipated Failure Records(%)" readonly>
+              </fieldset>
+            </div>
+            <div class="col-lg-6 value">
+              <fieldset>
+                <legend class="legend-seven">Kpi Value </legend>
+                <input type="number" name="failure_records_kpi" [(ngModel)]="process.failure_records_kpi">
+              </fieldset>
+            </div>
+          </div>
+          <div class=" form-group row generalformfive">
+            <div class="col-lg-6 formone" matTooltip="Max. Idle Time(Sec)">
+              <fieldset>
+                <legend class="legend-seven">KPI Name</legend>
+                <input id="kpi_name" name="kpiname" type="text" value="Max. Idle Time(Sec)" readonly>
+              </fieldset>
+            </div>
+            <div class="col-lg-6 value">
+              <fieldset>
+                <legend class="legend-seven">Kpi Value </legend>
+                <input type="number" name="max_idle_time_kpi" [(ngModel)]="process.max_idle_time_kpi">
+              </fieldset>
+            </div>
+          </div>
+          <div class=" form-group row generalformfive">
+            <div class="col-lg-6 formone" matTooltip="Manual Opex Baseline cost/rec($)">
+              <fieldset>
+                <legend class="legend-seven">KPI Name</legend>
+                <input id="kpi_name" name="kpiname" type="text" value="Manual Opex Baseline cost/rec($)" readonly>
+              </fieldset>
+            </div>
+            <div class="col-lg-6 value">
+              <fieldset>
+                <legend class="legend-seven">Kpi Value </legend>
+                <input type="number" name="manual_opex_cost_kpi" [(ngModel)]="process.manual_opex_cost_kpi"
+                  [(value)]="process.manual_opex_cost_kpi" (keyup)="onKeyPress1($event)">
+              </fieldset>
+            </div>
+          </div>
+          <div class=" form-group row generalformfive">
+            <div class="col-lg-6 formone" matTooltip="Bot Opex Baseline cost/rec($)">
+              <fieldset>
+                <legend class="legend-seven">KPI Name</legend>
+                <input id="kpi_name" name="kpiname" type="text" value="Bot Opex Baseline cost/rec($)" readonly>
+              </fieldset>
+            </div>
+            <div class="col-lg-6 value">
+              <fieldset>
+                <legend class="legend-seven">Kpi Value </legend>
+                <input type="number" name="bot_opex_cost_kpi" [(ngModel)]="process.bot_opex_cost_kpi"
+                  [(value)]="process.bot_opex_cost_kpi" (keyup)="onKeyPress2($event)">
+              </fieldset>
+            </div>
+          </div>
+          <div class=" form-group row generalformfive">
+            <div class="col-lg-6 formone" matTooltip="Savings Per Record">
+              <fieldset>
+                <legend class="legend-seven">KPI Name</legend>
+                <input type="text" value="Savings Per Record" readonly>
+              </fieldset>
+            </div>
+            <div class="col-lg-6 value">
+              <fieldset>
+                <legend class="legend-seven">Kpi Value </legend>
+                <input type="number" name="savings_per_record" [(ngModel)]="process.savings_per_record" readonly>
+              </fieldset>
+            </div>
+          </div>
+          <div class=" form-group row generalformcheckbox">
+
+            <div class="col-lg-12 checkbox">
+              <label>
+                <input type="checkbox" [(ngModel)]="process.show_in_processes_list"
+                  [ngModelOptions]="{standalone: true}" >Shown in Process List</label>
+              <label>
+                <input type="checkbox" [(ngModel)]="process.show_in_financial_dashboard"
+                  [ngModelOptions]="{standalone: true}">Shown in Financial Dashboard</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="col-lg-7 text-center generalimagetwo">
+      <img class=imagetwo src="../../../../../assets/images/advamced.png" alt="">
+      <p class="image-para">More advanced option for your process</p>
+    </div>
+  </div>
+</div>

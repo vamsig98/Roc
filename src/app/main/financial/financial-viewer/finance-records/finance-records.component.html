@@ -1,0 +1,104 @@
+<div class="financial-records financial-table">
+  <table class="table" *ngIf="_frecords.length != 0">
+    <thead class="financial-table-header">
+      <th class="align-left tableHeading" style="padding-left:25px;">Process Name</th>
+      <th class="tableHeading">Savings Baseline</th>
+      <th class="tableHeading">Savings Achieved to date</th>
+      <th class="tableHeading">Avg Saving/Run</th>
+      
+      <th class="tableHeading">Throughput to date</th>
+      <th class="tableHeading emptytd"></th>
+     
+    </thead>
+    <tbody class="financial-table-body" *ngFor="let item of _frecords | filter : 'displayName' : searchString">
+      <tr class="hoverpull">
+          <td  class="hoverhand positionRelative" style="padding-left: 16px;" >
+             <div class="pull-left" >
+            <span [hidden]="openedId == item.group.parent.displayName">
+                <mat-icon class="collapseicon" (click)="openchildprocess(item.group.parent.displayName)">arrow_right</mat-icon>
+              </span>
+              <span [hidden]="openedId!=item.group.parent.displayName">
+                <mat-icon class="collapseicon" (click)="openchildprocess('0')">arrow_drop_down</mat-icon>
+              </span>
+            </div> 
+          <span (mouseenter)="getDynamicContent(item)"  [innerText]="item.group.parent.displayName" class="tab-process-name"></span> 
+
+        </td>
+        <td class="positionRelative tableHeadValues">
+          <span class="tab-process-value">
+            ${{item.group.parent.savingsBaseLine | number}}
+          </span>
+        </td>
+        <td class="positionRelative tableHeadValues">
+          <span class="tab-process-value">
+            ${{item.group.parent.savingAchievedToDate | number}}
+          </span>
+        </td>
+      
+        <td class="positionRelative tableHeadValues">
+          <span class="tab-process-value">
+            ${{item.group.parent.avgSavingsPerRun | number}}
+          </span>
+        </td>
+        <td class="positionRelative tableHeadValues">
+          <span class="tab-process-value">
+            {{item.group.parent.throughputtoDate | number}}
+          </span>
+        </td>
+        <td class="positionRelative emptytd"></td>
+        
+      </tr>
+      <tr *ngIf="item.group.child.length == 0" [hidden]="openedId!=item.group.parent.displayName"><td colspan="5"> No Data available</td></tr>
+      <ng-container *ngIf="item.group.child.length != 0">
+      <tr *ngFor="let childitem of item.group.child" class="textclr" [hidden]="openedId!=item.group.parent.displayName">
+            <td>
+              <div class="pull-left"></div>
+            <span  class="mleft childName" (click)="onSelectRecord(childitem)">{{childitem.displayName}}</span>
+          </td>
+          <td class="innerTableValues" >
+            <span class="childValue">
+                ${{childitem.savingsBaseLine | number}}
+            </span>
+          </td>
+          <td class="innerTableValues">
+              <span class="childValue">
+                ${{childitem.savingAchievedToDate | number}}
+            </span>
+          </td>
+         
+          <td class="innerTableValues">
+              <span class="childValue">
+                ${{childitem.avgSavingsPerRun | number}}
+            </span>
+          </td>
+          <td class="innerTableValues">
+              <span class="childValue">
+                {{childitem.throughputtoDate | number}}
+            </span>
+          </td>
+          <td class="innerTableValues emptytd"></td>
+         
+        </tr>
+      </ng-container>
+      <tr *ngIf="_frecords.length==0">
+        <td colspan="5">
+          No Data Available.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <popover-content #myPopover 
+   placement="top"  [animation]="true" [closeOnClickOutside]="true">
+   <div *ngIf="dynamic" class="tooltip-title">{{dynamic.title}}</div> 
+   <table *ngIf="dynamic" class="table-responsive margin-top-5">
+      <tbody>
+        <tr *ngFor="let item of dynamic.content">
+          <td>
+            <strong> {{getKey(item)}} </strong>
+          </td>
+          <td> {{item[getKey(item)]}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </popover-content>
+</div>

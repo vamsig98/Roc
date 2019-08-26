@@ -1,0 +1,41 @@
+<div class="smtpserver">
+  <form>
+    <div>
+      <label class="labelClass">SMTP Server</label>
+      <br>
+      <input class="inputclass" type="text" [(ngModel)]="smtpdata.smtp_server" placeholder="smtp server" 
+        name="smtp_server" required/>
+      <br>
+    </div>
+    <div>
+      <label class="labelClass">SMTP Port</label>
+      <br>
+      <input class="inputclass" type="text" [(ngModel)]="smtpdata.smtp_port" placeholder="smtp port" name="smtp_port" required/>
+      <br>
+    </div>
+    <div>
+      <label class="labelClass">Authenticate Username</label>
+      <br>
+      <input class="inputclass" type="text" [(ngModel)]="smtpdata.smtp_username" placeholder="User name"
+        required name="smtp_username" />
+      <br>
+    </div>
+    <div>
+      <label class="labelClass">Authenticate Password</label>
+      <br>
+      <input class="inputclass" type="password" [(ngModel)]="smtpdata.smtp_password" placeholder="Enter Password" 
+        name="smtp_password" required/>
+      <br>
+    </div>
+  </form>
+  <div class="container-fluid margin-class">
+    <button class="btn btn-default btn-setting" (click)="testSMTP(smtpdata)">Test SMTP setting</button>
+    <span *ngIf="smtptest.status === 'success'"><em class="fas fa-check-circle success_class"></em><span class="text">Test Success</span></span>
+   <span *ngIf="smtptest.status === 'failed'"><em class="fas fa-times-circle failure_class"></em><span class="text">Test Failure</span></span>
+  </div>
+  <div class="clear padding-10 margin-1">
+    <button color="primary" class="col-md-1 margin-2" mat-raised-button  (click)=" isNew ? saveSmtpServer(smtpdata) :updateSmtpServer(smtpdata)">
+      {{isNew ?'Save':'Update'}}
+    </button>
+  </div>
+</div>

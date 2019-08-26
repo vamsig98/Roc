@@ -1,0 +1,8 @@
+.error-wrapper{
+    margin: 0 auto;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 12px;
+    box-sizing: border-box;
+}

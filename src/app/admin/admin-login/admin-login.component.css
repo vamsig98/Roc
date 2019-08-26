@@ -1,0 +1,14 @@
+.login-card{
+    width: 270px;
+    margin: 0 auto;
+}
+.btn-login{
+    width: 105px;
+}
+
+mat-spinner{
+    position: absolute;
+    right: 0;
+    top: 8px;
+    margin: 0;
+}

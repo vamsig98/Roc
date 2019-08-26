@@ -1,0 +1,141 @@
+<div *ngIf="_bpmnService.participants && _bpmnService.participants.length > 0">
+<div class="map-sec " (mousemove)="selectedLOB(bpmn_id)" id="subway_dblclick">
+    <div class="head-part">
+        <div class="pull-right1">
+            <button mat-icon-button (click)="zoomOut('subway_map_viewer_'+ bpmn_id)">
+                <em class="material-icons plus-icon minimize-icon" [ngClass]="{'active-btn': minimize}"
+                    (click)="minimize= true;zoom_out=false;add=false;">minimize</em>
+            </button>
+            <button mat-icon-button (click)="zoomReset('subway_map_viewer_'+ bpmn_id)">
+                <em class="material-icons plus-icon" [ngClass]="{'active-btn': zoom_out}"
+                    (click)="minimize= false;zoom_out=true;add=false;">zoom_out</em>
+            </button>
+            <button mat-icon-button (click)="zoomIn('subway_map_viewer_'+ bpmn_id)">
+                <em class="material-icons plus-icon" [ngClass]="{'active-btn': add}"
+                    (click)="minimize= false;zoom_out=false;add=true;">add</em>
+            </button>
+        </div>
+    </div>
+   
+    <div class="grabber" *ngIf="accordionheight" appCustomdrag [lob_id]="bpmn_id" [lob_height]="accordionheight"
+        (onValueChanged)="onValueChanged($event)" >
+        <div class="map-body dragdiv"  contenteditable="true">
+            <div class="content-wrapper subway-map-custom-style">
+                <div class="subway-map-viewer" id="{{'subway_map_viewer_'+ bpmn_id}}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="panel panel-default" *ngIf="false">
+    <div class="panel-heading">
+        <h3 class="panel-title">Panel title</h3>
+        <div class="content-wrapper subway-map-custom-style">
+
+            <mat-toolbar class="subway-map-viewer-menu map-toolbar">
+                <button mat-icon-button (click)="zoomIn()">
+                    <mat-icon aria-label="Zoom In">zoom_in</mat-icon>
+                </button>
+                <button mat-icon-button (click)="zoomReset()">
+                    <mat-icon aria-label="Zoom In">center_focus_strong</mat-icon>
+                </button>
+                <button mat-icon-button (click)="zoomOut()">
+                    <mat-icon aria-label="Zoom Out">zoom_out</mat-icon>
+                </button>
+            </mat-toolbar>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="content-wrapper subway-map-custom-style" >
+            <div class="subway-map-viewer" id="{{'subway_map_viewer_'+ bpmn_id}}">
+            </div>
+        </div>
+    </div>
+
+    <!-- new subway map heading -->
+    <div class="subway-map-new-filter-select" *ngIf="false">
+        <div class="filder-div">
+            <span class="show-legend hand" (click)="showLegend()"> Show Legend</span>
+            <span class="hand position-relation" (click)="showFilters()">
+                <span class="apply-filter-symbol" *ngIf="selectedStatus.length > 0"></span>
+                <i class="fa fa-filter filter-icon" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- show legend -->
+        <div class="legend-box" *ngIf="showLegendBox">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="legend-head">Processes performance</div>
+                    <div class="row">
+                        <div class="col-lg-4 legend-status ">
+                            <img class="processes-icon" src="../assets/images/Initiated-waiting-spinner.png"
+                                alt="img" />
+                            <span class="status-desc">Initiated, waiting</span>
+                        </div>
+                        <div class="col-lg-4 legend-status">
+                            <img class="processes-icon" src="../assets/images/active-issues.png" alt="img" />
+                            <span class="status-desc">Active, issues</span>
+                        </div>
+                        <div class="col-lg-4 legend-status">
+                            <img class="processes-icon" src="../assets/images/active-acceptable.png"
+                                alt="img" />
+                            <span class="status-desc">Active, acceptable</span>
+                        </div>
+                        <div class="col-lg-4 legend-status">
+                            <img class="processes-icon" src="../assets/images/active-average.png" alt="img" />
+                            <span class="status-desc">Active, average</span>
+                        </div>
+                        <div class="col-lg-4 legend-status">
+                            <img class="processes-icon" src="../assets/images/inactive.png" alt="img" />
+                            <span class="status-desc">Inactive</span>
+                        </div>
+                        <div class="col-lg-4 legend-status">
+                            <img class="processes-icon" src="../assets/images/not-automated.png" alt="img" />
+                            <span class="status-desc">Not Automated</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 bots-health">
+                    <div class="legend-head">Bots Health</div>
+                    <div class="un-healthy">
+                        <span><img src="../assets/images/bitmapred.png" alt="" /></span>
+                        <span class="status-desc">Unhealthy</span>
+                    </div>
+                    <div>
+                        <span><img src="../assets/images/bitmapgreen.png" alt="" /></span>
+                        <span class="status-desc">Healthy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- show filters -->
+        <div>
+            <ul class="filter-dropdown-menu" *ngIf="showfilterBox">
+                <li class="all-cases">
+                    <input class="input-checkbox hand" type="checkbox" value="allcases" [checked]="checkedAll"
+                        (click)="toggleselection('All')">
+                    <span class="hand process-name" (click)="toggleselection('All')">All</span></li>
+                <li *ngFor="let item of participants ">
+                    <input class="input-checkbox hand" type="checkbox" value="{{item.name}}"
+                        [checked]="selectedStatus.indexOf(item.name)>-1" (click)="toggleselection(item.name)">
+                    <span class="hand process-name" (click)="toggleselection(item.name)">{{item.name}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<svg height="30" width="30">
+    <defs>
+        <marker id="marker-circle" markerWidth="8" markerHeight="8" refx="4" refy="4">
+            <circle cx="4" cy="4" r="4" stroke-width="3" fill="#6269A2" />
+        </marker>
+    </defs>
+</svg>
+</div>
+
+<div id="tooltip" [style.position]="'fixed'" [style.left]="tooltipLEFT" [style.top]="tooltipTOP" [innerHtml]="tooltipHTML"></div>

@@ -1,0 +1,108 @@
+<div class="dash-wrapper flex">
+  <div class="sidenav ">
+    <app-processes-list></app-processes-list>
+  </div>
+  <div class="sidecontent sidecontent_bg">
+    <div class=" processes" [ngStyle]="{'width': table_col_processes ? '76%' : '97%'}">
+      <div class="active_process" style="height:20px;">
+        <span *ngIf="_workItemService.isViewRecordDetails">
+          <span (click)="goToActiveWorkItems()" class="pointer">
+            <u>{{ _workItemService.activeProcess }}</u>
+          </span> >
+          <span class="active_process"><u> {{ _workItemService.activePage }}</u></span>
+        </span>
+        <div>
+            <div *ngIf="disableKillAndSchedule">
+            <div class="pull-right scheduleCls" [ngStyle]="{'right': table_col_resources ? '280px' : '41px'}"
+            *ngIf="!isAdmin">
+            
+            <div class="pull-left toggle-left" [ngStyle]="{'border-right': activeWorkItems.length > 0 ? '2px solid #435272' : 'none'}">
+              <span>Schedule <strong> {{isScheduleChecked?'On':'Off'}}</strong> &nbsp;
+                <label class="switch">
+                  <input type="checkbox" [disabled]="isScheduleLoader" [checked]="isScheduleChecked"
+                    (change)="schedule()">
+                  <span class="slider round"></span>
+                </label>
+              </span>
+            </div>
+            <div class="pull-right toggle-right" *ngIf="activeWorkItems.length > 0">
+              <button *ngIf="!processKillInProgress" class="btn btn-primary kill-btn" (click)="kill()">
+                <em class="fas fa-stop-circle  stop-circle_icon"></em>
+                Stop Process
+              </button>
+              <button *ngIf="processKillInProgress" [disabled]="true" class="btn btn-primary kill-btn">
+                <em class="fas fa-spinner stop-circle_icon"></em>Stopping...
+              </button>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-process-header [process]="process" [triggeredBy]="triggeredBy"></app-process-header>
+      <div *ngIf="metaData">
+        <app-work-item-metadata [data]="table_col_processes" [metadata]="metaData" [showFilterMenu]="true"
+          [ddSelected]="'ALL'"></app-work-item-metadata>
+      </div>
+      
+      <mat-card (scroll)="onScroll($event)" class="tab-wrapper mat-elevation-z0 tab-card-wrapper"
+        *ngIf="process && !_workItemService.isViewRecordDetails">
+
+        <mat-tab-group class="demo-tab-group" (selectedTabChange)="onTabChange($event)">
+          <mat-tab>
+            <ng-template mat-tab-label>
+              Active Work Items {{ (totalActiveWorkItems ? '(' + totalActiveWorkItems + ')' : '(0)') }}
+            </ng-template>
+            <mat-spinner color="accent" diameter="20" *ngIf="isLoadingActiveWorkItems"></mat-spinner>
+            <app-active-work-items [data]="table_col_processes" [workItems]="activeWorkItems"
+              *ngIf="!isLoadingActiveWorkItems"></app-active-work-items>
+          </mat-tab>
+          <mat-tab>
+            <ng-template mat-tab-label>
+              Completed Work Items &nbsp;
+              <span *ngIf="!totalCompletedWorkItemsLoader">
+                {{ (totalCompletedWorkItems ? '(' + totalCompletedWorkItems + ')' : '(0)')}}</span>
+              <mat-spinner color="accent" diameter="20" *ngIf="totalCompletedWorkItemsLoader"></mat-spinner>
+            </ng-template>
+            <ng-container *ngIf="completedItems">
+              <ng-container *ngFor="let keys of  completedItems">
+                <div class="filter-wrapper margito">
+                  <mat-icon class="completed-search" (click)="filerkey(keyvalue,keys)">search</mat-icon>
+                  <mat-form-field class="search-text">
+                    <input matInput placeholder="Filter by {{keys}}" (keyup.enter)="filerkey(keyvalue,keys)"
+                      [(ngModel)]="keyvalue" />
+                  </mat-form-field>
+
+                </div>
+              </ng-container>
+            </ng-container>
+            <app-completed-work-items (sendScrollEventToProcessInit)="eventFromCompletedWorkItems($event)"
+              [workItems]="completedWorkItems" *ngIf="!isLoadingProcessedWorkItems"></app-completed-work-items>
+            <mat-spinner color="accent" diameter="20" *ngIf="isLoadingProcessedWorkItems"></mat-spinner>
+          </mat-tab>
+
+        
+        </mat-tab-group>
+      </mat-card>
+
+      <!-- view record details -->
+      <mat-card class="tab-wrapper mat-elevation-z0 tab-card-wrapper" *ngIf="_workItemService.isViewRecordDetails">
+        <mat-tab-group class="demo-tab-group" (selectedTabChange)="onViewTabChange($event)">
+          <mat-tab>
+            <ng-template mat-tab-label>
+              Records
+            </ng-template>
+            <mat-spinner color="accent" diameter="20" *ngIf="isLoadingActiveWorkItems"></mat-spinner>
+            <app-view-record-details *ngIf="!isLoadingActiveWorkItems"></app-view-record-details>
+          </mat-tab>
+
+        </mat-tab-group>
+
+      </mat-card>
+    </div>
+    <div class="resources" [ngStyle]="{'width': table_col_resources ? '24%' : '3%'}">
+      <app-resourcesandsupport *ngIf="showStakeholder" (ResourceEvent)="receiveMessage($event)" (ResourceShowEvent)="showMessage($event)" [stakeholderInformation]="stakeholderInformation">
+      </app-resourcesandsupport>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,40 @@
+@import '../../../../var.scss';
+.container-border{
+    border:1px solid $throughput-container-border-color;
+    padding:10px;
+    bottom:2px;
+    margin-top:30px;
+    margin-right:20px;
+}
+.container-title-throughput{
+    position: absolute;
+    margin: -4.5% 1%;
+    z-index: 99;
+    background-color: $throughput-background-color;
+}
+.container-title-right{
+    position: absolute;
+    margin: -4.6% 1%;
+    z-index: 99;
+    background-color: $throughput-background-color;
+}
+.process-name-custom-ellipse{
+    max-width: 200px !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor:pointer;
+}
+.clear{
+    clear:both;
+}
+.customResultsCls{
+    padding:5px;
+}
+.customreport{
+    height: calc(100vh - 41px) !important;
+    overflow: auto;
+}
+.customselect  .mat-optgroup-label{
+    display: none !important;
+}

@@ -1,0 +1,154 @@
+<div class="container-fluid main-cntr">
+  <div class="row">
+    <div class="col-md-2 p-0">
+      <div class="sidenav col-sm-2 p-0" [style.height]="_financialservice.leftScreenHeight">
+        <div class="headeing-first meta-text-label-color head-text">
+          LOBs
+        </div>
+        <ul class="process-mennu2">
+          <li  (click)="changeSelectedLob('all')" [ngClass]="{'active':lobs == 'all'}">
+            ALL LOBs
+            <mat-spinner diameter="20" *ngIf="lobsboolean" class="pull-right"></mat-spinner>
+          </li>
+          <li *ngFor="let lobprocess of lobslist" (click)="changeSelectedLob(lobprocess)"
+            [ngClass]="{'active':lobs == lobprocess}">
+            {{lobprocess}}
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-10 rightDiv" id="rightDiv">
+      <div class="container-fluid ">
+        <div class="row">
+          <div class="col-md-12 p-0">
+
+            <div class="container-fluid m12" style="background-color: #e6e6e6;" *ngIf="selectedRecord.length == 0">
+              <div class="row aggretedSec">
+                <div class="col-md-12 header1">
+                  <mat-icon (click)="backtoDashboard()" *ngIf="selectedRecord.length!=0" class="drill-down-back">arrow_back_ios</mat-icon>
+                  <span *ngIf="selectedRecord.length==0" class="aggregatedFinancial">AGGREGATED FINANCIALS (For <span class="for-all-lobs">{{selectedLob}}</span>)</span>
+                  <span *ngIf="selectedRecord.length!=0">{{this.selectedRecord}} </span>
+                  <span class="pull-right" class="processes" *ngIf="selectedRecord.length==0 && !isLoading">{{this.processes_count}} Process</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-fluid m12" *ngIf="selectedRecord.length!=0" style="background-color: transparent;">
+              <div class="row aggretedSec">
+                <div class="col-md-12 header1">
+                  <mat-icon (click)="backtoDashboard()" *ngIf="selectedRecord.length!=0" class="drill-down-back">arrow_back_ios</mat-icon>
+                  <span *ngIf="selectedRecord.length!=0" class="selectedRecordName">{{this.selectedRecord}} </span>
+                </div>
+              </div>
+            </div>
+            <div class="containerfluid margiright">
+              <div class="row">
+                <div class="col-md-12">
+                  <ng-container *ngIf="selectedRecord.length==0  && !isLoading">
+                    <div class="menu-metadata lifetodate" *ngIf="fsummary">
+                      <app-summary [summary]="fsummary" [livesummary]="flivesummary"></app-summary>
+                    </div>
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-fluid bg1">
+              <div class="row no-padding-no-margin header3" *ngIf="selectedRecord.length==0  && !isLoading">
+                <div class="col-md-12">
+                  <div class="menu-metadata lifetodate">
+                    <div class="">
+                      <div class="pull-right">
+                        <button mat-button (click)="showDatewiseFilter('YTD')" [ngClass]="{'active': (ddSelected == 'YTD') }">YTD</button>
+                        <button mat-button (click)="showDatewiseFilter('MTD')" [ngClass]="{'active': (ddSelected == 'MTD') }">MTD</button>
+                        <button mat-button (click)="showDatewiseFilter('WTD')" [ngClass]="{'active': (ddSelected == 'WTD') }">WTD</button>
+                        <button mat-button (click)="showDatewiseFilter('LIFE')" [ngClass]="{'active': (ddSelected == 'LIFE') }">Life-to-date</button>
+                       
+                      </div>
+                      <div class="date-dummy" #datePlaceholder daterangepicker [options]="dateoptions" (selected)="selectedDate($event, daterange)"></div>
+                    </div>
+                    <mat-spinner diameter="20" *ngIf="isLoading" class="pull-right"></mat-spinner>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid bg3">
+              <div class="row">
+                <div class="col-md-2 p-0 p1" *ngIf="selectedRecord.length==0 && !isLoading">
+                  <div class="summary padding-margin-10" *ngIf="fsummary">
+                    <div class="leftheadepadding">
+                      
+                      <div class="value-header">Avg Savings Per Run</div>
+                      <div class="value-bigsz">${{fsummary.avgSavingsPerRun | number}}</div>
+                      
+                      <div class="value-header">Avg Savings Per Record</div>
+                      <div class="value-bigsz">${{fsummary.avgSavingsPerRecord | number}}</div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="col-md-10 p-0" style="border-left: 1px solid lightgrey;" *ngIf="selectedRecord.length==0 && !isLoading">
+                  <div class=" graphical-view padding-margin-10" *ngIf="fgraphdata">
+                    <app-graphical-view [graphdata]="fgraphdata"></app-graphical-view>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+            <div class="container-fluid c1">
+              <div class="row h11" *ngIf="selectedRecord.length==0">
+                <div class="col-md-12">
+                  <p class="process-level-metrics">
+                    PROCESS LEVEL METRICS
+                  </p>
+                  <mat-spinner diameter="20" *ngIf="isLoading" class="" style="margin: 0 auto;"></mat-spinner>
+                </div>
+              </div>
+            </div>
+            <div class="row m10" *ngIf="selectedRecord.length==0 && !isLoading">
+              <div class="col-sm-12 no-padding-no-margin">
+                <div class="finance-records padding-margin-10" *ngIf="frecords">
+                  <app-finance-records [records]="frecords" (financeRecord)="getSelectedRecord($event)"></app-finance-records>
+                </div>
+              </div>
+            </div>
+            <div class="row" *ngIf="selectedRecord.length!=0 && !isLoading">
+              <div class="finance-record-drilldown">
+                <mat-spinner color="accent" diameter="20" *ngIf="isdrillLoading" class="pull-right"></mat-spinner>
+                <table class="table table-responsive">
+                  <thead>
+                    <th>#Run</th>
+                    <th>Completed On</th>
+                    <th>Savings baseline</th>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of financial_drill_data">
+                      <td>
+                        {{item["run"]}}
+                      </td>
+                      <td>
+                        {{item["completed_on"]}}
+                      </td>
+                      <td>
+                        <strong> ${{item["savings_baseline"]}} </strong>
+                      </td>
+                    </tr>
+                    <tr *ngIf="financial_drill_data.length==0">
+                      <td colspan="3">
+                        No data available !
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="no-margin-financial row">
+
+  <div class="financial-viewer  col-sm-9">

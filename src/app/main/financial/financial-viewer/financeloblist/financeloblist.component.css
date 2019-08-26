@@ -1,0 +1,26 @@
+.head-text{
+    height: 25px;
+    line-height: 25px;
+    padding: 0 15px;
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+}
+
+.process-menu li{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 42px;
+    line-height: 42px;
+    cursor: pointer;
+    outline: none;
+    padding: 0 15px;
+    transition: all .3s ease 0s;
+    font-size: 12px;
+}
+.process-menu li:active{
+    background-color:#424f6f;
+}

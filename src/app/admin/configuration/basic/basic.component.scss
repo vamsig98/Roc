@@ -1,0 +1,50 @@
+@import '../../../../var.scss';
+.labelClass{
+    font-size: 13px;
+    margin-left: 12px;
+    color:  $basic-label-color;
+    font-weight: 600
+}
+.inputclass{
+    margin-left: 8px;
+    height: 42px;
+    width:30%;
+    font-size: 13px;
+    padding-left: 7px;
+    color:  $basic-input-color;
+    border: 1px solid $basic-input-border-color;
+    border-radius: 3px;
+    background: $basic-input-border-color;
+    outline: none;
+    margin-bottom: 18px;
+}
+.success_class{
+    color:  $basic-toastr-sucess-color;
+}
+.failure_class{
+    color:$basic-failure-color;
+}
+.margin-1{
+    margin-top: 27px;
+}
+.margin-2{
+    margin: 10px;
+}
+.smtpserver{
+    padding: 20px;
+    margin: 20px;
+    background-color: $basic-input-border-color;
+    height: 620px;
+    
+}
+.btn-setting{
+    color:$basic-button-color;
+    border:1px solid $basic-button-color;
+    margin-right: 30px;
+}
+.margin-class{
+    margin-top: 40px
+}
+.text{
+margin-right: 20px;
+}

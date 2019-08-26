@@ -1,0 +1,33 @@
+
+#subway-map-viewer{
+    height: calc(100vh - 55px - 60px);
+}
+.content-wrapper {
+    margin: 1px 174px;
+    box-sizing: border-box;
+    border-width: 0px;
+    background-color: #1c1b3b;
+    box-shadow: 0 0 0px 0 #ceced0;
+}
+
+.content-wrapper .mat-toolbar-single-row{
+    background: none;
+    background-color: #2a2852;
+    margin-bottom: -3px;
+    z-index: 2;
+    position: relative;
+    color: #fff;
+    font-size: 12px;
+}
+
+.content-wrapper .mat-toolbar-single-row > span{
+    margin-right: 15px;
+}
+
+
+.content-wrapper .mat-toolbar-single-row .spacer {
+    flex: 1 1 auto;
+}
+.content-wrapper .mat-toolbar-single-row .mat-icon{
+    vertical-align: middle;
+}

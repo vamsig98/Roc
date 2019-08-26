@@ -1,0 +1,50 @@
+<div class="record_list">
+  <span class="records">Records:
+    <span [matMenuTriggerFor]="menu" class="pointer">
+      <span  class="menu_item_value">{{this._workItemService.workItemDetailsFilter}}</span>
+      <i class="fa fa-angle-down pointer icon_custom" aria-hidden="true"></i>
+    </span>
+  </span>
+
+  <mat-menu #menu="matMenu">
+    <ng-container *ngFor="let opt of recordsFilter">
+      <button class="menu_width pointer" mat-menu-item (click)="filterChanged(opt)" 
+      [ngClass]="{'failed': (opt == 'Failed - Attention Needed') }" >{{opt}}</button>
+    </ng-container>
+  </mat-menu>
+  <div class="table-wrapper">
+  <table  class="table table-responsive table-hover record-table ">
+    <thead class="table_header">
+      <tr class="thead_height">
+        <th class="name">Record Id</th>
+        <th class="status">Status</th>
+        <th class="time-taken">Time Taken(secs)</th>
+        <th>Messages</th>
+      </tr>
+    </thead>
+    <tbody  class="table_body" *ngIf="_workItemService.workItemDetails && _workItemService.workItemDetails.recordDetails">
+        <tr *ngFor="let record of recordTemp | paginate: { itemsPerPage: itemsPerPage, currentPage: page , totalItems: total}; let ind=index;">
+          <td class="name">
+              <div  class="td_data_hidden" matTooltip= {{record.recordId}}>{{record.recordId}} </div>
+             </td>
+        <td>
+            <div class="tbody_status">
+              <img src= "{{(record && record.status.toUpperCase()) == 'FAILED' ? '../../../../assets/images/high-priority.png' : (record && record.status.toUpperCase()) == 'COMPLETED' ? '../../../../assets/images/checkmark.png' : (record && record.status.toUpperCase()) == 'RUNNING' ? '../../../../assets/images/loader.gif' : '' }}" [ngClass]= "{ 'loaderGif': (record && record.status.toUpperCase()) == 'RUNNING' }" alt="loader-image"/>
+            </div>
+        </td>
+        <td class="data"> {{ record.processingTime}}</td>
+        <td class="message" [ngClass]="{'msg_err': (record.status == 'FAILED') }">{{ record.message}}</td>
+      </tr>
+      <tr *ngIf="recordTemp && recordTemp.length === 0">
+          <td colspan="4" class="text-center"> There is no record to display</td>
+        </tr>
+      <tr *ngIf="recordTemp && recordTemp.length > 0">
+          <th colspan='4' class="pagination-sec text-center">
+            <pagination-controls (pageChange)="pageChange($event)"></pagination-controls>
+          </th>
+        </tr>
+    </tbody>
+  </table>
+</div>
+  
+</div>

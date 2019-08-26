@@ -1,0 +1,241 @@
+LOGIN
+-----
+URL:-http://127.0.0.1:5000/admin/login
+METHOD:-POST
+REQUEST:-
+{
+"username":"superadmin",
+"password":"changeme"
+}
+
+RESPONSE:-
+{
+	"_id": {
+		"$oid": "5a94ebf955772a1edc573c47"
+	},
+	"username": "superadmin",
+	"firstname": "changeme",
+	"lastname": "B",
+	"roles": ["Super Admin"],
+	"division": "Finance",
+	"processes": [8, 9, 10],
+	"first_login": "False"
+}
+
+CREATE USER/UPDATE USER
+-----------------------
+URL:-http://127.0.0.1:5000/admin/users
+METHOD:-POST
+REQUEST:-
+{
+	"username": "user2",
+	"firstname": "changeme",
+	"lastname": "B",
+	"roles": ["Super Admin"],
+	"division": "Finance",
+	"processes": [8,9,10]
+}
+RESPONSE:-(List of all users)
+[{
+	"_id": {
+		"$oid": "5a92e99055772a1c20cb0fdf"
+	},
+	"username": "Kruthika",
+	"password": "a7470858e79c282bc2f6adfd831b132672dfd1224c1e78cbf5bcd057",
+	"firstname": "kumar456",
+	"lastname": "B",
+	"roles": ["Super Admin"],
+	"division": "Finance",
+	"processes": [8, 9, 10]
+}, {
+	"_id": {
+		"$oid": "5a9441d055772a1d44fca2ab"
+	},
+	"username": "Testuser",
+	"firstname": "kumar456",
+	"lastname": "B",
+	"roles": ["Super Admin"],
+	"division": "Finance",
+	"processes": [8, 9, 10],
+	"password": "a7470858e79c282bc2f6adfd831b132672dfd1224c1e78cbf5bcd057",
+	"first_login": "False"
+}, {
+	"_id": {
+		"$oid": "5a94ebf955772a1edc573c47"
+	},
+	"username": "superadmin",
+	"firstname": "changeme",
+	"lastname": "B",
+	"roles": ["Super Admin"],
+	"division": "Finance",
+	"processes": [8, 9, 10],
+	"password": "d44d697d0b8ad27b1d3b323b1b438db88058ec1f0f21cef6a6629875",
+	"first_login": "False"
+}, {
+	"_id": {
+		"$oid": "5a94ed2455772a19008b70fd"
+	},
+	"username": "user2",
+	"firstname": "changeme",
+	"lastname": "B",
+	"roles": ["Super Admin"],
+	"division": "Finance",
+	"processes": [8, 9, 10],
+	"password": "a7470858e79c282bc2f6adfd831b132672dfd1224c1e78cbf5bcd057",
+	"first_login": "False"
+}, {
+	"_id": {
+		"$oid": "5a95688155772a193c802ad0"
+	},
+	"username": "user3",
+	"firstname": "changeme",
+	"lastname": "B",
+	"roles": ["Super Admin"],
+	"division": "Finance",
+	"processes": [8, 9, 10],
+	"password": "d44d697d0b8ad27b1d3b323b1b438db88058ec1f0f21cef6a6629875",
+	"first_login": "True"
+}]
+
+CHANGE PASSWORD
+----------------
+URL:-http://127.0.0.1:5000/admin/password
+METHOD:- POST
+REQUEST:-
+{
+"username":"user2",
+"password":"12345"
+}
+RESPONSE:-{"Status": "SUCCESS"}
+
+GET USERS
+---------
+URL:-http://127.0.0.1:5000/admin/users
+METHOD:= GET
+RESPONSE:-[{
+	"_id": {
+		"$oid": "5a92e99055772a1c20cb0fdf"
+	},
+	"username": "Kruthika",
+	"password": "a7470858e79c282bc2f6adfd831b132672dfd1224c1e78cbf5bcd057",
+	"firstname": "kumar456",
+	"lastname": "B",
+	"roles": ["Super Admin"],
+	"division": "Finance",
+	"processes": [8, 9, 10]
+}, {
+	"_id": {
+		"$oid": "5a9441d055772a1d44fca2ab"
+	},
+	"username": "Testuser",
+	"firstname": "kumar456",
+	"lastname": "B",
+	"roles": ["Super Admin"],
+	"division": "Finance",
+	"processes": [8, 9, 10],
+	"password": "a7470858e79c282bc2f6adfd831b132672dfd1224c1e78cbf5bcd057",
+	"first_login": "False"
+}, {
+	"_id": {
+		"$oid": "5a94ebf955772a1edc573c47"
+	},
+	"username": "superadmin",
+	"firstname": "changeme",
+	"lastname": "B",
+	"roles": ["Super Admin"],
+	"division": "Finance",
+	"processes": [8, 9, 10],
+	"password": "d44d697d0b8ad27b1d3b323b1b438db88058ec1f0f21cef6a6629875",
+	"first_login": "False"
+}, {
+	"_id": {
+		"$oid": "5a94ed2455772a19008b70fd"
+	},
+	"username": "user2",
+	"firstname": "changeme",
+	"lastname": "B",
+	"roles": ["Super Admin"],
+	"division": "Finance",
+	"processes": [8, 9, 10],
+	"password": "a7470858e79c282bc2f6adfd831b132672dfd1224c1e78cbf5bcd057",
+	"first_login": "False"
+}]
+
+GET USER BY USERNAME
+---------------------
+URL:-http://127.0.0.1:5000/admin/users/<username>
+METHOD:-GET
+RESPONSE:-
+{
+	"_id": {
+		"$oid": "5a94ed2455772a19008b70fd"
+	},
+	"username": "user2",
+	"firstname": "changeme",
+	"lastname": "B",
+	"roles": ["Super Admin"],
+	"division": "Finance",
+	"processes": [8, 9, 10],
+	"password": "a7470858e79c282bc2f6adfd831b132672dfd1224c1e78cbf5bcd057",
+	"first_login": "False"
+}
+
+DELETE USER
+------------
+URL:-http://127.0.0.1:5000/admin/users/<username>
+METHOD:-DELETE
+RESPONSE:-{'Status': 'SUCCESS'}
+
+GET DIVISIONS
+-------------
+URL:-http://127.0.0.1:5000/admin/divisions
+METHOD:-GET
+RESPONSE:-[{"_id": {"$oid": "5a9274a1b898abb0e8211f22"}, "role": ["Engineering", "Finance", "Human Resources"]}]
+
+GET ROLES
+---------
+URL:-http://127.0.0.1:5000/admin/roles
+METHOD:-GET
+RESPONSE:-
+[{
+	"_id": {
+		"$oid": "5a92f06d1f2645dbd2afcfd1"
+	},
+	"id": 1.0,
+	"name": "Super Admin"
+}, {
+	"_id": {
+		"$oid": "5a92f06d1f2645dbd2afcfd2"
+	},
+	"id": 2.0,
+	"name": "Admin"
+}, {
+	"_id": {
+		"$oid": "5a92f06d1f2645dbd2afcfd3"
+	},
+	"id": 3.0,
+	"name": "Operator"
+}, {
+	"_id": {
+		"$oid": "5a92f06d1f2645dbd2afcfd4"
+	},
+	"id": 4.0,
+	"name": "Business Owner"
+}, {
+	"_id": {
+		"$oid": "5a92f0b41f2645dbd2afcfd5"
+	},
+	"id": 2.0,
+	"name": "Admin"
+}]
+
+LOGOUT
+------
+URL:-http://127.0.0.1:5000/admin/logout
+METHOD:-POST
+REQUEST:-
+{
+"username":"Testuser"
+}
+
+RESPONSE:-{'Status': 'SUCCESS'}

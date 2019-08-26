@@ -1,0 +1,52 @@
+<div class="financial-summary">
+  <div class="row">
+    <div class="col-sm-4 leftheade2">
+
+      <div class="summary padding-margin-10" >
+        <div class="value-headerhead" style="padding-left: 15px;"> Program Savings since 
+          <span *ngIf="_flivesummary.begining && _flivesummary.begining.length>0">{{_flivesummary.begining}}</span>
+          <span *ngIf="!_flivesummary.begining">begining</span>
+        </div>
+        <div class="value-bigsz">
+          ${{_flivesummary.life | number }}
+        </div>
+      </div>
+    </div>
+   
+    <div class="col-sm-8 rightheade2">
+      <div class="row no-padding-no-margin" style="border-bottom: 1px solid #979797;">
+        <div class="value-headerhead" style="padding-top: 10px;
+        padding-bottom: 6px;"> YTD Fianancials Savings</div>
+      </div>
+      <div class="row" style="margin-top: 8px;">
+        <div class="col-sm-2 padding0" >
+          <div class="value-header1">Today</div>
+          <div class="value-smallsz1"> 
+            ${{_flivesummary.today | number}}
+          </div>
+        </div>
+        <div class="col-sm-2 padding0">
+          <div class="value-header1">This Week</div>
+          <div class="value-smallsz1">
+            ${{_flivesummary.week | number}}
+          </div>
+        </div>
+        <div class="col-sm-2 padding0">
+          <div class="value-header1">This Month</div>
+          <div class="value-smallsz1">
+            ${{_flivesummary.month | number}}
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="value-header1">This Year</div>
+          <div class="value-smallsz1">
+            ${{_flivesummary.year | number}}
+          </div>
+        </div>
+        <div class="col-sm-3" style="display:none">
+          <div class="value link-filter btn-link">Detailed Savings</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

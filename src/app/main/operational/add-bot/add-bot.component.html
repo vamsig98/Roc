@@ -1,0 +1,22 @@
+<div class="add-bot-popup">
+  <div class="add-bot-title up">Spin More Bots</div>
+  <div class="flex flex-align-center flex-justify-center">
+
+    <div>
+      <mat-icon class="pointer" [ngClass]="{'disabled': (botsAdded==0)}" (click)="updateBot('-')">remove_circle_outline</mat-icon>
+    </div>
+
+    <div>
+      <input disabled class="add-bot-field" [ngClass]="{'error': (availableBots==0)}" type="text" [ngModel]="botsAdded">
+    </div>
+
+    <div>
+      <mat-icon class="pointer" [ngClass]="{'disabled': (availableBots==0)}" (click)="updateBot('+')">add_circle_outline</mat-icon>
+    </div>
+
+  </div>
+  <div class="add-bot-title">Available Bots {{availableBots}}</div>
+  <div>
+    <button class="btn-done" mat-button (click)="saveBots()" ng-disabled="isSaving">Done</button>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+.status-bar{
+    margin: 5px 15px 0 15px;
+    color:#555555;
+    font-size:11px;
+}
+
+.record-wrapper{
+    margin: 5px 15px 0;
+}
+
+.waiting-color{
+    color: #EDBC8B !important;
+}
+.clear{
+    clear:both;
+}
+.record-wrapper .record-head{
+    display:flex;
+    margin:0 10px !important;
+}
+
+.record-item-header-button .view-button{
+    right: 5px;
+}
+.record-item-header-button .plain-label-size{
+    text-align: center;
+}

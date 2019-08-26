@@ -1,0 +1,392 @@
+.no-margin-reports{
+    margin:0 !important;
+    background-color:white;
+    width:100%;
+}
+.no-margin-reports .mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0 0px 1px 0px rgba(0,0,0,.2), 0 0px 1px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+.reports-container,.reports-container-drill{
+    padding:20px;
+    font-size:12px;
+}
+
+.reports-container-drill{
+    margin: 0 !important;
+    background-color: #1c1b3b;
+    font-size: 12px;
+}
+
+
+.reports-container table th{
+    text-align: center !important;
+}
+/* .graphical-view{
+    padding-bottom:20px;
+} */
+
+.colordiv{
+    color: transparent;
+    width: 10px;
+    height: 9px;
+    float: left;
+    margin-right: 4px;
+    margin-top: 3px;
+}
+/* .reports-container .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th{
+    width:40px !important;
+} */
+
+.fixed-table{
+    table-layout:fixed; 
+    margin-left:0;
+    margin-top:12px;
+    width:calc(100vw - 195px);
+    border-left-color:transparent;
+}
+.report-title{
+    float: left;
+    color: #ff5a11;
+    text-align: right;
+    margin-left: 4%;
+    width: 185px;
+    font-size: 15px;
+}
+.reports-container .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+  padding:2px 0px !important;
+  white-space: nowrap;
+}
+
+.reports-container .process-td{
+    /* width:140px; */
+    margin-left:-130px;
+}
+
+
+.yaxescls{
+    position: absolute;
+    width: 60px !important;
+    left: 50px;
+    top: 25% !important;
+}
+.link-download{
+    cursor:pointer;
+}
+.no-padding-no-margin{
+    padding:0;
+    margin:0;
+}
+
+/* new css */
+div.tabledivright { 
+    width: calc(100% - 14em);
+    overflow-x: scroll;
+    margin-left:-1px;
+    overflow-y: visible;
+    padding-bottom: 1px;
+}
+
+
+div.tabledivleft{
+    width: 14em;
+    float: left;
+    margin-left: -16em;
+    margin-top: 24px;
+}
+
+div.tabledivright td{
+    text-align: right;
+    cursor:pointer;
+}
+.headertable{
+    width: 12em;
+    position: absolute;
+    left: 38px;
+    margin-top:12px;
+}
+.setTransparent{
+    color:transparent;
+}
+
+
+.devider-elements{
+    border:none;
+    border-left: 1px solid #979797;
+    height: 21px;
+    opacity: 0.26;
+    width:3px;
+    float:left;
+}
+.span-element{
+    padding:4px 20px;
+    float:left;
+}
+.filters-cls{
+    float:left;
+    width: 90%;
+    margin-top: 0;
+}
+.custom_value_cls{
+   background-color:#f1f1f1;
+    cursor: none !important;
+}
+.custom_value_cls:hover{
+   background-color:none !important;
+    cursor: none !important;
+    color:black;
+}
+ .tabledivleft .graphical-view ng-star-inserted .nvd3 nv-wrap nv-multiBarWithLegend .nvd3 nv-wrap nv-axis .tick{
+ opacity:0 !important;
+ }
+.drill-down-back-wr{
+    cursor:pointer;
+    margin-top:-4px;
+}
+.drill-wr{
+    width:130px;
+    float:left;
+}
+.drill-expand{
+    height:calc(100vh - 210px);
+    overflow-y:auto;
+}
+.drill-wr .mat-card{
+    text-align: center !important;
+    width:120px;
+    padding:8px;
+    margin:2px -2px;
+    -webkit-box-shadow:none;
+    box-shadow: none !important;
+    cursor: pointer;
+}
+.drill-wr .mat-card.active{
+    background-color:#edf4f7;
+    padding:8px !important;
+}
+
+.drill-wr .mat-card.active .dayNumber{
+    font-size:25px;
+    margin-top:-5px;
+}
+.dayNumber{
+    font-weight: bold;
+    color:#585858;
+}
+
+.drill-wr .mat-card.active .datetitle{
+    color:#ff5a11;
+}
+
+.datetitle{
+    font-size:16px;
+    color:#a29d9d;
+}
+.totaldrill{
+    font-size: 16px;
+    color: #5a2985;
+    cursor: pointer;
+}
+.finance-record-drill-down{
+    padding: 2px;
+    clear: both;
+    background-color:#edf4f7; 
+    height:calc(100vh - 210px);
+    overflow-y:hidden;
+    border-top:3px solid white;
+}
+.filtercls{
+    margin-top: -10px;
+}
+.clear{
+    clear: inherit;
+}
+
+.report-container{
+    margin-top:15px;
+}
+.custom_value_active:hover{
+    background-color:blue;
+    color:white;
+}
+.backcls{
+    color:white;
+    margin-bottom:10px;
+}
+.headerdetails{
+    height:80px;
+    background-color:#F8F8F8;
+}
+.no-margin-no-padding{
+    margin:0;
+    padding:0;
+}
+.procdetails{
+    padding:2px 10px;
+}
+.procdetails .procTitle{
+    color:#aeabab;
+    font-size: 14px;
+}
+.ProcName{
+    font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+.totalcls .mat-form-field-infix{
+    width:120px !important;
+    }
+    .totalclsyear .mat-form-field-infix{
+        width:80px !important;
+        }
+        .filetr  .mat-form-field-wrapper{
+            margin-left:22px;
+        }
+    
+.procdevider{
+    margin: 5px 0 0 0;
+    background: linear-gradient(135deg, #ACACAC, #d3d0d0 60%, #f2f2f2);
+    height: 1px;
+}
+.procdevider:after{
+    right: -3px;
+    height: 3px;
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#000), to(transparent));
+    background-image: -webkit-linear-gradient(left, #000, transparent);
+    background-image: -moz-linear-gradient(left, #000, transparent);
+    background-image: -o-linear-gradient(left, #000, transparent);
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: -3px;
+}
+.ProcDate{
+    font-size: 17px;
+    margin-top:5px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.header-mat-card{
+    height: 79px;
+    padding:15px !important;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-radius: 0;
+    background-color:transparent;
+    text-align:center;
+}
+
+.header-mat-card.active .dateheadercount{
+    font-size: 18px;
+}
+.header-mat-card.active .dateheadertitle{
+    color:#ff5a11;
+    font-size: 18px;
+}
+.arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    
+    border-top: 20px solid #f00;
+  }
+  .arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+    margin-left: 48%;
+    margin-top: -9px;
+}
+.header-mat-container{
+   background-color:#E9E9E9;
+}
+.reports-container-drill .filtercls{
+    margin-top:-14px !important;
+}
+.reports-container-drill .mat-select-arrow{
+    color:white !important;
+}
+.reports-container-drill .mat-select-value-text{
+    color:white !important;
+}
+
+.reports-container-drill .mat-form-field-wrapper{
+    right:28px;
+}
+.totalclsdiv .mat-form-field-wrapper{
+     margin-left: -42px !important; 
+}
+.downloadtitle{
+    line-height:20px;
+    padding:2px;
+    cursor:pointer;
+}
+.download-icon-bg{
+    background-color:#cecece;
+}
+.devider{
+    border-right: 1px solid #cecece;
+    height: 20px;
+    margin: 2px;
+}
+.downloadcls{
+    padding: 0px 6px;
+    border: 1px solid #cecece;
+}
+.downloadTableCls{
+    height: 25px;
+    clear: both;
+    position: absolute;
+    right: 25px;
+    margin-top: -24px;
+}
+.weekrange{
+    float: left;
+    width: 60px;
+    margin:0 0 0 10px;
+}
+.weekrangelabel{
+    float: left;
+    margin: 8px 10px 0px 0px;
+}
+.weekcls{
+text-align:right;
+}
+.weekcls .mat-form-field-infix{
+width:82px !important;
+}
+.yearcls{
+ text-align:right;
+}
+.yearcls .mat-form-field-infix{
+width:90px !important;
+}
+.searchprocessfilter{
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 0;
+    background-color: transparent;
+}
+.searchbtncls.mat-icon-button{
+width:85px !important;
+margin-top:-7px !important;
+}
+.report-table-td-height{
+height:22px;
+}
+.no-data{
+    margin-top: 100px;
+    text-align: center;
+    color:black;
+}
+
+.cdk-overlay-container .cdk-overlay-pane {
+    min-width: 120px !important; 
+    pointer-events: auto !important;
+    top: 54.875px !important;
+    }

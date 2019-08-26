@@ -1,0 +1,87 @@
+{
+  "result": {
+    "data": [
+      {
+        "display_name": "IMS validation",
+        "hosted_on": "",
+        "last_modified_on": "",
+        "name": "Chart_Review_Data_Entry_BOT_DEV_DataEntry_BOT",
+        "org_unit": "others"
+      },
+      {
+        "display_name": "File Decryptor",
+        "hosted_on": "",
+        "last_modified_on": "",
+        "name": "DECRYPT",
+        "org_unit": "CDAI"
+      },
+      {
+        "display_name": "CRS DE",
+        "hosted_on": "",
+        "last_modified_on": "",
+        "name": "Chart_Review_Data_Entry_BOT_QA_CRS_DataEntry",
+        "org_unit": "others"
+      },
+      {
+        "display_name": "CRS DE 2.0",
+        "hosted_on": "",
+        "last_modified_on": "",
+        "name": "Chart_Review_DataEntryBOT_2.0_QA_CRS_DataEntry",
+        "org_unit": "CDAI"
+      },
+      {
+        "display_name": "ConfigandConstantDict PPDBOT2",
+        "hosted_on": "",
+        "last_modified_on": "",
+        "name": "ConfigandConstantDict_PPDBOT2",
+        "org_unit": "others"
+      },
+      {
+        "display_name": "DataEntryBOT 2.0 QA CRS DataEntry",
+        "hosted_on": "",
+        "last_modified_on": "",
+        "name": "DataEntryBOT_2.0_QA_CRS_DataEntry",
+        "org_unit": "others"
+      }
+    ],
+    "filter": {},
+    "headers": [
+      {
+        "key": "name",
+        "searchFilter": "",
+        "sort": "1",
+        "type": "string",
+        "value": "Process ID"
+      },
+      {
+        "key": "display_name",
+        "searchFilter": "",
+        "sort": "1",
+        "type": "string",
+        "value": "Display Name"
+      },
+      {
+        "key": "org_unit",
+        "searchFilter": "",
+        "sort": "1",
+        "type": "string",
+        "value": "Org Unit"
+      },
+      {
+        "key": "hosted_on",
+        "searchFilter": "",
+        "sort": "1",
+        "type": "string",
+        "value": "Hosted On"
+      },
+      {
+        "key": "last_modified_on",
+        "searchFilter": "",
+        "sort": "-1",
+        "type": "datetime",
+        "value": "Last Modified On"
+      }
+    ],
+    "total": 166
+  }
+}

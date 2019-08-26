@@ -1,0 +1,95 @@
+<div class="admin-sec">
+  <div class="container-fluid lob_padding" *ngIf="defaultLobTemplate">
+    <div class="row marginemail marginlr0">
+      <div class="col-sm-12 row template marginlr0">
+        <div class="col-sm-9 paddinglr0">
+          <label class="header">LOBs</label>
+        </div>
+        <div class="col-sm-3 text-right paddinglr0">
+          <button class="btn-btn-default btn-save" (click)="editTemplate('new')">Add New LOB</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row marginlr0">
+      <div class="col-sm-12 paddinglr0">
+        <table class="table margintop1">
+          <thead>
+            <td>LOB Name</td>
+            <td>Description</td>
+            <td>Actions</td>
+          </thead>
+          <tbody *ngIf="isLoading" >
+            <tr>
+              <td colspan="3" >
+                <mat-spinner class="spinnerCenter" color="accent" diameter="20"></mat-spinner>
+              </td>
+            </tr>
+          </tbody>
+
+          <tbody *ngIf="!isLoading">
+            <tr class="table-row" *ngFor="let data of lob_templates; let i=index">
+              <td class="color-temp">{{data.lob_name?data.lob_name: '-'}}</td>
+              <td class="color-temp">{{data.lob_description?data.lob_description: '-'}}</td>
+              <td class="td_padding_left">
+                <em class="glyphicon glyphicon-pencil pointer" (click)="editTemplate(data.lob_id)" style="padding-right: 20px"></em>
+                <em class="glyphicon glyphicon-trash pointer" (click)="deleteTemplate(data.lob_id,data.lob_name,i)"></em>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+  <div class="container-fluid" class="editLobTemplate" *ngIf="editLobTemplate">
+    <ol class="breadcrumb breadcrumb-bg">
+      <li>
+        <a href="#" class="breadcrumb-text" (click)="defaultLobTemplate=true;editLobTemplate=false">Lob Templates</a>
+      </li>
+      <li>
+        <a class="breadcrumb-temp" >{{ post_template == true? 'Create New' : 'Update' }} Templates</a>
+      </li>
+    </ol>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-10">
+          <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="bottom-edit-template">
+                    <label class="label">LOB Name</label>
+                    <br>
+                    <input class="inputfield" type="text" placeholder="Enter LOB Name" [(ngModel)]="Template.lob_name"
+                      required name="lobname" />
+                    <br>
+                  </div>
+                  <div>
+                    <label class="label">Description</label>
+                    <br>
+                    <textarea class="inputfield descpfield" placeholder="Enter LOB Description" [(ngModel)]="Template.lob_description"
+                      required name="description"></textarea>
+                    <br>
+                  </div>
+              
+              <div>
+                <div class="panel-footer footer">
+                  <button type="submit" class="btn btn-default btn-save_template" *ngIf="update_template" (click)="putLobTemaplte(Template)">Update
+                      <mat-spinner class="edit-spinner" color="accent" diameter="20" *ngIf="isLoading"></mat-spinner>
+                  </button>
+                  <button type="submit" class="btn btn-default btn-save_template" *ngIf="post_template" (click)="postLobTemaplte(Template)">Save 
+                    <mat-spinner class="edit-spinner" color="accent" diameter="20" *ngIf="isLoading"></mat-spinner>
+                  </button>
+                  <button type="submit" class="btn btn-default btn-cancel" (click)="cancelEditTemplate()">Cancel</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-2">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+</div>
+</div>
