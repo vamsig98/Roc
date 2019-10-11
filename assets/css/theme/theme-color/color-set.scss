@@ -1,14 +1,19 @@
 /* Color Set */
 .mat-toolbar{
-    background : linear-gradient(to right, $foregroundBg1 , $foregroundBg2);
+    // background : linear-gradient(to right, $foregroundBg1 , $foregroundBg2);
+    background: rgb(44, 53, 69);
+    color: #FFF;
 }
 .menu li{
-    color: $foregroundColor1;
+    // color: $foregroundColor1;
+    color: #FFF;
     border-color: $mainMenuBorderColor;
 }
-.menu li.active{
-    background: $mainMenuBg1;
-    color: $mainMenuColor1;
+.menu li span.active{
+    // background: $mainMenuBg1;
+    color: #1cbbff;
+    border-bottom: 3px solid #1cbbff;
+
 }
 .dash-wrapper{
     // background: linear-gradient(to right, $primaryBg1 , $primaryBg2);
@@ -197,7 +202,9 @@ a.tab-head:focus{
     color : $sidenavColor;
 }
 mat-drawer .menu li.active{
-    background : $sidenavItemActiveBg;
+    // background : $sidenavItemActiveBg;
+    color: rgb(11, 135, 189);
+    border-bottom: 3px solid rgb(11, 135, 189);
 }
 
 app-list-item{
@@ -243,7 +250,7 @@ hr{
     margin: 3px 0px;
     min-height: calc(100vh - 55px) !important;
     box-sizing: border-box;
-    box-shadow: 0 0 4px 0 #ceced0;
+    // box-shadow: 0 0 4px 0 #ceced0;
     /*border-width: 3px;
     border-style: solid;*/
 }

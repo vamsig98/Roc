@@ -1,66 +1,12 @@
-{
-    "result": [
-        {
-            "ReleaseId": 246,
-            "_id": "5cc98d0751c051388529a121",
-            "bot_count": 4,
-            "bot_opex_cost_kpi": 0.3,
-            "description": "test1",
-            "display_name": "ROC Simulation",
-            "failure_records_kpi": 5,
-            "fc": 170,
-            "general_information": {
-                "Mode": "",
-                "lob": "CDAI",
-                "operations_start_date": "Wed, 01 May 2019 06:40:35 GMT"
-            },
-            "hosted_on": "AWS",
-            "is_configured": true,
-            "is_sub_process": false,
-            "last_modified_on": "2019-Jul-09 15:27 PM",
-            "lobs": "CDAI",
-            "manual_opex_cost_kpi": 0.5,
-            "max_idle_time_kpi": 100,
-            "name": "ROC.Simulation.Process1_QA_CRS_DataEntry",
-            "onboarding": "<div>This is something used for testing the roc codes<br></div><div><ul><li>Test 1</li><li>Test 2</li><li>Test 3</li></ul><div><br></div></div><div>Customizable process</div><div><br></div>",
-            "parent_process_id": null,
-            "processing_time_kpi": 5,
-            "req_type": "PUT",
-            "savings_per_record": 0.2,
-            "sc": 1450,
-            "show_in_financial_dashboard": true,
-            "show_in_processes_list": true,
-            "source_type_search": false,
-            "stakeholder_information": {
-                "Business Owners": [
-                    {
-                        "email": "aswanikumar@xpms.io",
-                        "name": "Aswani XPMS",
-                        "phonenum": "9989999899"
-                    },
-                    {
-                        "email": "vamsig98@gmail.com",
-                        "name": "vamsi",
-                        "phonenum": "345678"
-                    }
-                ],
-                "Process Owners": [
-                    {
-                        "email": "aswani.ayyagari@cioxhealth.com",
-                        "name": "Aswani CIOX",
-                        "phonenum": "9988899899"
-                    }
-                ],
-                "Technical Support": [
-                    {
-                        "email": "aswani@purplelogic.io",
-                        "name": "Aswani PPL",
-                        "phonenum": "9988899899"
-                    }
-                ]
-            },
-            "sub_process_prefix": " ",
-            "volume_backlog_kpi": 800
-        }
-    ]
+{"result":{"stakeholders" : [
+    {"name": "Benjamin Munyon" , "phonenum": "(555) 403 658" , "email":"jerry.website@cioxhealth.com"},
+    {"name": "Breeves" , "phonenum": "(555) 403 658" , "email":"breeves@cioxhealth.com"},
+    {"name": "Corey vega" , "phonenum": "(555) 403 658" , "email":"coreyvega@cioxhealth.com"}
+],
+"processowner" : [{"name": "Benjamin Munyon" , "phonenum": "(555) 403 658" , "email":"jerry.website@cioxhealth.com"},
+    {"name": "Breeves" , "phonenum": "(555) 403 658" , "email":"breeves@cioxhealth.com"},
+    {"name": "Corey vega" , "phonenum": "(555) 403 658" , "email":"coreyvega@cioxhealth.com"}],
+    
+    "technicalsupport" : [{"name": "Benjamin Munyon" , "phonenum": "(555) 403 658" , "email":"jerry.website@cioxhealth.com"}]
+}
 }

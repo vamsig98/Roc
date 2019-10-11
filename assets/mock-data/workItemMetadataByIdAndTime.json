@@ -1,9 +1,74 @@
 {
-    "attentionNeeded": 13,
-    "botCount": 1,
-    "items": 4,
-    "otherFailures": 0,
-    "process_name": "Chart_Review_DataEntryBOT_2.0_QA_CRS_DataEntry",
-    "recordsProcessed": 387,
-    "totalRecords": 400
+    "result": {
+        "active_work_items": [
+            {
+                "ETA": 0.0,
+                "_tm": "",
+                "botCount": "0",
+                "botsAvailable": "",
+                "botsRunning": 1,
+                "displayName": "EDI FILE INGESTION",
+                "items": 1,
+                "job_id": "",
+                "metadata": {},
+                "metrics": [
+                    {
+                        "clickable": true,
+                        "key": "totalRecords",
+                        "label": "Total Records",
+                        "value": 99
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalProcessed",
+                        "label": "Records Processed",
+                        "value": 87
+                    },
+                    {
+                        "clickable": true,
+                        "key": "avgProcessingTime",
+                        "label": "Avg. Processing Time (secs)",
+                        "value": "-"
+                    },
+                    {
+                        "clickable": true,
+                        "key": "attentionNeeded",
+                        "label": "Attention Needed",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "otherFailures",
+                        "label": "Other Failures",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalAwaiting",
+                        "label": "Waiting to be Processed",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalFailed",
+                        "label": "Records Failed",
+                        "value": "-"
+                    }
+                ],
+                "processName": "EDI_837_INGESTION",
+                "recordDetails": [],
+                "sourceId": "SN837File6040",
+                "startCode": "",
+                "started": "",
+                "status": "ACTIVE_FLOWING",
+                "statusColor": "ACTIVE_FLOWING",
+                "stop_id": "",
+                "tmStarted": "2019-Oct-01 20:11 PM",
+                "totalFailed": 0,
+                "totalRecords": 475,
+                "triggeredBy": ""
+            }
+        ],
+        "subway_map": {}
+    }
 }

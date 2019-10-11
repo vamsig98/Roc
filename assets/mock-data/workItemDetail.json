@@ -4,21 +4,43 @@
     "botsAvailable": "",
     "displayName": "",
     "items": 1,
-    "metadata": {
-      "key": "TimeRange",
-      "value": "01/07/2019 00:00:00 - 01/08/2019 02:33:48"
-    },
+    "job_id": "",
+    "metadata": {},
     "metrics": [
       {
         "clickable": true,
         "key": "totalRecords",
         "label": "Total Records",
-        "value": 25
+        "value": 26
       },
       {
         "clickable": true,
         "key": "totalProcessed",
         "label": "Records Processed",
+        "value": 0
+      },
+      {
+        "clickable": true,
+        "key": "avgProcessingTime",
+        "label": "Avg. Processing Time (secs)",
+        "value": "2.46s"
+      },
+      {
+        "clickable": true,
+        "key": "attentionNeeded",
+        "label": "Attention Needed",
+        "value": 0
+      },
+      {
+        "clickable": true,
+        "key": "otherFailures",
+        "label": "Other Failures",
+        "value": 0
+      },
+      {
+        "clickable": true,
+        "key": "dropCount",
+        "label": "Drop Count",
         "value": 0
       },
       {
@@ -29,375 +51,1346 @@
       },
       {
         "clickable": true,
-        "key": "avgProcessingTime",
-        "label": "Average Processing Time",
-        "value": 0.04
-      },
-      {
-        "clickable": true,
         "key": "totalFailed",
         "label": "Records Failed",
-        "value": 25
+        "value": 26
       }
     ],
-    "processName": "DECRYPT",
+    "processName": "CLAIM_CREATION",
     "recordDetails": [
       {
-        "_time": "2019-01-08T13:14:09.511+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' passworddoc - Copy (48).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
+        "@timestamp": "2019-09-26T01:47:40.867Z",
+        "@version": "1",
+        "FileListenerNodeId": "4a730bcadf3911e988ae548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "RE1Aa20BWYLy6HnLvU1P",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication1 7ac22d5a5f85d70e866090e149fb61e5",
+        "claimType": "Commercial Professional",
+        "claimWorkId": "CLM_17100585",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6044",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 643250
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-23T00:14:49.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6044\", \"agentNodeId\": \"X12BatchClaimAdjudication1 7ac22d5a5f85d70e866090e149fb61e5\", \"FileListenerNodeId\": \"4a730bcadf3911e988ae548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000586\", \"claimWorkId\": \"CLM_17100585\", \"claimType\": \"Commercial Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6044\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 2,
+        "recordId": "CDE17000586",
+        "sourceId": "SSN837File6044",
+        "startStagRecordStatus": 0,
+        "status": "FAILED",
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-23T00:14:49.123000+05:30"
+      },
+      {
+        "@timestamp": "2019-09-26T01:47:40.867Z",
+        "@version": "1",
+        "FileListenerNodeId": "4a730bcadf3911e988ae548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "Tk1Aa20BWYLy6HnLvU1P",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication 43048e13cfb9dbec611c5d9ef98ef4e4",
+        "claimType": "Commercial Professional",
+        "claimWorkId": "CLM_17100588",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6044",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 645996
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-23T00:14:54.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6044\", \"agentNodeId\": \"X12BatchClaimAdjudication 43048e13cfb9dbec611c5d9ef98ef4e4\", \"FileListenerNodeId\": \"4a730bcadf3911e988ae548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000589\", \"claimWorkId\": \"CLM_17100588\", \"claimType\": \"Commercial Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6044\"}",
+        "processName": "CLAIM_CREATION",
         "processingTime": 1,
-        "recordCount": "1",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\10122490_CD_0108_ToBeProcessed\\passworddoc - Copy (48).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "recordId": "CDE17000589",
+        "sourceId": "SSN837File6044",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:42:31.2244147-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-23T00:14:54.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:09.627+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' passworddoc - Copy (49).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "2",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\10122490_CD_0108_ToBeProcessed\\passworddoc - Copy (49).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
-        "status": "Running",
-        "timeStamp": "2019-01-08T02:42:31.8650445-05:00"
-      },
-      {
-        "_time": "2019-01-08T13:14:09.743+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' passworddoc - Copy (50).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "3",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\10122490_CD_0108_ToBeProcessed\\passworddoc - Copy (50).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
-        "status": "SUCCESS",
-        "timeStamp": "2019-01-08T02:42:32.4900396-05:00"
-      },
-      {
-        "_time": "2019-01-08T13:14:09.860+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' passworddoc - Copy.pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "4",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\10122490_CD_0108_ToBeProcessed\\passworddoc - Copy.pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
-        "status": "Running",
-        "timeStamp": "2019-01-08T02:42:33.099424-05:00"
-      },
-      {
-        "_time": "2019-01-08T13:14:09.976+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' passworddoc.pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "5",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\10122490_CD_0108_ToBeProcessed\\passworddoc.pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:40.868Z",
+        "@version": "1",
+        "FileListenerNodeId": "4a730bcadf3911e988ae548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "dk1Aa20BWYLy6HnLvU1P",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication1 46da9a7cb27a3ed61f6c70ec76a9968c",
+        "claimType": "Commercial Professional",
+        "claimWorkId": "CLM_17100589",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6044",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 648191
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-23T00:14:55.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6044\", \"agentNodeId\": \"X12BatchClaimAdjudication1 46da9a7cb27a3ed61f6c70ec76a9968c\", \"FileListenerNodeId\": \"4a730bcadf3911e988ae548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000590\", \"claimWorkId\": \"CLM_17100589\", \"claimType\": \"Commercial Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6044\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 1,
+        "recordId": "CDE17000590",
+        "sourceId": "SSN837File6044",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:42:33.7249836-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-23T00:14:55.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:10.429+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (18) - Copy.pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "6",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (18) - Copy.pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:40.868Z",
+        "@version": "1",
+        "FileListenerNodeId": "4a730bcadf3911e988ae548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "eU1Aa20BWYLy6HnLvU1P",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication3 1d8119eff845cf041b34a84fc037f263",
+        "claimType": "Commercial Professional",
+        "claimWorkId": "CLM_17100590",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6044",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 649291
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-23T00:14:55.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6044\", \"agentNodeId\": \"X12BatchClaimAdjudication3 1d8119eff845cf041b34a84fc037f263\", \"FileListenerNodeId\": \"4a730bcadf3911e988ae548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000591\", \"claimWorkId\": \"CLM_17100590\", \"claimType\": \"Commercial Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6044\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 1,
+        "recordId": "CDE17000591",
+        "sourceId": "SSN837File6044",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:42:36.0559487-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-23T00:14:55.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:10.567+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (19) - Copy.pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "7",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (19) - Copy.pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:44.771Z",
+        "@version": "1",
+        "FileListenerNodeId": "4ab2e234df3911e98881548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "fE1Aa20BWYLy6HnLvk5s",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication2 d0c8e71c9830a2d5d73af08e599ed402",
+        "claimType": "Commercial Institutional",
+        "claimWorkId": "CLM_17100641",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6045",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 706899
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-23T00:15:50.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6045\", \"agentNodeId\": \"X12BatchClaimAdjudication2 d0c8e71c9830a2d5d73af08e599ed402\", \"FileListenerNodeId\": \"4ab2e234df3911e98881548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000642\", \"claimWorkId\": \"CLM_17100641\", \"claimType\": \"Commercial Institutional\", \"code\": \"400\", \"sourceId\": \"SSN837File6045\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 4,
+        "recordId": "CDE17000642",
+        "sourceId": "SSN837File6045",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:42:36.805951-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-23T00:15:50.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:10.690+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (2).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "8",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (2).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
-        "status": "SUCCESS",
-        "timeStamp": "2019-01-08T02:42:42.7702961-05:00"
-      },
-      {
-        "_time": "2019-01-08T13:14:10.808+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (3).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "9",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (3).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:44.826Z",
+        "@version": "1",
+        "FileListenerNodeId": "4abbb5badf3911e9b661548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "qE1Aa20BWYLy6HnLvk5s",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication2 8b319d1347d6eddd1824454ce27e27cc",
+        "claimType": "Cross Over Professional",
+        "claimWorkId": "CLM_17100652",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6046",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 718421
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-23T00:15:58.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6046\", \"agentNodeId\": \"X12BatchClaimAdjudication2 8b319d1347d6eddd1824454ce27e27cc\", \"FileListenerNodeId\": \"4abbb5badf3911e9b661548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000653\", \"claimWorkId\": \"CLM_17100652\", \"claimType\": \"Cross Over Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6046\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 1,
+        "recordId": "CDE17000653",
+        "sourceId": "SSN837File6046",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:42:43.4265496-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-23T00:15:58.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:10.931+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (4).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "10",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (4).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:44.826Z",
+        "@version": "1",
+        "FileListenerNodeId": "4abbb5badf3911e9b661548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "tU1Aa20BWYLy6HnLvk5s",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication 1d8119eff845cf041b34a84fc037f263",
+        "claimType": "Cross Over Professional",
+        "claimWorkId": "CLM_17100656",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6046",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 721714
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-23T00:15:59.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6046\", \"agentNodeId\": \"X12BatchClaimAdjudication 1d8119eff845cf041b34a84fc037f263\", \"FileListenerNodeId\": \"4abbb5badf3911e9b661548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000657\", \"claimWorkId\": \"CLM_17100656\", \"claimType\": \"Cross Over Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6046\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 1,
+        "recordId": "CDE17000657",
+        "sourceId": "SSN837File6046",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:42:44.1452988-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-23T00:15:59.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:11.062+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (5).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "11",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (5).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:44.829Z",
+        "@version": "1",
+        "FileListenerNodeId": "4abbb5badf3911e9b661548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "e01Aa20BWYLy6HnLvk_W",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication1 1d8119eff845cf041b34a84fc037f263",
+        "claimType": "Cross Over Professional",
+        "claimWorkId": "CLM_17100660",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6046",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 725558
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-24T00:16:07.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6046\", \"agentNodeId\": \"X12BatchClaimAdjudication1 1d8119eff845cf041b34a84fc037f263\", \"FileListenerNodeId\": \"4abbb5badf3911e9b661548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000661\", \"claimWorkId\": \"CLM_17100660\", \"claimType\": \"Cross Over Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6046\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 3,
+        "recordId": "CDE17000661",
+        "sourceId": "SSN837File6046",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:42:44.83497-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-24T00:16:07.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:11.179+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (6).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "12",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (6).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:44.829Z",
+        "@version": "1",
+        "FileListenerNodeId": "4abbb5badf3911e9b661548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "hU1Aa20BWYLy6HnLvk_W",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication1 5f5a98ee0f95282f58940f988cd4c6e4",
+        "claimType": "Cross Over Professional",
+        "claimWorkId": "CLM_17100665",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6046",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 728304
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-24T00:16:08.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6046\", \"agentNodeId\": \"X12BatchClaimAdjudication1 5f5a98ee0f95282f58940f988cd4c6e4\", \"FileListenerNodeId\": \"4abbb5badf3911e9b661548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000666\", \"claimWorkId\": \"CLM_17100665\", \"claimType\": \"Cross Over Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6046\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 1,
+        "recordId": "CDE17000666",
+        "sourceId": "SSN837File6046",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:42:45.5849714-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-24T00:16:08.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:11.298+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (7).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "13",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (7).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:44.829Z",
+        "@version": "1",
+        "FileListenerNodeId": "4abbb5badf3911e9b661548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "jU1Aa20BWYLy6HnLvk_W",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication3 5f5a98ee0f95282f58940f988cd4c6e4",
+        "claimType": "Cross Over Professional",
+        "claimWorkId": "CLM_17100666",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6046",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 730502
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-24T00:16:12.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6046\", \"agentNodeId\": \"X12BatchClaimAdjudication3 5f5a98ee0f95282f58940f988cd4c6e4\", \"FileListenerNodeId\": \"4abbb5badf3911e9b661548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000667\", \"claimWorkId\": \"CLM_17100666\", \"claimType\": \"Cross Over Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6046\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 4,
+        "recordId": "CDE17000667",
+        "sourceId": "SSN837File6046",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:42:46.2880974-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-24T00:16:12.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:11.414+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (8).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "14",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (8).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:44.829Z",
+        "@version": "1",
+        "FileListenerNodeId": "4abbb5badf3911e9b661548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "kU1Aa20BWYLy6HnLvk_W",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication2 7ac22d5a5f85d70e866090e149fb61e5",
+        "claimType": "Cross Over Professional",
+        "claimWorkId": "CLM_17100664",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6046",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 731602
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-24T00:16:13.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6046\", \"agentNodeId\": \"X12BatchClaimAdjudication2 7ac22d5a5f85d70e866090e149fb61e5\", \"FileListenerNodeId\": \"4abbb5badf3911e9b661548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000665\", \"claimWorkId\": \"CLM_17100664\", \"claimType\": \"Cross Over Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6046\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 4,
+        "recordId": "CDE17000665",
+        "sourceId": "SSN837File6046",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:42:46.9599841-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-24T00:16:13.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:11.531+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (9).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "15",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (9).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:44.830Z",
+        "@version": "1",
+        "FileListenerNodeId": "4abbb5badf3911e9b661548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "9U1Aa20BWYLy6HnLv09T",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication 7ac22d5a5f85d70e866090e149fb61e5",
+        "claimType": "Cross Over Professional",
+        "claimWorkId": "CLM_17100669",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6046",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 734895
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-24T00:16:13.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6046\", \"agentNodeId\": \"X12BatchClaimAdjudication 7ac22d5a5f85d70e866090e149fb61e5\", \"FileListenerNodeId\": \"4abbb5badf3911e9b661548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000670\", \"claimWorkId\": \"CLM_17100669\", \"claimType\": \"Cross Over Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6046\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 1,
+        "recordId": "CDE17000670",
+        "sourceId": "SSN837File6046",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:42:47.6318462-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-24T00:16:13.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:11.649+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (10).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "16",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (10).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:44.850Z",
+        "@version": "1",
+        "FileListenerNodeId": "4b1b39fadf3911e98361548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "e01Aa20BWYLy6HnLwFCL",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication3 46da9a7cb27a3ed61f6c70ec76a9968c",
+        "claimType": "Paper Professional",
+        "claimWorkId": "CLM_17100743",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6047",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 816607
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-24T00:17:32.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6047\", \"agentNodeId\": \"X12BatchClaimAdjudication3 46da9a7cb27a3ed61f6c70ec76a9968c\", \"FileListenerNodeId\": \"4b1b39fadf3911e98361548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000744\", \"claimWorkId\": \"CLM_17100743\", \"claimType\": \"Paper Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6047\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 4,
+        "recordId": "CDE17000744",
+        "sourceId": "SSN837File6047",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:42:48.2959919-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-24T00:17:32.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:11.767+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (11).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "17",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (11).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:44.851Z",
+        "@version": "1",
+        "FileListenerNodeId": "4b1b39fadf3911e98361548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "gE1Aa20BWYLy6HnLwFCL",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication3 43048e13cfb9dbec611c5d9ef98ef4e4",
+        "claimType": "Paper Professional",
+        "claimWorkId": "CLM_17100744",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6047",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 817697
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-24T00:17:30.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6047\", \"agentNodeId\": \"X12BatchClaimAdjudication3 43048e13cfb9dbec611c5d9ef98ef4e4\", \"FileListenerNodeId\": \"4b1b39fadf3911e98361548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000745\", \"claimWorkId\": \"CLM_17100744\", \"claimType\": \"Paper Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6047\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 2,
+        "recordId": "CDE17000745",
+        "sourceId": "SSN837File6047",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:42:48.9888151-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-24T00:17:30.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:11.883+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (12).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "18",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (12).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:44.851Z",
+        "@version": "1",
+        "FileListenerNodeId": "4b1b39fadf3911e98361548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "h01Aa20BWYLy6HnLwFCL",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication2 43048e13cfb9dbec611c5d9ef98ef4e4",
+        "claimType": "Paper Professional",
+        "claimWorkId": "CLM_17100750",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6047",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 821505
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-24T00:17:34.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6047\", \"agentNodeId\": \"X12BatchClaimAdjudication2 43048e13cfb9dbec611c5d9ef98ef4e4\", \"FileListenerNodeId\": \"4b1b39fadf3911e98361548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000751\", \"claimWorkId\": \"CLM_17100750\", \"claimType\": \"Paper Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6047\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 2,
+        "recordId": "CDE17000751",
+        "sourceId": "SSN837File6047",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:42:49.8347247-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-24T00:17:34.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:11.999+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (13).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "19",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (13).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:44.851Z",
+        "@version": "1",
+        "FileListenerNodeId": "4b1b39fadf3911e98361548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "jU1Aa20BWYLy6HnLwFCL",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication 5f5a98ee0f95282f58940f988cd4c6e4",
+        "claimType": "Paper Professional",
+        "claimWorkId": "CLM_17100752",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6047",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 824770
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-24T00:17:38.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6047\", \"agentNodeId\": \"X12BatchClaimAdjudication 5f5a98ee0f95282f58940f988cd4c6e4\", \"FileListenerNodeId\": \"4b1b39fadf3911e98361548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000753\", \"claimWorkId\": \"CLM_17100752\", \"claimType\": \"Paper Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6047\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 3,
+        "recordId": "CDE17000753",
+        "sourceId": "SSN837File6047",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:42:50.4753483-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-24T00:17:38.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:12.116+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (14).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "20",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (14).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:44.851Z",
+        "@version": "1",
+        "FileListenerNodeId": "4b1b39fadf3911e98361548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "kk1Aa20BWYLy6HnLwFCL",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication 7ac22d5a5f85d70e866090e149fb61e5",
+        "claimType": "Paper Professional",
+        "claimWorkId": "CLM_17100754",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6047",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 827488
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-24T00:17:41.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6047\", \"agentNodeId\": \"X12BatchClaimAdjudication 7ac22d5a5f85d70e866090e149fb61e5\", \"FileListenerNodeId\": \"4b1b39fadf3911e98361548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000755\", \"claimWorkId\": \"CLM_17100754\", \"claimType\": \"Paper Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6047\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 2,
+        "recordId": "CDE17000755",
+        "sourceId": "SSN837File6047",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:42:51.2253436-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-24T00:17:41.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:12.234+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (15).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "21",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (15).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:44.852Z",
+        "@version": "1",
+        "FileListenerNodeId": "4b1b39fadf3911e98361548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "lE1Aa20BWYLy6HnLwFCL",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication2 d0c8e71c9830a2d5d73af08e599ed402",
+        "claimType": "Paper Professional",
+        "claimWorkId": "CLM_17100758",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6047",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 828577
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-24T00:17:41.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6047\", \"agentNodeId\": \"X12BatchClaimAdjudication2 d0c8e71c9830a2d5d73af08e599ed402\", \"FileListenerNodeId\": \"4b1b39fadf3911e98361548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000759\", \"claimWorkId\": \"CLM_17100758\", \"claimType\": \"Paper Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6047\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 1,
+        "recordId": "CDE17000759",
+        "sourceId": "SSN837File6047",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:42:58.5592537-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-24T00:17:41.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:12.350+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (16).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "22",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (16).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:44.852Z",
+        "@version": "1",
+        "FileListenerNodeId": "4b1b39fadf3911e98361548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "nE1Aa20BWYLy6HnLwFCL",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication2 a6cd9e5386fedd861f797588a3de1ad8",
+        "claimType": "Paper Professional",
+        "claimWorkId": "CLM_17100759",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6047",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 832931
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-24T00:17:46.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6047\", \"agentNodeId\": \"X12BatchClaimAdjudication2 a6cd9e5386fedd861f797588a3de1ad8\", \"FileListenerNodeId\": \"4b1b39fadf3911e98361548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000760\", \"claimWorkId\": \"CLM_17100759\", \"claimType\": \"Paper Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6047\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 3,
+        "recordId": "CDE17000760",
+        "sourceId": "SSN837File6047",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:42:59.2623749-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-24T00:17:46.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:12.466+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (17).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "23",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (17).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:44.852Z",
+        "@version": "1",
+        "FileListenerNodeId": "4b1b39fadf3911e98361548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "nk1Aa20BWYLy6HnLwFCL",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication1 22acde8d3e4f183086842314c4a17b1c",
+        "claimType": "Paper Professional",
+        "claimWorkId": "CLM_17100761",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6047",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 834021
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-24T00:17:47.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6047\", \"agentNodeId\": \"X12BatchClaimAdjudication1 22acde8d3e4f183086842314c4a17b1c\", \"FileListenerNodeId\": \"4b1b39fadf3911e98361548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000762\", \"claimWorkId\": \"CLM_17100761\", \"claimType\": \"Paper Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6047\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 4,
+        "recordId": "CDE17000762",
+        "sourceId": "SSN837File6047",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:42:59.9967458-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-24T00:17:47.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:12.582+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (18).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "24",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (18).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:44.852Z",
+        "@version": "1",
+        "FileListenerNodeId": "4b1b39fadf3911e98361548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "ok1Aa20BWYLy6HnLwFCL",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication d0c8e71c9830a2d5d73af08e599ed402",
+        "claimType": "Paper Professional",
+        "claimWorkId": "CLM_17100763",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6047",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 836198
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-24T00:17:51.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6047\", \"agentNodeId\": \"X12BatchClaimAdjudication d0c8e71c9830a2d5d73af08e599ed402\", \"FileListenerNodeId\": \"4b1b39fadf3911e98361548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000764\", \"claimWorkId\": \"CLM_17100763\", \"claimType\": \"Paper Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6047\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 4,
+        "recordId": "CDE17000764",
+        "sourceId": "SSN837File6047",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:43:00.7936219-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-24T00:17:51.123000+05:30"
       },
       {
-        "_time": "2019-01-08T13:14:12.698+05:30",
-        "code": "10400",
-        "jobId": "fd61b8f0-9204-490f-82e9-6fa7fc793628",
-        "message": "Decrypt:File ' password - Copy (19).pdf' Decryption failed due to file protected or locked",
-        "processName": "Transfer_Monitor_BOT_QA_TransferMonitorBot",
-        "processingTime": 0,
-        "recordCount": "25",
-        "recordId": "\\\\DevQA\\CRS_DataEntry_Automation\\TransferMonitorBot\\OffsiteRetrieval\\Archived\\CD\\2019\\01\\08\\12312345_CD_0108_ToBeProcessed\\password - Copy (19).pdf",
-        "sourceName": "01/07/2019 00:00:00 - 01/08/2019 02:33:48",
-        "sourceType": "TimeRange",
+        "@timestamp": "2019-09-26T01:47:44.853Z",
+        "@version": "1",
+        "FileListenerNodeId": "4b1b39fadf3911e98361548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "pk1Aa20BWYLy6HnLwFCL",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication1 7ac22d5a5f85d70e866090e149fb61e5",
+        "claimType": "Paper Professional",
+        "claimWorkId": "CLM_17100764",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6047",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 838375
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-24T00:17:52.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6047\", \"agentNodeId\": \"X12BatchClaimAdjudication1 7ac22d5a5f85d70e866090e149fb61e5\", \"FileListenerNodeId\": \"4b1b39fadf3911e98361548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000765\", \"claimWorkId\": \"CLM_17100764\", \"claimType\": \"Paper Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6047\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 3,
+        "recordId": "CDE17000765",
+        "sourceId": "SSN837File6047",
+        "startStagRecordStatus": 0,
         "status": "FAILED",
-        "timeStamp": "2019-01-08T02:43:01.5123787-05:00"
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-24T00:17:52.123000+05:30"
+      },
+      {
+        "@timestamp": "2019-09-26T01:47:44.898Z",
+        "@version": "1",
+        "FileListenerNodeId": "4bb16eaedf3911e9ab5d548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "N01Aa20BWYLy6HnLxFQU",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication a6cd9e5386fedd861f797588a3de1ad8",
+        "claimType": "Cross Over Professional",
+        "claimWorkId": "CLM_17100879",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6048",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 963423
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-25T00:19:45.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6048\", \"agentNodeId\": \"X12BatchClaimAdjudication a6cd9e5386fedd861f797588a3de1ad8\", \"FileListenerNodeId\": \"4bb16eaedf3911e9ab5d548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000880\", \"claimWorkId\": \"CLM_17100879\", \"claimType\": \"Cross Over Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6048\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 4,
+        "recordId": "CDE17000880",
+        "sourceId": "SSN837File6048",
+        "startStagRecordStatus": 0,
+        "status": "FAILED",
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-25T00:19:45.123000+05:30"
+      },
+      {
+        "@timestamp": "2019-09-26T01:47:44.899Z",
+        "@version": "1",
+        "FileListenerNodeId": "4bb16eaedf3911e9ab5d548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "PU1Aa20BWYLy6HnLxFQU",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication2 1d8119eff845cf041b34a84fc037f263",
+        "claimType": "Cross Over Professional",
+        "claimWorkId": "CLM_17100883",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6048",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 966714
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-25T00:19:46.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6048\", \"agentNodeId\": \"X12BatchClaimAdjudication2 1d8119eff845cf041b34a84fc037f263\", \"FileListenerNodeId\": \"4bb16eaedf3911e9ab5d548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000884\", \"claimWorkId\": \"CLM_17100883\", \"claimType\": \"Cross Over Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6048\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 1,
+        "recordId": "CDE17000884",
+        "sourceId": "SSN837File6048",
+        "startStagRecordStatus": 0,
+        "status": "FAILED",
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-25T00:19:46.123000+05:30"
+      },
+      {
+        "@timestamp": "2019-09-26T01:47:44.900Z",
+        "@version": "1",
+        "FileListenerNodeId": "4bb16eaedf3911e9ab5d548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "bE1Aa20BWYLy6HnLw1Pw",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication2 d0c8e71c9830a2d5d73af08e599ed402",
+        "claimType": "Cross Over Professional",
+        "claimWorkId": "CLM_17100886",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6048",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 971106
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-25T00:19:51.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6048\", \"agentNodeId\": \"X12BatchClaimAdjudication2 d0c8e71c9830a2d5d73af08e599ed402\", \"FileListenerNodeId\": \"4bb16eaedf3911e9ab5d548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000887\", \"claimWorkId\": \"CLM_17100886\", \"claimType\": \"Cross Over Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6048\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 3,
+        "recordId": "CDE17000887",
+        "sourceId": "SSN837File6048",
+        "startStagRecordStatus": 0,
+        "status": "FAILED",
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-25T00:19:51.123000+05:30"
+      },
+      {
+        "@timestamp": "2019-09-26T01:47:44.901Z",
+        "@version": "1",
+        "FileListenerNodeId": "4bb16eaedf3911e9ab5d548ca0abd2c6",
+        "Message": "ClaimCreation",
+        "_id": "c01Aa20BWYLy6HnLw1Pw",
+        "agent": {
+          "ephemeral_id": "b1605b14-4282-4466-8448-e38958c12631",
+          "hostname": "DESKTOP-563I1OI",
+          "id": "1c5ef27f-70b1-4623-b763-07222bacd2e0",
+          "type": "filebeat",
+          "version": "7.3.2"
+        },
+        "agentNodeId": "X12BatchClaimAdjudication1 1d8119eff845cf041b34a84fc037f263",
+        "claimType": "Cross Over Professional",
+        "claimWorkId": "CLM_17100888",
+        "claimWorkRecordStatus": "New",
+        "code": "400",
+        "ecs": {
+          "version": "1.0.1"
+        },
+        "endStagRecordStatus": -1,
+        "error": {
+          "message": "Error decoding JSON: json: cannot unmarshal number into Go value of type map[string]interface {}",
+          "type": "json"
+        },
+        "errorType": 401,
+        "exceptionMessage": "NA",
+        "host": {
+          "name": "DESKTOP-563I1OI"
+        },
+        "jobId": "N837File6048",
+        "log": {
+          "file": {
+            "path": "E:\\ExponentialMachines\\Anthem POC\\Transformed_by_shalini\\26092019\\newset\\t\\Workcreation_out_24_20.log"
+          },
+          "offset": 973302
+        },
+        "log-level": "Info",
+        "message": "{\"Message\": \"ClaimCreation\", \"timeStamp\": \"2019-09-25T00:19:57.123000+05:30\", \"startStagRecordStatus\": 0, \"endStagRecordStatus\": -1, \"claimWorkRecordStatus\": \"New\", \"processName\": \"CLAIM_CREATION\", \"jobId\": \"N837File6048\", \"agentNodeId\": \"X12BatchClaimAdjudication1 1d8119eff845cf041b34a84fc037f263\", \"FileListenerNodeId\": \"4bb16eaedf3911e9ab5d548ca0abd2c6\", \"exceptionMessage\": \"NA\", \"recordId\": \"CDE17000889\", \"claimWorkId\": \"CLM_17100888\", \"claimType\": \"Cross Over Professional\", \"code\": \"400\", \"sourceId\": \"SSN837File6048\"}",
+        "processName": "CLAIM_CREATION",
+        "processingTime": 4,
+        "recordId": "CDE17000889",
+        "sourceId": "SSN837File6048",
+        "startStagRecordStatus": 0,
+        "status": "FAILED",
+        "tags": [
+          "beats_input_codec_plain_applied"
+        ],
+        "timeStamp": "2019-09-25T00:19:57.123000+05:30"
       }
     ],
     "sourceId": "",
     "startCode": "",
     "started": "",
-    "status": "SUCCESS",
-    "tmStarted": "Tue, 08 Jan 2019 02:40:32 GMT",
+    "status": "ACTIVE_FLOWING",
+    "stop_id": "",
+    "tmStarted": null,
     "triggeredBy": ""
   }
 }

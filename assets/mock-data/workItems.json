@@ -1,169 +1,1074 @@
 {
-  "result": {
-    "active_work_items": [
-      {
-        "ETA": 0, 
-        "_tm": "", 
-        "botCount": 4, 
-        "botsAvailable": 4, 
-        "botsRunning": 1, 
-        "displayName": "CRS DE 2.0", 
-        "items": 1, 
-        "job_id": "62c00bfd-fac1-4dca-a0e0-3c28cee4e5d5", 
-        "metadata": {
-          "key": "File", 
-          "value": "Test Scenario 3_Normal_6_All_Pass_Humana_run1"
-        }, 
-        "metrics": [
-          {
-            "clickable": true, 
-            "key": "totalRecords", 
-            "label": "Total Records", 
-            "value": 6
-          }, 
-          {
-            "clickable": true, 
-            "key": "totalProcessed", 
-            "label": "Records Processed", 
-            "value": "-"
-          }, 
-          {
-            "clickable": true, 
-            "key": "avgProcessingTime", 
-            "label": "Avg. Processing Time (secs)", 
-            "value": "-"
-          }, 
-          {
-            "clickable": true, 
-            "key": "attentionNeeded", 
-            "label": "Attention Needed", 
-            "value": 0
-          }, 
-          {
-            "clickable": true, 
-            "key": "otherFailures", 
-            "label": "Other Failures", 
-            "value": 0
-          }, 
-          {
-            "clickable": true, 
-            "key": "totalAwaiting", 
-            "label": "Waiting to be Processed", 
-            "value": 6
-          }, 
-          {
-            "clickable": true, 
-            "key": "totalFailed", 
-            "label": "Records Failed", 
-            "value": "-"
-          }
-        ], 
-        "processName": "Chart_Review_DataEntryBOT_2.0_QA_CRS_DataEntry", 
-        "recordDetails": [], 
-        "sourceId": "5d1f32414f9b0d212c2a71dd", 
-        "startCode": "", 
-        "started": "", 
-        "status": "WAITING", 
-        "statusColor": "WAITING", 
-        "stop_id": 34935, 
-        "tmStarted": "2019-Jul-05 07:19 AM", 
-        "totalFailed": 0, 
-        "totalRecords": 6, 
-        "triggeredBy": "File"
-      }
-    ], 
-    "subway_map": {
-      "CDAI_ARR_PRP_ConvertAndCombineChart_CDAI_ARR_PRP": {
-        "attribute": {}, 
-        "key": "CDAI_ARR_PRP_ConvertAndCombineChart_CDAI_ARR_PRP", 
-        "status": "INACTIVE"
-      }, 
-      "CDAI_ARR_PRP_UploadChartToHealthSource_CDAI_ARR_PRP": {
-        "attribute": {}, 
-        "key": "CDAI_ARR_PRP_UploadChartToHealthSource_CDAI_ARR_PRP", 
-        "status": "INACTIVE"
-      }, 
-      "CSRPPD_Purge_MongoDB_Records_PPD BOT Environment": {
-        "attribute": {}, 
-        "key": "CSRPPD_Purge_MongoDB_Records_PPD BOT Environment", 
-        "status": "INACTIVE"
-      }, 
-      "Chart_Review_DataEntryBOT_2.0_QA_CRS_DataEntry": {
-        "attribute": {
-          "active_bots": 1, 
-          "anticipated_time": "0.00", 
-          "avg_processess_time_actual": [
-            0, 
-            0, 
-            80
-          ], 
-          "failed_records_actual": [
-            0, 
-            0, 
-            50
-          ], 
-          "remaining_items_in_queue": 6, 
-          "stand_by_bots": 3, 
-          "total_records_per_day_actual": [
-            20, 
-            350
-          ], 
-          "up_time": "25m:23s"
-        }, 
-        "healthStatus": "healthy", 
-        "key": "Chart_Review_DataEntryBOT_2.0_QA_CRS_DataEntry", 
-        "status": "WAITING"
-      }, 
-      "DECRYPT": {
-        "attribute": {}, 
-        "key": "DECRYPT", 
-        "status": "INACTIVE"
-      }, 
-      "IMS_GenerateInvoiceReportsProcess_BOT_IMS_DEV_ENV": {
-        "attribute": {}, 
-        "key": "IMS_GenerateInvoiceReportsProcess_BOT_IMS_DEV_ENV", 
-        "status": "INACTIVE"
-      }, 
-      "OR_Folders_Lead_Allocator_QA_OR_Transfer": {
-        "attribute": {}, 
-        "key": "OR_Folders_Lead_Allocator_QA_OR_Transfer", 
-        "status": "INACTIVE"
-      }, 
-      "OR_Folders_Lead_Uploader_QA_FolderBOT_ENV": {
-        "attribute": {}, 
-        "key": "OR_Folders_Lead_Uploader_QA_FolderBOT_ENV", 
-        "status": "INACTIVE"
-      }, 
-      "ROC.Simulation.Process1_QA_CRS_DataEntry": {
-        "attribute": {}, 
-        "key": "ROC.Simulation.Process1_QA_CRS_DataEntry", 
-        "status": "INACTIVE"
-      }, 
-      "TNT_GenerateMailingLabel_BOT_TNTHorizontalScaling": {
-        "attribute": {}, 
-        "key": "TNT_GenerateMailingLabel_BOT_TNTHorizontalScaling", 
-        "status": "INACTIVE"
-      }, 
-      "TSR_BOT_QA_TSR": {
-        "attribute": {}, 
-        "key": "TSR_BOT_QA_TSR", 
-        "status": "INACTIVE"
-      }, 
-      "TransferBOT_Decryptor_QA_TransferMonitorBot": {
-        "attribute": {}, 
-        "key": "TransferBOT_Decryptor_QA_TransferMonitorBot", 
-        "status": "INACTIVE"
-      }, 
-      "TransferMonitorBOT2.0_QA_TransferMonitorBot": {
-        "attribute": {}, 
-        "key": "TransferMonitorBOT2.0_QA_TransferMonitorBot", 
-        "status": "INACTIVE"
-      }, 
-      "Transfer_Monitor_BOT_QA_TransferMonitorBot": {
-        "attribute": {}, 
-        "key": "Transfer_Monitor_BOT_QA_TransferMonitorBot", 
-        "status": "INACTIVE"
-      }
+    "result": {
+        "active_work_items": [
+            {
+                "ETA": 0.0,
+                "_tm": "",
+                "botCount": "0",
+                "botsAvailable": "",
+                "botsRunning": 1,
+                "displayName": "EDI 837 INGESTION",
+                "items": 1,
+                "job_id": "",
+                "metadata": {},
+                "metrics": [
+                    {
+                        "clickable": true,
+                        "key": "totalRecords",
+                        "label": "Total Records",
+                        "value": 20200
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalProcessed",
+                        "label": "Records Processed",
+                        "value": 10545
+                    },
+                    {
+                        "clickable": true,
+                        "key": "avgProcessingTime",
+                        "label": "Avg. Processing Time (secs)",
+                        "value": "-"
+                    },
+                    {
+                        "clickable": true,
+                        "key": "attentionNeeded",
+                        "label": "Attention Needed",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "otherFailures",
+                        "label": "Other Failures",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "dropCount",
+                        "label": "Drop Count",
+                        "value": "-"
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalAwaiting",
+                        "label": "Waiting to be Processed",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalFailed",
+                        "label": "Records Failed",
+                        "value": "-"
+                    }
+                ],
+                "processName": "EDI_837_INGESTION",
+                "recordDetails": [],
+                "sourceId": "SN837File6047",
+                "startCode": "",
+                "started": "",
+                "status": "ACTIVE_FLOWING",
+                "statusColor": "ACTIVE_FLOWING",
+                "stop_id": "",
+                "tmStarted": "2019-Sep-24 20:19 PM",
+                "totalFailed": 0,
+                "totalRecords": 126,
+                "triggeredBy": ""
+            },
+            {
+                "ETA": 0.0,
+                "_tm": "",
+                "botCount": "0",
+                "botsAvailable": "",
+                "botsRunning": 1,
+                "displayName": "CLAIM CREATION",
+                "items": 1,
+                "job_id": "",
+                "metadata": {},
+                "metrics": [
+                    {
+                        "clickable": true,
+                        "key": "totalRecords",
+                        "label": "Total Records",
+                        "value": 124
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalProcessed",
+                        "label": "Records Processed",
+                        "value": 120
+                    },
+                    {
+                        "clickable": true,
+                        "key": "avgProcessingTime",
+                        "label": "Avg. Processing Time (secs)",
+                        "value": "2.65s"
+                    },
+                    {
+                        "clickable": true,
+                        "key": "attentionNeeded",
+                        "label": "Attention Needed",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "otherFailures",
+                        "label": "Other Failures",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "dropCount",
+                        "label": "Drop Count",
+                        "value": 2
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalAwaiting",
+                        "label": "Waiting to be Processed",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalFailed",
+                        "label": "Records Failed",
+                        "value": 4
+                    }
+                ],
+                "processName": "CLAIM_CREATION",
+                "recordDetails": [],
+                "sourceId": "SSN837File6047",
+                "startCode": "",
+                "started": "",
+                "status": "ACTIVE_FLOWING",
+                "statusColor": "ACTIVE_FLOWING",
+                "stop_id": "",
+                "tmStarted": "2019-Sep-24 20:19 PM",
+                "totalFailed": 4,
+                "totalRecords": 124,
+                "triggeredBy": ""
+            },
+            {
+                "ETA": 0.0,
+                "_tm": "",
+                "botCount": "0",
+                "botsAvailable": "",
+                "botsRunning": 1,
+                "displayName": "ORCHESTRATION",
+                "items": 1,
+                "job_id": "",
+                "metadata": {},
+                "metrics": [
+                    {
+                        "clickable": true,
+                        "key": "totalRecords",
+                        "label": "Total Records",
+                        "value": 118
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalProcessed",
+                        "label": "Records Processed",
+                        "value": 114
+                    },
+                    {
+                        "clickable": true,
+                        "key": "avgProcessingTime",
+                        "label": "Avg. Processing Time (secs)",
+                        "value": "2.6s"
+                    },
+                    {
+                        "clickable": true,
+                        "key": "attentionNeeded",
+                        "label": "Attention Needed",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "otherFailures",
+                        "label": "Other Failures",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "dropCount",
+                        "label": "Drop Count",
+                        "value": 2
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalAwaiting",
+                        "label": "Waiting to be Processed",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalFailed",
+                        "label": "Records Failed",
+                        "value": 4
+                    }
+                ],
+                "processName": "ORCHESTRATION",
+                "recordDetails": [],
+                "sourceId": "SSSN837File6047",
+                "startCode": "",
+                "started": "",
+                "status": "ACTIVE_FLOWING",
+                "statusColor": "ACTIVE_FLOWING",
+                "stop_id": "",
+                "tmStarted": "2019-Sep-24 20:19 PM",
+                "totalFailed": 4,
+                "totalRecords": 118,
+                "triggeredBy": ""
+            },
+            {
+                "ETA": 0.0,
+                "_tm": "",
+                "botCount": "0",
+                "botsAvailable": "",
+                "botsRunning": 1,
+                "displayName": "OBJECT GENERATION",
+                "items": 1,
+                "job_id": "",
+                "metadata": {},
+                "metrics": [
+                    {
+                        "clickable": true,
+                        "key": "totalRecords",
+                        "label": "Total Records",
+                        "value": 112
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalProcessed",
+                        "label": "Records Processed",
+                        "value": 109
+                    },
+                    {
+                        "clickable": true,
+                        "key": "avgProcessingTime",
+                        "label": "Avg. Processing Time (secs)",
+                        "value": "2.55s"
+                    },
+                    {
+                        "clickable": true,
+                        "key": "attentionNeeded",
+                        "label": "Attention Needed",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "otherFailures",
+                        "label": "Other Failures",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "dropCount",
+                        "label": "Drop Count",
+                        "value": 2
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalAwaiting",
+                        "label": "Waiting to be Processed",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalFailed",
+                        "label": "Records Failed",
+                        "value": 3
+                    }
+                ],
+                "processName": "Object_Generation",
+                "recordDetails": [],
+                "sourceId": "SSSN837File6047",
+                "startCode": "",
+                "started": "",
+                "status": "ACTIVE_FLOWING",
+                "statusColor": "ACTIVE_NOT_FLOWING",
+                "stop_id": "",
+                "tmStarted": "2019-Sep-24 20:19 PM",
+                "totalFailed": 3,
+                "totalRecords": 112,
+                "triggeredBy": ""
+            },
+            {
+                "ETA": 0.0,
+                "_tm": "",
+                "botCount": "0",
+                "botsAvailable": "",
+                "botsRunning": 1,
+                "displayName": "FILE GENERATION",
+                "items": 1,
+                "job_id": "",
+                "metadata": {},
+                "metrics": [
+                    {
+                        "clickable": true,
+                        "key": "totalRecords",
+                        "label": "Total Records",
+                        "value": 107
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalProcessed",
+                        "label": "Records Processed",
+                        "value": 104
+                    },
+                    {
+                        "clickable": true,
+                        "key": "avgProcessingTime",
+                        "label": "Avg. Processing Time (secs)",
+                        "value": "2.42s"
+                    },
+                    {
+                        "clickable": true,
+                        "key": "attentionNeeded",
+                        "label": "Attention Needed",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "otherFailures",
+                        "label": "Other Failures",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "dropCount",
+                        "label": "Drop Count",
+                        "value": 2
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalAwaiting",
+                        "label": "Waiting to be Processed",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalFailed",
+                        "label": "Records Failed",
+                        "value": 3
+                    }
+                ],
+                "processName": "File_Generation",
+                "recordDetails": [],
+                "sourceId": "SSSN837File6047",
+                "startCode": "",
+                "started": "",
+                "status": "ACTIVE_FLOWING",
+                "statusColor": "ACTIVE_NOT_FLOWING",
+                "stop_id": "",
+                "tmStarted": "2019-Sep-24 20:19 PM",
+                "totalFailed": 3,
+                "totalRecords": 107,
+                "triggeredBy": ""
+            },
+            {
+                "ETA": 0.0,
+                "_tm": "",
+                "botCount": "0",
+                "botsAvailable": "",
+                "botsRunning": 1,
+                "displayName": "POSTBACK 1",
+                "items": 1,
+                "job_id": "",
+                "metadata": {},
+                "metrics": [
+                    {
+                        "clickable": true,
+                        "key": "totalRecords",
+                        "label": "Total Records",
+                        "value": 103
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalProcessed",
+                        "label": "Records Processed",
+                        "value": 97
+                    },
+                    {
+                        "clickable": true,
+                        "key": "avgProcessingTime",
+                        "label": "Avg. Processing Time (secs)",
+                        "value": "2.5s"
+                    },
+                    {
+                        "clickable": true,
+                        "key": "attentionNeeded",
+                        "label": "Attention Needed",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "otherFailures",
+                        "label": "Other Failures",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "dropCount",
+                        "label": "Drop Count",
+                        "value": 1
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalAwaiting",
+                        "label": "Waiting to be Processed",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalFailed",
+                        "label": "Records Failed",
+                        "value": 6
+                    }
+                ],
+                "processName": "Postback_1",
+                "recordDetails": [],
+                "sourceId": "SSSN837File6047",
+                "startCode": "",
+                "started": "",
+                "status": "ACTIVE_FLOWING",
+                "statusColor": "ACTIVE_NOT_FLOWING",
+                "stop_id": "",
+                "tmStarted": "2019-Sep-24 20:20 PM",
+                "totalFailed": 6,
+                "totalRecords": 103,
+                "triggeredBy": ""
+            },
+            {
+                "ETA": 0.0,
+                "_tm": "",
+                "botCount": "0",
+                "botsAvailable": "",
+                "botsRunning": 1,
+                "displayName": "POSTBACK 2",
+                "items": 1,
+                "job_id": "",
+                "metadata": {},
+                "metrics": [
+                    {
+                        "clickable": true,
+                        "key": "totalRecords",
+                        "label": "Total Records",
+                        "value": 93
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalProcessed",
+                        "label": "Records Processed",
+                        "value": 89
+                    },
+                    {
+                        "clickable": true,
+                        "key": "avgProcessingTime",
+                        "label": "Avg. Processing Time (secs)",
+                        "value": "2.67s"
+                    },
+                    {
+                        "clickable": true,
+                        "key": "attentionNeeded",
+                        "label": "Attention Needed",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "otherFailures",
+                        "label": "Other Failures",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "dropCount",
+                        "label": "Drop Count",
+                        "value": 4
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalAwaiting",
+                        "label": "Waiting to be Processed",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalFailed",
+                        "label": "Records Failed",
+                        "value": 4
+                    }
+                ],
+                "processName": "Postback_2",
+                "recordDetails": [],
+                "sourceId": "SSSN837File6047",
+                "startCode": "",
+                "started": "",
+                "status": "ACTIVE_FLOWING",
+                "statusColor": "ACTIVE_NOT_FLOWING",
+                "stop_id": "",
+                "tmStarted": "2019-Sep-24 20:20 PM",
+                "totalFailed": 4,
+                "totalRecords": 93,
+                "triggeredBy": ""
+            },
+            {
+                "ETA": 0.0,
+                "_tm": "",
+                "botCount": "0",
+                "botsAvailable": "",
+                "botsRunning": 1,
+                "displayName": "WGS",
+                "items": 1,
+                "job_id": "",
+                "metadata": {},
+                "metrics": [
+                    {
+                        "clickable": true,
+                        "key": "totalRecords",
+                        "label": "Total Records",
+                        "value": 87
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalProcessed",
+                        "label": "Records Processed",
+                        "value": 79
+                    },
+                    {
+                        "clickable": true,
+                        "key": "avgProcessingTime",
+                        "label": "Avg. Processing Time (secs)",
+                        "value": "2.4s"
+                    },
+                    {
+                        "clickable": true,
+                        "key": "attentionNeeded",
+                        "label": "Attention Needed",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "otherFailures",
+                        "label": "Other Failures",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "dropCount",
+                        "label": "Drop Count",
+                        "value": 2
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalAwaiting",
+                        "label": "Waiting to be Processed",
+                        "value": 0
+                    },
+                    {
+                        "clickable": true,
+                        "key": "totalFailed",
+                        "label": "Records Failed",
+                        "value": 8
+                    }
+                ],
+                "processName": "WGS_Mainframe_System",
+                "recordDetails": [],
+                "sourceId": "SSSN837File6047",
+                "startCode": "",
+                "started": "",
+                "status": "ACTIVE_FLOWING",
+                "statusColor": "ACTIVE_NOT_FLOWING",
+                "stop_id": "",
+                "tmStarted": "2019-Sep-24 20:20 PM",
+                "totalFailed": 8,
+                "totalRecords": 87,
+                "triggeredBy": ""
+            }
+        ],
+        "subway_map": {
+            "CLAIM_CREATION": {
+                "active_count": 0,
+                "attribute": {
+                    "active_bots": 1,
+                    "anticipated_time": "0.00s",
+                    "avg_processess_time_actual": [
+                        0,
+                        2.65,
+                        16
+                    ],
+                    "failed_pending": [
+                        0.0,
+                        15
+                    ],
+                    "failed_records_actual": [
+                        3,
+                        0,
+                        12
+                    ],
+                    "remaining_items_in_queue": 0,
+                    "reolved_complete": [
+                        0.0,
+                        15
+                    ],
+                    "resolved_denied": [
+                        0.0,
+                        15
+                    ],
+                    "stand_by_bots": "",
+                    "total_records_per_day_actual": [
+                        0,
+                        1000
+                    ],
+                    "up_time": "33h:34m:57s"
+                },
+                "display_name": "CLAIM CREATION",
+                "drop_counts": 2,
+                "dropped_records": [
+                    {
+                        "r_s_tm": "Tue, 24 Sep 2019 18:49:55 GMT",
+                        "recordId": "CDE17000892"
+                    },
+                    {
+                        "r_s_tm": "Tue, 24 Sep 2019 18:49:53 GMT",
+                        "recordId": "CDE17000890"
+                    }
+                ],
+                "failed_count": 4,
+                "failed_records": [
+                    "CDE17000880",
+                    "CDE17000884",
+                    "CDE17000887",
+                    "CDE17000889"
+                ],
+                "healthStatus": "healthy",
+                "in": 124,
+                "instances": 45,
+                "key": "CLAIM_CREATION",
+                "out": 120,
+                "status": "ACTIVE_FLOWING"
+            },
+            "EDI_837_INGESTION": {
+                "active_count": 0,
+                "attribute": {
+                    "active_bots": 1,
+                    "anticipated_time": "0.00s",
+                    "avg_processess_time_actual": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "failed_pending": [
+                        0.0,
+                        15
+                    ],
+                    "failed_records_actual": [
+                        0,
+                        0,
+                        5
+                    ],
+                    "remaining_items_in_queue": 0,
+                    "reolved_complete": [
+                        0.0,
+                        15
+                    ],
+                    "resolved_denied": [
+                        0.0,
+                        15
+                    ],
+                    "stand_by_bots": "",
+                    "total_records_per_day_actual": [
+                        0,
+                        1000
+                    ],
+                    "up_time": "33h:34m:59s"
+                },
+                "display_name": "EDI 837 INGESTION",
+                "drop_counts": 0,
+                "dropped_records": [],
+                "failed_count": 0,
+                "failed_records": [],
+                "healthStatus": "healthy",
+                "in": 126,
+                "instances": 10000,
+                "key": "EDI_837_INGESTION",
+                "out": 126,
+                "status": "ACTIVE_FLOWING"
+            },
+            "File_Generation": {
+                "active_count": 0,
+                "attribute": {
+                    "active_bots": 1,
+                    "anticipated_time": "0.00s",
+                    "avg_processess_time_actual": [
+                        0,
+                        2.42,
+                        1
+                    ],
+                    "failed_pending": [
+                        0.0,
+                        15
+                    ],
+                    "failed_records_actual": [
+                        3,
+                        0,
+                        5
+                    ],
+                    "remaining_items_in_queue": 0,
+                    "reolved_complete": [
+                        0.0,
+                        15
+                    ],
+                    "resolved_denied": [
+                        0.0,
+                        15
+                    ],
+                    "stand_by_bots": "",
+                    "total_records_per_day_actual": [
+                        0,
+                        1000
+                    ],
+                    "up_time": "33h:34m:42s"
+                },
+                "display_name": "FILE GENERATION",
+                "drop_counts": 2,
+                "dropped_records": [
+                    {
+                        "r_s_tm": "Tue, 24 Sep 2019 18:50:13 GMT",
+                        "recordId": "CDE17000904"
+                    },
+                    {
+                        "r_s_tm": "Tue, 24 Sep 2019 18:50:12 GMT",
+                        "recordId": "CDE17000901"
+                    }
+                ],
+                "failed_count": 3,
+                "failed_records": [
+                    "CDE17000883",
+                    "CDE17000885",
+                    "CDE17000906"
+                ],
+                "healthStatus": "healthy",
+                "in": 107,
+                "instances": 48,
+                "key": "File_Generation",
+                "out": 104,
+                "status": "ACTIVE_NOT_FLOWING"
+            },
+            "ORCHESTRATION": {
+                "active_count": 0,
+                "attribute": {
+                    "active_bots": 1,
+                    "anticipated_time": "0.00s",
+                    "avg_processess_time_actual": [
+                        0,
+                        2.6,
+                        34
+                    ],
+                    "failed_pending": [
+                        0.0,
+                        15
+                    ],
+                    "failed_records_actual": [
+                        3,
+                        0,
+                        5
+                    ],
+                    "remaining_items_in_queue": 0,
+                    "reolved_complete": [
+                        0.0,
+                        15
+                    ],
+                    "resolved_denied": [
+                        0.0,
+                        15
+                    ],
+                    "stand_by_bots": "",
+                    "total_records_per_day_actual": [
+                        0,
+                        1000
+                    ],
+                    "up_time": "33h:34m:52s"
+                },
+                "display_name": "ORCHESTRATION",
+                "drop_counts": 2,
+                "dropped_records": [
+                    {
+                        "r_s_tm": "Tue, 24 Sep 2019 18:49:46 GMT",
+                        "recordId": "CDE17000881"
+                    },
+                    {
+                        "r_s_tm": "Tue, 24 Sep 2019 18:49:59 GMT",
+                        "recordId": "CDE17000894"
+                    }
+                ],
+                "failed_count": 4,
+                "failed_records": [
+                    "CDE17000882",
+                    "CDE17000886",
+                    "CDE17000888",
+                    "CDE17000896"
+                ],
+                "healthStatus": "healthy",
+                "in": 118,
+                "instances": 45,
+                "key": "ORCHESTRATION",
+                "out": 114,
+                "status": "ACTIVE_FLOWING"
+            },
+            "Object_Generation": {
+                "active_count": 0,
+                "attribute": {
+                    "active_bots": 1,
+                    "anticipated_time": "0.00s",
+                    "avg_processess_time_actual": [
+                        0,
+                        2.55,
+                        1
+                    ],
+                    "failed_pending": [
+                        0.0,
+                        15
+                    ],
+                    "failed_records_actual": [
+                        3,
+                        0,
+                        5
+                    ],
+                    "remaining_items_in_queue": 0,
+                    "reolved_complete": [
+                        0.0,
+                        15
+                    ],
+                    "resolved_denied": [
+                        0.0,
+                        15
+                    ],
+                    "stand_by_bots": "",
+                    "total_records_per_day_actual": [
+                        0,
+                        1000
+                    ],
+                    "up_time": "33h:34m:44s"
+                },
+                "display_name": "OBJECT GENERATION",
+                "drop_counts": 2,
+                "dropped_records": [
+                    {
+                        "r_s_tm": "Tue, 24 Sep 2019 18:50:03 GMT",
+                        "recordId": "CDE17000893"
+                    },
+                    {
+                        "r_s_tm": "Tue, 24 Sep 2019 18:50:03 GMT",
+                        "recordId": "CDE17000898"
+                    }
+                ],
+                "failed_count": 3,
+                "failed_records": [
+                    "CDE17000891",
+                    "CDE17000897",
+                    "CDE17000899"
+                ],
+                "healthStatus": "healthy",
+                "in": 112,
+                "instances": 40,
+                "key": "Object_Generation",
+                "out": 109,
+                "status": "ACTIVE_NOT_FLOWING"
+            },
+            "Postback_1": {
+                "active_count": 0,
+                "attribute": {
+                    "active_bots": 1,
+                    "anticipated_time": "0.00s",
+                    "avg_processess_time_actual": [
+                        0,
+                        2.5,
+                        1
+                    ],
+                    "failed_pending": [
+                        0.0,
+                        15
+                    ],
+                    "failed_records_actual": [
+                        6,
+                        0,
+                        5
+                    ],
+                    "remaining_items_in_queue": 0,
+                    "reolved_complete": [
+                        0.0,
+                        15
+                    ],
+                    "resolved_denied": [
+                        0.0,
+                        15
+                    ],
+                    "stand_by_bots": "",
+                    "total_records_per_day_actual": [
+                        0,
+                        1000
+                    ],
+                    "up_time": "33h:34m:32s"
+                },
+                "display_name": "POSTBACK 1",
+                "drop_counts": 1,
+                "dropped_records": [
+                    {
+                        "r_s_tm": "Tue, 24 Sep 2019 18:50:23 GMT",
+                        "recordId": "CDE17000908"
+                    }
+                ],
+                "failed_count": 6,
+                "failed_records": [
+                    "CDE17000808",
+                    "CDE17000809",
+                    "CDE17000813",
+                    "CDE17000900",
+                    "CDE17000902",
+                    "CDE17000905"
+                ],
+                "healthStatus": "healthy",
+                "in": 103,
+                "instances": 42,
+                "key": "Postback_1",
+                "out": 97,
+                "status": "ACTIVE_NOT_FLOWING"
+            },
+            "Postback_2": {
+                "active_count": 0,
+                "attribute": {
+                    "active_bots": 1,
+                    "anticipated_time": "0.00s",
+                    "avg_processess_time_actual": [
+                        0,
+                        2.67,
+                        1
+                    ],
+                    "failed_pending": [
+                        0.0,
+                        15
+                    ],
+                    "failed_records_actual": [
+                        4,
+                        0,
+                        5
+                    ],
+                    "remaining_items_in_queue": 0,
+                    "reolved_complete": [
+                        0.0,
+                        15
+                    ],
+                    "resolved_denied": [
+                        0.0,
+                        15
+                    ],
+                    "stand_by_bots": "",
+                    "total_records_per_day_actual": [
+                        0,
+                        1000
+                    ],
+                    "up_time": "33h:34m:28s"
+                },
+                "display_name": "POSTBACK 2",
+                "drop_counts": 4,
+                "dropped_records": [
+                    {
+                        "r_s_tm": "Tue, 24 Sep 2019 18:48:46 GMT",
+                        "recordId": "CDE17000807"
+                    },
+                    {
+                        "r_s_tm": "Tue, 24 Sep 2019 18:48:52 GMT",
+                        "recordId": "CDE17000817"
+                    },
+                    {
+                        "r_s_tm": "Tue, 24 Sep 2019 18:50:07 GMT",
+                        "recordId": "CDE17000895"
+                    },
+                    {
+                        "r_s_tm": "Tue, 24 Sep 2019 18:48:43 GMT",
+                        "recordId": "CDE17000806"
+                    }
+                ],
+                "failed_count": 4,
+                "failed_records": [
+                    "CDE17000811",
+                    "CDE17000812",
+                    "CDE17000912",
+                    "CDE17000911"
+                ],
+                "healthStatus": "healthy",
+                "in": 93,
+                "instances": 39,
+                "key": "Postback_2",
+                "out": 89,
+                "status": "ACTIVE_NOT_FLOWING"
+            },
+            "WGS_Mainframe_System": {
+                "active_count": 0,
+                "attribute": {
+                    "active_bots": 1,
+                    "anticipated_time": "0.00s",
+                    "avg_processess_time_actual": [
+                        0,
+                        2.4,
+                        1
+                    ],
+                    "failed_pending": [
+                        0.0,
+                        15
+                    ],
+                    "failed_records_actual": [
+                        9,
+                        0,
+                        5
+                    ],
+                    "remaining_items_in_queue": 0,
+                    "reolved_complete": [
+                        37.93,
+                        40
+                    ],
+                    "resolved_denied": [
+                        0.0,
+                        15
+                    ],
+                    "stand_by_bots": "",
+                    "total_records_per_day_actual": [
+                        0,
+                        1000
+                    ],
+                    "up_time": "33h:34m:13s"
+                },
+                "display_name": "WGS_edit",
+                "drop_counts": 2,
+                "dropped_records": [
+                    {
+                        "r_s_tm": "Tue, 24 Sep 2019 18:48:49 GMT",
+                        "recordId": "CDE17000815"
+                    },
+                    {
+                        "r_s_tm": "Tue, 24 Sep 2019 18:50:28 GMT",
+                        "recordId": "CDE17000903"
+                    }
+                ],
+                "failed_count": 8,
+                "failed_records": [
+                    "CDE17000820",
+                    "CDE17000822",
+                    "CDE17000833",
+                    "CDE17000837",
+                    "CDE17000828",
+                    "CDE17000909",
+                    "CDE17000921",
+                    "CDE17000917"
+                ],
+                "healthStatus": "healthy",
+                "in": 87,
+                "instances": 40,
+                "key": "WGS_Mainframe_System",
+                "out": 79,
+                "status": "ACTIVE_NOT_FLOWING"
+            }
+        }
     }
-  }
 }

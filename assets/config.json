@@ -1,7 +1,8 @@
 {
     "env": "dev",
-    "apiUrl" : "http://localhost:5005/api",
-    "adminApiUrl": "http://localhost:5005/api",
+    "baseUrl":"http://mypulse.com/be",
+    "apiUrl" : "http://mypulse.com/be/api",
+    "adminApiUrl": "http://mypulse.com/be/api",
     "version": "1.0.0-dev",
     "tmPollingInMs": 20000,
     "useMockData": true,

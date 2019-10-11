@@ -1,0 +1,93 @@
+{
+  "result": {
+    "data": {
+      "CDE17000893": [
+        {
+          "code": 210,
+          "instance_id": "X12BatchClaimAdjudication1 8b319d1347d6eddd1824454ce27e27cc",
+          "process_name": "EDI_837_INGESTION",
+          "status": 0,
+          "timestamp": "2019-09-25T00:19:53.123000+05:30",
+          "outwgs":2
+        },
+        {
+          "code": "210",
+          "instance_id": "X12BatchClaimAdjudication2 8b319d1347d6eddd1824454ce27e27cc",
+          "process_name": "CLAIM_CREATION",
+          "status": 1,
+          "timestamp": "2019-09-25T00:20:01.123000+05:30",
+          "outwgs":2
+        },
+        {
+          "code": "201",
+          "instance_id": "X12BatchClaimAdjudication3 43048e13cfb9dbec611c5d9ef98ef4e4",
+          "process_name": "ORCHESTRATION",
+          "status": "Pending-Kernel",
+          "timestamp": "2019-09-25T00:20:01.123000+05:30",
+          "outwgs":2
+        },
+        {
+          "code": "201",
+          "instance_id": "X12BatchClaimAdjudication 46da9a7cb27a3ed61f6c70ec76a9968c",
+          "process_name": "Object_Generation",
+          "status": "Inprogress",
+          "timestamp": "2019-09-25T00:20:03.123000+05:30",
+                    "outwgs":2
+        }
+      ],
+      "CDE17000898": [
+        {
+          "code": 210,
+          "instance_id": "X12BatchClaimAdjudication cf75035d916c60bbd9ea6beff61a963c",
+          "process_name": "EDI_837_INGESTION",
+          "status": 0,
+          "timestamp": "2019-09-25T00:19:58.123000+05:30",
+          "outwgs":2
+        },
+        {
+          "code": "201",
+          "instance_id": "X12BatchClaimAdjudication 6a57049a82431a001fd5b019d97762a4",
+          "process_name": "CLAIM_CREATION",
+          "status": 1,
+          "timestamp": "2019-09-25T00:20:01.123000+05:30",
+          "outwgs":2
+        },
+        {
+          "code": "201",
+          "instance_id": "X12BatchClaimAdjudication1 678616aa0598aa87177e39a34e65a8b1",
+          "process_name": "ORCHESTRATION",
+          "status": "Pending-Kernel",
+          "timestamp": "2019-09-25T00:20:02.123000+05:30",
+          "outwgs":2
+        },
+        {
+          "code": "201",
+          "instance_id": "X12BatchClaimAdjudication3 8b319d1347d6eddd1824454ce27e27cc",
+          "process_name": "Object_Generation",
+          "status": "Inprogress",
+          "timestamp": "2019-09-25T00:20:03.123000+05:30",
+          "outwgs":2
+        }
+      ]
+    },
+    "headers": [
+      {
+        "displayName": "Process Name",
+        "name": "process_name"
+      },
+     
+      {
+        "displayName": "Status",
+        "name": "status"
+      },
+      {
+        "displayName": "OUT WGS",
+        "name": "OUT WGS"
+      },
+      {
+        "displayName": "Date",
+        "name": "timeStamp"
+      }
+    ]
+  }
+}

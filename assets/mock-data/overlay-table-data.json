@@ -1,0 +1,42 @@
+{
+    "result": {
+        "headers": [
+            {
+                "displayName": "Claim Id",
+                "name": "claimIdWorkId"
+            },
+            {
+                "displayName": "Agent Node Id",
+                "name": "agentNodeId"
+            },
+            {
+                "displayName": "Last Known Status",
+                "name": "status"
+            },
+            {
+                "displayName": "Date",
+                "name": "timeStamp"
+            }
+        ],
+      "data": [
+        {
+          "claim_id": "CDE17233813",
+          "agent_node_id": "X12BatchClaimAdjudication2 6a57049a82431a001fd5b019d97762a4",
+          "status": "0",
+          "timestamp": "2019-09-09 10:16:77"
+        },
+        {
+          "claim_id": "CLM-17148198",
+          "agent_node_id": "X12BatchClaimAdjudication2 6a57049a82431a001fd5b019d97762a4",
+          "status": "0",
+          "timestamp": "2019-09-09 10:16:77"
+        },
+        {
+          "claim_id": "CDE17233813",
+          "agent_node_id": "X12BatchClaimAdjudication2 6a57049a82431a001fd5b019d97762a4",
+          "status": "0",
+          "timestamp": "2019-09-09 10:16:77"
+        }
+      ]
+    }
+  }
